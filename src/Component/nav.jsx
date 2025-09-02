@@ -6,7 +6,6 @@ import {
   ChevronDown,
   House,
   List,
-  X,
 } from "lucide-react";
 
 import "./nav.css";
@@ -22,17 +21,19 @@ function Navbar() {
             <a href="#SkipContent" className="hover:text-blue-600">
               ⏭ Skip To Main Content
             </a>
-            <a
+            {/* <a
               href="https://sso.rajasthan.gov.in/signin"
               target="_blank"
               className="flex items-center gap-1 hover:text-blue-600"
+              rel="noreferrer"
             >
               <Globe size={16} /> SSO Sign In
-            </a>
+            </a> */}
             <a
               href="https://emitra.rajasthan.gov.in/"
               target="_blank"
               className="flex items-center gap-1 hover:text-blue-600"
+              rel="noreferrer"
             >
               <ArrowDownRight size={16} /> Avail Services
             </a>
@@ -42,8 +43,14 @@ function Navbar() {
           <div className="flex items-center gap-6">
             {/* Language Switch */}
             <div className="flex gap-2">
-              <a className="font-semibold text-blue-600 cursor-pointer">English</a>
-              <a className="cursor-pointer hover:text-blue-600">हिन्दी</a>
+            <a
+              href="https://sso.rajasthan.gov.in/signin"
+              target="_blank"
+              className="flex items-center gap-1 hover:text-blue-600"
+              rel="noreferrer"
+            >
+              <Globe size={16} />  Lang
+            </a>
             </div>
 
             {/* Font Resize */}
@@ -76,10 +83,10 @@ function Navbar() {
       </div>
 
       {/* ---------- Navbar ---------- */}
-   <nav className="w-full border-b sticky top-0 z-50 bg-white">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3  navbar-bg">
-          {/* Logo */}
-          <a href="/" className="flex items-center">
+      <nav className="w-full border-b sticky top-0 z-50 bg-white">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
+          {/* Logo fully left */}
+          <a href="/" className="flex items-center pl-4">
             <img
               src="https://rajasthan.gov.in/assets/images/raj-logo.png"
               alt="Gov. of Rajasthan"
@@ -96,15 +103,25 @@ function Navbar() {
           <ul className="hidden xl:flex gap-6 text-gray-700 font-medium">
             <li>
               <a href="/" className="flex items-center gap-1 hover:text-blue-600">
-                <House size={18} />
+                Home
               </a>
             </li>
+
+            {/* Dropdown with smooth fade-up */}
             <li className="relative group cursor-pointer">
-              <span className="flex items-center gap-1">
+              <span className="flex items-center gap-1 hover:text-blue-600">
                 Government <ChevronDown size={16} />
               </span>
-              {/* Dropdown */}
-              <ul className="absolute left-0 mt-2 bg-white border rounded shadow-lg hidden group-hover:block w-48">
+
+              <ul
+                className="
+                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  opacity-0 invisible translate-y-2 pointer-events-none
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
+                  transition-all duration-300 ease-out will-change-transform
+                  ring-1 ring-black/5
+                "
+              >
                 <li>
                   <a href="/" className="block px-4 py-2 hover:bg-gray-100">
                     Governor
@@ -122,14 +139,106 @@ function Navbar() {
                 </li>
               </ul>
             </li>
-            <li className="cursor-pointer">Sectors</li>
-            <li className="cursor-pointer">Residents</li>
-            <li className="cursor-pointer">Visiting</li>
-            <li className="cursor-pointer">About Rajasthan</li>
+            
+            <li className="relative group cursor-pointer">
+              <span className="flex items-center gap-1 hover:text-blue-600">
+                Sectors <ChevronDown size={16} />
+              </span>
+
+              <ul
+                className="
+                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  opacity-0 invisible translate-y-2 pointer-events-none
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
+                  transition-all duration-300 ease-out will-change-transform
+                  ring-1 ring-black/5
+                "
+              >
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Governor
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Chief Minister
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Cabinet Ministers
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="relative group cursor-pointer">
+              <span className="flex items-center gap-1 hover:text-blue-600">
+                Residents <ChevronDown size={16} />
+              </span>
+
+              <ul
+                className="
+                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  opacity-0 invisible translate-y-2 pointer-events-none
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
+                  transition-all duration-300 ease-out will-change-transform
+                  ring-1 ring-black/5
+                "
+              >
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Governor
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Chief Minister
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Cabinet Ministers
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="relative group cursor-pointer">
+              <span className="flex items-center gap-1 hover:text-blue-600">
+                Visiting <ChevronDown size={16} />
+              </span>
+
+              <ul
+                className="
+                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  opacity-0 invisible translate-y-2 pointer-events-none
+                  group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
+                  transition-all duration-300 ease-out will-change-transform
+                  ring-1 ring-black/5
+                "
+              >
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Governor
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Chief Minister
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                    Cabinet Ministers
+                  </a>
+                </li>
+              </ul>
+            </li>
+          <li className="cursor-pointer hover:text-blue-600">About Rajasthan</li>
+
           </ul>
 
           {/* CM Profile */}
-          <div className="hidden xl:flex items-center gap-2 text-right">
+          <div className="hidden xl:flex items-center gap-2 text-right pr-4">
             <img
               src="https://jankalyanFile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
               alt="Shri BhajanLal Sharma"

@@ -1,0 +1,21 @@
+.navbar-bg {
+  position: relative;
+  display: flex;
+  background: none; /* remove direct image */
+}
+
+.navbar-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/1.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  opacity: 0.2; /* 👈 adjust this (0 = invisible, 1 = full) */
+  z-index: 0;
+}
+
+.navbar-bg > * {
+  position: relative;
+  z-index: 1; /* keep navbar content above the faded bg */
+}
