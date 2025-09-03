@@ -58,18 +58,18 @@ export default function HeroSlider() {
 
       {/* STATISTICS STRIP */}
       <div className="w-full bg-white border-t border-gray-200 shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-6 py-5">
             <div className="relative shrink-0">
-              <div className="text-2xl sm:text-3xl font-semibold text-gray-800">Statistics</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-gray-800">Statistics:</div>
               {/* <svg className="absolute -bottom-4 left-3 w-20 h-8 text-gray-700/60" viewBox="0 0 120 40" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round">
                 <path d="M5 20c25 25 55 0 85 0" />
                 <path d="M90 20l-8-8M90 20l-8 8" />
               </svg> */}
             </div>
 
-            <div className="flex-1 overflow-x-auto">
-              <div className="min-w-max flex items-end gap-6 pr-3">
+            <div className="flex-1 overflow-x-auto flex items-center">
+              <div className="min-w-max mx-auto flex items-end gap-6 pr-3">
                 {stats.map((st) => (
                   <div key={st.label} className="flex flex-col">
                     <div className="text-[14px] sm:text-[16px] font-extrabold text-gray-800 leading-none">

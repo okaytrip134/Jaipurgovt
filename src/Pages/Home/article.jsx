@@ -5,7 +5,7 @@ const Article = () => {
   return (
     <section className="w-full bg-white px-6 sm:px-8 py-12 z-40 mt-2">
       {/* Section Eyebrow + Title */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <span className="inline-block text-xs font-semibold tracking-wide text-orange-600 bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
           What We Do
         </span>
@@ -27,7 +27,7 @@ const Article = () => {
       </div>
 
       {/* Grid: Left feature + Right list */}
-      <div className="max-w-7xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-[1400px] mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Featured Article (custom overlay card) */}
         <article className="group relative overflow-hidden rounded-2xl shadow-md">
           <img
@@ -128,7 +128,7 @@ const Article = () => {
       </div>
 
       {/* Mobile “view all” link */}
-      <div className="max-w-7xl mx-auto mt-8 sm:hidden">
+      <div className="max-w-[1400px] mx-auto mt-8 sm:hidden">
         <a
           href="#"
           className="inline-block text-sm font-medium text-gray-600 hover:text-gray-900"

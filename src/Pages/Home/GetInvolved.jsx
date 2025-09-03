@@ -41,7 +41,7 @@ export default function GetInvolved() {
   const [activeTab, setActiveTab] = useState("do");
 
   return (
-    <section className="py-10 px-6 bg-white max-w-7xl mx-auto">
+    <section className="py-10 px-6 bg-white max-w-[1400px] mx-auto">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-sky-600">GET INVOLVED</h2>
         <p className="text-gray-600">Participate in nation-building activities</p>
