@@ -10,86 +10,15 @@ import {
 
 import "./nav.css";
 
+import Topbar from './topbar'
+
 function Navbar() {
   return (
-    <header className="w-full shadow bg-white">
-      {/* ---------- Topbar ---------- */}
-      <div className="w-full bg-white text-sm border-b">
-        <div className="max-w-auto mx-auto flex flex-wrap justify-between items-center px-4 py-2">
-          {/* Left side */}
-          <div className="flex flex-wrap gap-4 items-center text-gray-700">
-            <a href="#SkipContent" className="hover:text-blue-600">
-              ⏭ Skip To Main Content
-            </a>
-            {/* <a
-              href="https://emitra.rajasthan.gov.in/"
-              target="_blank"
-              className="flex items-center gap-1 hover:text-blue-600"
-              rel="noreferrer"
-            >
-              <ArrowDownRight size={16} /> Avail Services
-            </a> */}
-          </div>
-
-          {/* --------- News Marquee --------- */}
-          <div className="flex-1 mx-6 overflow-hidden">
-            <marquee
-              behavior="scroll"
-              direction="left"
-              scrollamount="5"
-              className="text-red-600 font-medium"
-            >
-              📰 Latest News: Rajasthan Govt announces new digital services · CM
-              BhajanLal Sharma inaugurates development projects · Tourism
-              Festival 2025 starts in Jaipur
-            </marquee>
-          </div>
-
-          {/* Right side */}
-          <div className="flex items-center gap-6">
-            {/* Language Switch */}
-            <div className="flex gap-2">
-              <a
-                href="https://sso.rajasthan.gov.in/signin"
-                target="_blank"
-                className="flex items-center gap-1 hover:text-blue-600"
-                rel="noreferrer"
-              >
-                <Globe size={16} /> Lang
-              </a>
-            </div>
-
-            {/* Font Resize */}
-            <div className="flex gap-2">
-              <a className="cursor-pointer hover:text-blue-600">A+</a>
-              <a className="cursor-pointer hover:text-blue-600">A-</a>
-              <a className="cursor-pointer hover:text-blue-600">A</a>
-            </div>
-
-            {/* Theme Buttons */}
-            <div className="flex gap-2">
-              <button className="w-4 h-4 bg-gray-800 rounded-full"></button>
-              <button className="w-4 h-4 bg-blue-500 rounded-full"></button>
-              <button className="w-4 h-4 bg-yellow-500 rounded-full"></button>
-            </div>
-
-            {/* Search */}
-            <form className="flex items-center border rounded px-2">
-              <input
-                type="text"
-                placeholder="Search"
-                className="outline-none px-1 py-0.5 text-sm"
-              />
-              <button type="submit">
-                <Search size={16} />
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
+  
+  <header className="w-full bg-white">
+    <Topbar/>
       {/* ---------- Navbar ---------- */}
-      <nav className="w-full border-b sticky top-0 z-50 bg-white">
+      <nav className="w-full border-b sticky top-0 z-2 bg-white">
         <div className="max-w-auto mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
           {/* Logo fully left */}
           <a href="/" className="flex items-center pl-4">
@@ -121,7 +50,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -153,7 +82,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -185,7 +114,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -217,7 +146,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
