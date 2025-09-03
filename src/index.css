@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Story Script";
+  src: url("./assets/fonts/Jostf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

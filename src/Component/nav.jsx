@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <header className="w-full shadow bg-white">
       {/* ---------- Topbar ---------- */}
-      <div className="w-full bg-white text-sm">
+      <div className="w-full bg-white text-sm border-b">
         <div className="max-w-auto mx-auto flex flex-wrap justify-between items-center px-4 py-2">
           {/* Left side */}
           <div className="flex flex-wrap gap-4 items-center text-gray-700">
@@ -22,35 +22,41 @@ function Navbar() {
               ⏭ Skip To Main Content
             </a>
             {/* <a
-              href="https://sso.rajasthan.gov.in/signin"
-              target="_blank"
-              className="flex items-center gap-1 hover:text-blue-600"
-              rel="noreferrer"
-            >
-              <Globe size={16} /> SSO Sign In
-            </a> */}
-            <a
               href="https://emitra.rajasthan.gov.in/"
               target="_blank"
               className="flex items-center gap-1 hover:text-blue-600"
               rel="noreferrer"
             >
               <ArrowDownRight size={16} /> Avail Services
-            </a>
+            </a> */}
+          </div>
+
+          {/* --------- News Marquee --------- */}
+          <div className="flex-1 mx-6 overflow-hidden">
+            <marquee
+              behavior="scroll"
+              direction="left"
+              scrollamount="5"
+              className="text-red-600 font-medium"
+            >
+              📰 Latest News: Rajasthan Govt announces new digital services · CM
+              BhajanLal Sharma inaugurates development projects · Tourism
+              Festival 2025 starts in Jaipur
+            </marquee>
           </div>
 
           {/* Right side */}
           <div className="flex items-center gap-6">
             {/* Language Switch */}
             <div className="flex gap-2">
-            <a
-              href="https://sso.rajasthan.gov.in/signin"
-              target="_blank"
-              className="flex items-center gap-1 hover:text-blue-600"
-              rel="noreferrer"
-            >
-              <Globe size={16} />  Lang
-            </a>
+              <a
+                href="https://sso.rajasthan.gov.in/signin"
+                target="_blank"
+                className="flex items-center gap-1 hover:text-blue-600"
+                rel="noreferrer"
+              >
+                <Globe size={16} /> Lang
+              </a>
             </div>
 
             {/* Font Resize */}
@@ -60,7 +66,7 @@ function Navbar() {
               <a className="cursor-pointer hover:text-blue-600">A</a>
             </div>
 
-            {/* Theme Buttons (dummy) */}
+            {/* Theme Buttons */}
             <div className="flex gap-2">
               <button className="w-4 h-4 bg-gray-800 rounded-full"></button>
               <button className="w-4 h-4 bg-blue-500 rounded-full"></button>
@@ -88,7 +94,7 @@ function Navbar() {
           {/* Logo fully left */}
           <a href="/" className="flex items-center pl-4">
             <img
-              src="https://rajasthan.gov.in/assets/images/raj-logo.png"
+              src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
               alt="Gov. of Rajasthan"
               className="h-16"
             />
@@ -115,7 +121,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -139,7 +145,7 @@ function Navbar() {
                 </li>
               </ul>
             </li>
-            
+
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Sectors <ChevronDown size={16} />
@@ -147,7 +153,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -171,6 +177,7 @@ function Navbar() {
                 </li>
               </ul>
             </li>
+
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Residents <ChevronDown size={16} />
@@ -178,7 +185,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -202,6 +209,7 @@ function Navbar() {
                 </li>
               </ul>
             </li>
+
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Visiting <ChevronDown size={16} />
@@ -209,7 +217,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg
+                  absolute left-0 mt-1 w-50 bg-white border rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -233,8 +241,10 @@ function Navbar() {
                 </li>
               </ul>
             </li>
-          <li className="cursor-pointer hover:text-blue-600">About Rajasthan</li>
 
+            <li className="cursor-pointer hover:text-blue-600">
+              About Rajasthan
+            </li>
           </ul>
 
           {/* CM Profile */}
