@@ -15,11 +15,11 @@ import Topbar from './topbar'
 function Navbar() {
   return (
   
-  <header className="w-full bg-white">
+  <header className="w-full">
     <Topbar/>
       {/* ---------- Navbar ---------- */}
-      <nav className="w-full border-b sticky top-0 z-2 bg-white">
-        <div className="max-w-auto mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
+      <nav className="w-full border-b sticky top-0 z-2">
+        <div className="max-w-full mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
           {/* Logo fully left */}
           <a href="/" className="flex items-center pl-4">
             <img
@@ -30,12 +30,12 @@ function Navbar() {
           </a>
 
           {/* Mobile toggle */}
-          <button className="xl:hidden p-2">
+          <button className="xl:hidden p-2 flex-shrink-0">
             <List size={24} />
           </button>
 
           {/* Nav links */}
-          <ul className="hidden xl:flex gap-6 text-gray-700 font-medium">
+          <ul className="hidden xl:flex flex-1 justify-center gap-6 text-black font-medium">
             <li>
               <a href="/" className="flex items-center gap-1 hover:text-blue-600">
                 Home
@@ -50,7 +50,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -58,17 +58,17 @@ function Navbar() {
                 "
               >
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Governor
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Chief Minister
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Cabinet Ministers
                   </a>
                 </li>
@@ -82,7 +82,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -90,17 +90,17 @@ function Navbar() {
                 "
               >
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Governor
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Chief Minister
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Cabinet Ministers
                   </a>
                 </li>
@@ -114,7 +114,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -122,17 +122,17 @@ function Navbar() {
                 "
               >
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Governor
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Chief Minister
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Cabinet Ministers
                   </a>
                 </li>
@@ -146,7 +146,7 @@ function Navbar() {
 
               <ul
                 className="
-                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white border rounded shadow-lg
+                  absolute left-1/2 transform -translate-x-1/2 mt-1 w-50 bg-white rounded shadow-lg
                   opacity-0 invisible translate-y-2 pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
                   transition-all duration-300 ease-out will-change-transform
@@ -154,17 +154,17 @@ function Navbar() {
                 "
               >
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
-                    Governor
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
+                    Jaipur Tourism
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Chief Minister
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-100">
+                  <a href="/" className="block px-4 py-2 hover:bg-gray-300">
                     Cabinet Ministers
                   </a>
                 </li>
@@ -185,7 +185,7 @@ function Navbar() {
             />
             <div>
               <p className="m-0 font-medium text-sm">Shri BhajanLal Sharma</p>
-              <small className="text-gray-500">Hon'ble Chief Minister</small>
+              <small className="text-gray-800">Hon'ble Chief Minister</small>
             </div>
           </div>
         </div>
