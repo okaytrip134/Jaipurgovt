@@ -35,7 +35,7 @@ function Navbar() {
           </button>
 
           {/* Nav links */}
-          <ul className="hidden xl:flex flex-1 justify-center gap-6 text-black font-medium">
+          <ul className="hidden xl:flex flex-1 justify-center  text-black font-medium gap-6 md:gap-8 lg:gap-12 ">
             <li>
               <a href="/" className="flex items-center gap-1 hover:text-blue-600">
                 Home
