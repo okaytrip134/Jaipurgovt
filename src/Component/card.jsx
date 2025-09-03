@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ image, title, description, tag, className }) {
   return (
-    <div className="flex gap-4 items-start">
+    <div className="flex gap-4 items-start flex-col md:flex-row">
       {/* Image */}
       <img
         src={image}

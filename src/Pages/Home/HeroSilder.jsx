@@ -1,90 +1,110 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Search, Calendar, User, Bed } from 'lucide-react';
+import React, { useEffect, useState } from "react";
 
-const HeroSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [searchQuery, setSearchQuery] = useState('Thailand, Asia');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [rooms, setRooms] = useState(1);
-  const [guests, setGuests] = useState(2);
+const slides = [
+  { id: 1, image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
+  { id: 2, image: "https://images.unsplash.com/photo-1682830819991-3e100a80aa2e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
+  { id: 3, image: "https://images.unsplash.com/photo-1712166424478-eb9b7103e460?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
+];
 
-  const slides = [
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Discover Amazing Destinations',
-      subtitle: 'Explore the world with our exclusive deals'
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1682830819991-3e100a80aa2e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Luxury Stays at Affordable Prices',
-      subtitle: 'We compare prices from 200+ booking sites'
-    },
-    {
-      id: 3, 
-      image: 'https://images.unsplash.com/photo-1712166424478-eb9b7103e460?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Your Perfect Vacation Awaits',
-      subtitle: 'Find the best hotels for your dream trip'
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/flagged/photo-1573152455866-867556534827?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Your Perfect Vacation Awaits',
-      subtitle: 'Find the best hotels for your dream trip'
-    },
-    {
-      id: 5,
-      image: 'https://www.agoda.com/wp-content/uploads/2024/01/Jaipur-Traditional-Indian-puppets.jpg',
-      title: 'Your Perfect Vacation Awaits',
-      subtitle: 'Find the best hotels for your dream trip'
-    }
-  ];
+const stats = [
+  { value: "5,92,97,676", label: "MYGOV SAATHIS" },
+  { value: "17.89", suffix: " + Lakh", label: "SUBMISSIONS IN TASKS" },
+  { value: "55.89", suffix: " + Lakh", label: "COMMENTS IN DISCUSSIONS" },
+  { value: "38.76", suffix: " + Lakh", label: "VOTES IN POLLS" },
+  { value: "303.77", suffix: " + Lakh", label: "PARTICIPATION IN QUIZ" },
+  { value: "250.04", suffix: " + Lakh", label: "PLEDGES TAKEN" },
+];
+
+// 👇 Update this path to where you placed the icon
+const WHATSAPP_ICON = "/icons/whatsapp.png"; // e.g. public/icons/whatsapp.png
+
+export default function HeroSlider() {
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    const id = setInterval(() => {
+      setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
     }, 5000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log({ searchQuery, startDate, endDate, rooms, guests });
-  };
+    return () => clearInterval(id);
+  }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Slider Images */}
-      <div className="absolute inset-0 z-0 transition-opacity duration-1000">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
-            <div className="absolute inset-0 bg-black/30"></div>
+    <>
+      {/* HERO (reduced height) */}
+      <section className="relative overflow-hidden h-[220px] sm:h-[300px] md:h-[380px] lg:h-[440px]">
+        <div className="absolute inset-0">
+          {slides.map((s, i) => (
+            <div
+              key={s.id}
+              className={`absolute inset-0 bg-center bg-cover transition-opacity duration-[1000ms] ${i === current ? "opacity-100" : "opacity-0"}`}
+              style={{ backgroundImage: `url(${s.image})` }}
+            >
+              <div className="absolute inset-0 bg-black/25" />
+            </div>
+          ))}
+        </div>
+
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-2 w-2 rounded-full transition-all ${i === current ? "bg-white w-6" : "bg-white/60"}`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* STATISTICS STRIP */}
+      <div className="w-full bg-white border-t border-gray-200 shadow-md z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-6 py-5">
+            <div className="relative shrink-0">
+              <div className="text-2xl sm:text-3xl font-semibold text-gray-800">Statistics</div>
+              {/* <svg className="absolute -bottom-4 left-3 w-20 h-8 text-gray-700/60" viewBox="0 0 120 40" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round">
+                <path d="M5 20c25 25 55 0 85 0" />
+                <path d="M90 20l-8-8M90 20l-8 8" />
+              </svg> */}
+            </div>
+
+            <div className="flex-1 overflow-x-auto">
+              <div className="min-w-max flex items-end gap-6 pr-3">
+                {stats.map((st) => (
+                  <div key={st.label} className="flex flex-col">
+                    <div className="text-[14px] sm:text-[16px] font-extrabold text-gray-800 leading-none">
+                      {st.value}
+                      {st.suffix ? <span className="ml-1 text-gray-600 font-semibold text-[14px]">{st.suffix}</span> : null}
+                    </div>
+                    <div className="mt-1 text-[11px] sm:text-[8px] uppercase tracking-wide text-gray-500">{st.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* WhatsApp pill using your downloaded icon */}
+            <a
+              href="#"
+              className="hidden md:flex items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-3 shadow-sm hover:bg-emerald-100 transition"
+              title="Join on WhatsApp"
+            >
+              <span className="text-[12px] text-emerald-700 font-semibold">
+                JOIN <span className="text-[#1d9b50]">My</span>
+                <span className="text-[#6c63ff]">Gov</span> ON
+              </span>
+              <span className="flex items-center gap-2">
+                <img
+                  src="/WhatsApp.svg.webp"
+                  alt="WhatsApp"
+                  className="h-6 w-6 object-contain"
+                  loading="lazy"
+                />
+                <span className="text-emerald-700 font-extrabold text-lg">WhatsApp</span>
+              </span>
+            </a>
           </div>
-        ))}
+        </div>
       </div>
-
-      {/* Slider Content */}
-
-                  
-      {/* Slider Indicators */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`h-2 w-2 rounded-full transition duration-300 ${index === currentSlide ? 'bg-white w-6' : 'bg-white/50'}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </section>
+    </>
   );
-};
-
-export default HeroSlider;
+}

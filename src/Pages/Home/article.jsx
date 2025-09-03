@@ -2,58 +2,142 @@ import React from "react";
 import Card from "../../Component/card";
 
 const Article = () => {
-    return (
-        <section className="w-full px-8 py-12">
-            {/* Section Title */}
-            <p className="text-sm text-gray-500">What We Do</p>
-            <h2 className="text-3xl font-bold text-gray-900 mt-4 mb-8">
-                Insights of Jaipur’s
-            </h2>
+  return (
+    <section className="w-full bg-white px-6 sm:px-8 py-12 z-40 mt-2">
+      {/* Section Eyebrow + Title */}
+      <div className="max-w-7xl mx-auto">
+        <span className="inline-block text-xs font-semibold tracking-wide text-orange-600 bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
+          What We Do
+        </span>
 
-            {/* Layout: left big card, right stacked cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 space-x-8 ">
-                {/* Left Big Card */}
-                <div>
-                    <Card
-                        image="https://maverickbird.com/wp-content/uploads/2019/05/29064314_2088915684458801_6697876526559831881_o.jpg"
-                        className="w-full h-96  rounded-lg object-cover flex-shrink-0"
-                    />
+        <div className="mt-4 flex items-end justify-between gap-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            Insights of Jaipur’s
+          </h2>
 
-                    <h3 className="text-xl font-semibold mt-4 text-gray-800">
-                        Jaipur hand block print: a hands on experience
-                    </h3>
-                    <span className="mt-2 inline-block text-xs bg-gray-100 text-gray-700  py-1 rounded-full">
-                        Reed More
-                    </span>
-                </div>
+          <a
+            href="#"
+            className="hidden sm:inline-block text-sm font-medium text-gray-600 hover:text-gray-900"
+          >
+            View all
+          </a>
+        </div>
 
-                {/* Right Column with stacked Cards */}
-                <div className="flex flex-col gap-6">
-                    <Card
-                        image="https://rajasthancab.b-cdn.net/uploads/1743495736-67eba238ec8d0.webp"
-                        title="Desert Safari Adventure: A Journey Through the Sands"
-                        className="w-auto h-35 rounded-lg object-cover flex-shrink-0"
-                        description="Unveiling the enigmatic world of giant pandas and conservation challenges"
-                        tag="Species"
-                    />
-                    <Card
-                        image="https://i0.wp.com/travelshoebum.com/wp-content/uploads/2020/09/IMG_20200718_212254_280.jpg?fit=1200%2C900&ssl=1"
-                        title="Local who useCrafted in Jaipur: The Artisans Behind Pots, Clayware & More"
-                        className="w-auto h-45 rounded-lg object-cover flex-shrink-0"
-                        description="Fauna & Flora has been using the collective knowledge and experience to protect nature."
-                        tag="Species"
-                    />
-                    <Card
-                        image="https://www.jaipurcraftonline.com/cdn/shop/articles/11-unexplored-local-jaipur-markets-for-traditional-handicrafts-of-rajasthan-991172.jpg"
-                        title="Exploring the Fascinating Realm of Birds"
-                        className="w-auto h-35 rounded-lg object-cover flex-shrink-0"
-                        description="Exploring the Fascinating Realm of Birds and their ecological significance"
-                        tag="Species"
-                    />
-                </div>
+        <div className="mt-2 h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full" />
+      </div>
+
+      {/* Grid: Left feature + Right list */}
+      <div className="max-w-7xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left Featured Article (custom overlay card) */}
+        <article className="group relative overflow-hidden rounded-2xl shadow-md">
+          <img
+            src="https://maverickbird.com/wp-content/uploads/2019/05/29064314_2088915684458801_6697876526559831881_o.jpg"
+            alt="Jaipur hand block print workshop"
+            className="h-80 sm:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+
+          {/* Overlay */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+          {/* Content */}
+          <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-block text-[11px] tracking-wide uppercase bg-white/15 text-white px-2.5 py-1 rounded-full border border-white/20 backdrop-blur">
+                Craft & Culture
+              </span>
+              <span className="inline-block text-[11px] tracking-wide uppercase bg-white/10 text-white px-2.5 py-1 rounded-full border border-white/20 backdrop-blur">
+                Jaipur
+              </span>
             </div>
-        </section>
-    );
+
+            <h3 className="mt-3 sm:mt-4 text-xl sm:text-2xl font-semibold text-white leading-snug">
+              Jaipur hand block print: a hands-on experience
+            </h3>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-white transition"
+              >
+                Read More
+              </a>
+              <span className="text-xs text-white/80">6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        {/* Right stacked cards */}
+        <div className="flex flex-col gap-6">
+          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition">
+            <Card
+              image="https://rajasthancab.b-cdn.net/uploads/1743495736-67eba238ec8d0.webp"
+              title="Desert Safari Adventure: A Journey Through the Sands"
+              className="w-full h-44 rounded-xl object-cover"
+              description="Unveiling the enigmatic world of giant pandas and conservation challenges"
+              tag="Travel"
+            />
+            <div className="mt-3 flex items-center justify-between">
+              <span className="text-xs text-gray-500">4 min read</span>
+              <a
+                href="#"
+                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+
+          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition">
+            <Card
+              image="https://i0.wp.com/travelshoebum.com/wp-content/uploads/2020/09/IMG_20200718_212254_280.jpg?fit=1200%2C900&ssl=1"
+              title="Crafted in Jaipur: The Artisans Behind Pots, Clayware & More"
+              className="w-full h-44 rounded-xl object-cover"
+              description="Fauna & Flora has been using the collective knowledge and experience to protect nature."
+              tag="Artisans"
+            />
+            <div className="mt-3 flex items-center justify-between">
+              <span className="text-xs text-gray-500">5 min read</span>
+              <a
+                href="#"
+                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+
+          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition">
+            <Card
+              image="https://www.jaipurcraftonline.com/cdn/shop/articles/11-unexplored-local-jaipur-markets-for-traditional-handicrafts-of-rajasthan-991172.jpg"
+              title="Exploring the Local Jaipur Markets for Handicrafts"
+              className="w-full h-44 rounded-xl object-cover"
+              description="Exploring the Fascinating Realm of Birds and their ecological significance"
+              tag="Markets"
+            />
+            <div className="mt-3 flex items-center justify-between">
+              <span className="text-xs text-gray-500">3 min read</span>
+              <a
+                href="#"
+                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile “view all” link */}
+      <div className="max-w-7xl mx-auto mt-8 sm:hidden">
+        <a
+          href="#"
+          className="inline-block text-sm font-medium text-gray-600 hover:text-gray-900"
+        >
+          View all
+        </a>
+      </div>
+    </section>
+  );
 };
 
 export default Article;
