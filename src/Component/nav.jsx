@@ -14,8 +14,8 @@ function Navbar() {
   return (
     <header className="w-full shadow bg-white">
       {/* ---------- Topbar ---------- */}
-      <div className="w-full bg-gray-100 text-sm">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center px-4 py-2">
+      <div className="w-full bg-white text-sm">
+        <div className="max-w-auto mx-auto flex flex-wrap justify-between items-center px-4 py-2">
           {/* Left side */}
           <div className="flex flex-wrap gap-4 items-center text-gray-700">
             <a href="#SkipContent" className="hover:text-blue-600">
@@ -84,7 +84,7 @@ function Navbar() {
 
       {/* ---------- Navbar ---------- */}
       <nav className="w-full border-b sticky top-0 z-50 bg-white">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
+        <div className="max-w-auto mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
           {/* Logo fully left */}
           <a href="/" className="flex items-center pl-4">
             <img
@@ -242,7 +242,7 @@ function Navbar() {
             <img
               src="https://jankalyanFile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
               alt="Shri BhajanLal Sharma"
-              className="h-12 w-12 rounded-full object-cover"
+              className="h-18 w-18 rounded-full object-cover"
             />
             <div>
               <p className="m-0 font-medium text-sm">Shri BhajanLal Sharma</p>
