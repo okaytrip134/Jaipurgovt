@@ -19,3 +19,7 @@
   position: relative;
   z-index: 1; /* keep navbar content above the faded bg */
 }
+
+.searchop {
+  border: .01px solid #b7b5b5;
+}

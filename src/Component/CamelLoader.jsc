@@ -1,0 +1,19 @@
+import camel from "../assets/Namste.mp4"; // 👈 your video file
+
+const CamelLoader = () => {
+  return (
+    <div className="flex items-center justify-center h-30vh bg-emerald-800 flex-col">
+      <video
+        src={camel}
+        className="w-auto object-contain"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+       <p className="mt-4 text-gray-600 font-medium animate-pulse">Loading...</p>
+    </div>
+  );
+};
+
+export default CamelLoader;

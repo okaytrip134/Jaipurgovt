@@ -174,7 +174,7 @@ const Topbar = () => {
             </div>
 
             {/* Search */}
-            <form className="flex items-center border rounded px-2">
+            <form className="flex items-center border searchop rounded-2xl px-2">
               <input
                 type="text"
                 placeholder="Search"
