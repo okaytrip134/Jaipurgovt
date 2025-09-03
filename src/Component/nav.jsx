@@ -1,10 +1,6 @@
 import React from "react";
 import {
-  Globe,
-  ArrowDownRight,
-  Search,
   ChevronDown,
-  House,
   List,
 } from "lucide-react";
 
