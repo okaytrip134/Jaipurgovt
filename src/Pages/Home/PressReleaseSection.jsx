@@ -91,7 +91,7 @@ const InfoSection = () => {
     <section
       className="relative py-16 px-6 md:px-12"
       style={{
-        backgroundImage: "url('/press.jpg')", // 👈 apna background image path yaha do
+        backgroundImage: "url('https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0')", // 👈 apna background image path yaha do
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

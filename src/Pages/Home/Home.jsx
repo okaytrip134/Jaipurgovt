@@ -9,12 +9,14 @@ import QuizSection from './QuizSection'
 const Home = () => {
   return (
     <>
+    <div className='overflow-hidden'>
     <Hero/>
     <GetInvolved/>
     <Article/>
-    <MediaSection/>
     <PressReleasesSection/>
+    <MediaSection/>
     <QuizSection/>
+    </div>
     </>
   )
 }
