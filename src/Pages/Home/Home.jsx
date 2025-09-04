@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <>
     <Hero/>
-    <Article/>
     <GetInvolved/>
+    <Article/>
     <MediaSection/>
     <PressReleasesSection/>
     <QuizSection/>

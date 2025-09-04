@@ -105,25 +105,6 @@ const Article = () => {
               </a>
             </div>
           </div>
-
-          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition">
-            <Card
-              image="https://www.jaipurcraftonline.com/cdn/shop/articles/11-unexplored-local-jaipur-markets-for-traditional-handicrafts-of-rajasthan-991172.jpg"
-              title="Exploring the Local Jaipur Markets for Handicrafts"
-              className="w-full h-44 rounded-xl object-cover"
-              description="Exploring the Fascinating Realm of Birds and their ecological significance"
-              tag="Markets"
-            />
-            <div className="mt-3 flex items-center justify-between">
-              <span className="text-xs text-gray-500">3 min read</span>
-              <a
-                href="#"
-                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
-              >
-                Read More
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
