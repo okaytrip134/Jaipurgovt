@@ -3,6 +3,8 @@ import Hero from './Hero'
 import Article from './article'
 import GetInvolved from './GetInvolved'
 import MediaSection from './MediaSection'
+import PressReleasesSection from './PressReleaseSection'
+import QuizSection from './QuizSection'
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
     <Article/>
     <GetInvolved/>
     <MediaSection/>
+    <PressReleasesSection/>
+    <QuizSection/>
     </>
   )
 }
