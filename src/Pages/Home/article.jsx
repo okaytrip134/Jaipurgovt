@@ -70,7 +70,7 @@ const Article = () => {
         <div className="flex flex-col gap-6">
           <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition">
             <Card
-              image="https://rajasthancab.b-cdn.net/uploads/1743495736-67eba238ec8d0.webp"
+              image="https://Jaipurcab.b-cdn.net/uploads/1743495736-67eba238ec8d0.webp"
               title="Desert Safari Adventure: A Journey Through the Sands"
               className="w-full h-44 rounded-xl object-cover"
               description="Unveiling the enigmatic world of giant pandas and conservation challenges"

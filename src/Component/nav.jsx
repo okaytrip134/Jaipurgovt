@@ -1,6 +1,5 @@
 import React from "react";
 import { ChevronDown, List } from "lucide-react";
-
 import "./nav.css";
 import Topbar from "./topbar";
 
@@ -9,13 +8,13 @@ function Navbar() {
     <header className="w-full">
       <Topbar />
       {/* ---------- Navbar ---------- */}
-      <nav className="w-full border-b sticky top-0 z-2">
+      <nav className="w-full border-b sticky top-0 z-20">
         <div className="max-w-full mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
           {/* Logo fully left */}
           <a href="/" className="flex items-center pl-4">
             <img
               src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
-              alt="Gov. of Rajasthan"
+              alt="Gov. of Jaipur"
               className="h-16"
             />
           </a>
@@ -39,37 +38,20 @@ function Navbar() {
               <span className="flex items-center gap-1 hover:text-blue-600">
                 About Us <ChevronDown size={16} />
               </span>
-              <ul className="absolute left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white rounded shadow-lg opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out will-change-transform ring-1 ring-black/5">
+              <ul className="dropdown-menu">
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Local Produce</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Culinary Delights</a></li>
                 <li className="relative group cursor-pointer">
-                  <span className="block px-4 py-2 hover:bg-gray-300 flex justify-between items-center">
+                  <span className="px-4 py-2 hover:bg-gray-300 flex justify-between items-center">
                     Administrative Hierarchy <ChevronDown size={14} />
                   </span>
-                  {/* <ul className="absolute left-full top-0 mt-0 w-56 bg-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out ring-1 ring-black/5">
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Assembly Constituency</a></li>
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Sub Division Office</a></li>
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Tehsil</a></li>
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Panchayat Samiti / Block</a></li>
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Gram Panchayat</a></li>
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Village</a></li>
-                  </ul> */}
+                  {/* Add further nested items here if needed */}
                 </li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Organization Chart</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">About District</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Location & Area</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Geographical & Physical Features</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">History</a></li>
-                {/* <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Fair & Festival</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">How to Reach</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Wildlife</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Tourist Places</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Art, Culture & Lifestyle</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Population</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">District Environment Plan</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Arts & Leisure</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Sports & Recreations</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Libraries</a></li> */}
               </ul>
             </li>
 
@@ -78,7 +60,7 @@ function Navbar() {
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Contact Us <ChevronDown size={16} />
               </span>
-              <ul className="absolute left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white rounded shadow-lg opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out ring-1 ring-black/5">
+              <ul className="dropdown-menu">
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">District Administration</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">District Level Officers</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Block Level Officers</a></li>
@@ -94,7 +76,7 @@ function Navbar() {
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Business <ChevronDown size={16} />
               </span>
-              <ul className="absolute left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white rounded shadow-lg opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out ring-1 ring-black/5">
+              <ul className="dropdown-menu">
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Business Opportunity</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Economy</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Infrastructure</a></li>
@@ -109,7 +91,7 @@ function Navbar() {
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Media Gallery <ChevronDown size={16} />
               </span>
-              <ul className="absolute left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white rounded shadow-lg opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out ring-1 ring-black/5">
+              <ul className="dropdown-menu">
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Zila Darshan Pustika</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Poster</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Video-Awareness Material</a></li>
@@ -125,7 +107,7 @@ function Navbar() {
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Documents <ChevronDown size={16} />
               </span>
-              <ul className="absolute left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white rounded shadow-lg opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out ring-1 ring-black/5">
+              <ul className="dropdown-menu">
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Expenditure Statement</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Documents (All)</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Election Orders & Training</a></li>
@@ -150,7 +132,7 @@ function Navbar() {
               <span className="flex items-center gap-1 hover:text-blue-600">
                 Citizen Corner <ChevronDown size={16} />
               </span>
-              <ul className="absolute left-1/2 transform -translate-x-1/2 mt-1 w-64 bg-white rounded shadow-lg opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 ease-out ring-1 ring-black/5">
+              <ul className="dropdown-menu">
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">E-Pledge</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">NFSA Application Form</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Download Admit Cards</a></li>
@@ -158,25 +140,8 @@ function Navbar() {
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Smart City</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Farmer Registry Camp</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Download Forms</a></li>
-                <li className="relative group cursor-pointer">
-                  <span className="block px-4 py-2 hover:bg-gray-300 flex justify-between items-center">
-                    Recruitment <ChevronDown size={14} />
-                  </span>
-                  {/* <ul className="absolute left-full top-0 mt-0 w-48 bg-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out ring-1 ring-black/5">
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">State</a></li>
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Subordinate</a></li>
-                  </ul> */}
-                </li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Services</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Important Websites / Portals</a></li>
-                {/* <li className="relative group cursor-pointer">
-                  <span className="block px-4 py-2 hover:bg-gray-300 flex justify-between items-center">
-                    Public Utilities <ChevronDown size={14} />
-                  </span>
-                  <ul className="absolute left-full top-0 mt-0 w-48 bg-white rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out ring-1 ring-black/5">
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Booth Level Officers</a></li>
-                  </ul>
-                </li> */}
               </ul>
             </li>
           </ul>
@@ -184,7 +149,7 @@ function Navbar() {
           {/* CM Profile */}
           <div className="hidden xl:flex items-center gap-2 text-right pr-4">
             <img
-              src="https://jankalyanFile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
+              src="https://jankalyanFile.Jaipur.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
               alt="Shri BhajanLal Sharma"
               className="h-18 w-18 rounded-full object-cover"
             />

@@ -5,6 +5,7 @@ import GetInvolved from './GetInvolved'
 import MediaSection from './MediaSection'
 import PressReleasesSection from './PressReleaseSection'
 import QuizSection from './QuizSection'
+import Involved from './Involved'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
     <PressReleasesSection/>
     <MediaSection/>
     <QuizSection/>
+    <Involved/>
     </div>
     </>
   )
