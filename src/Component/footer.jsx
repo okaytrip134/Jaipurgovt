@@ -116,7 +116,7 @@ function Footer() {
         </div>
 
         {/* Contact Information Bar */}
-        <div className="bg-black/30 rounded-lg p-4 mb-6">
+        <div className="bg-black/30 rounded-lg p-4 ">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="flex items-center justify-center">
               <FaPhone className="mr-2 text-yellow-300" size={16} />
@@ -130,74 +130,6 @@ function Footer() {
               <FaMapMarkerAlt className="mr-2 text-yellow-300" size={16} />
               <span>District Collectorate, Jaipur</span>
             </div>
-          </div>
-        </div>
-
-        {/* Social Media Section */}
-        <div className="border-t border-gray-500 pt-6 mb-6">
-          <div className="text-center">
-            <h5 className="text-lg font-semibold mb-4">Follow Us on Social Media</h5>
-            <div className="flex justify-center space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
-                 className="bg-blue-600 hover:bg-blue-700 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-                <FaFacebook size={20} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-                 className="bg-blue-400 hover:bg-blue-500 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-                <FaTwitter size={20} />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                 className="bg-pink-600 hover:bg-pink-700 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-                <FaInstagram size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                 className="bg-blue-700 hover:bg-blue-800 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-                <FaLinkedin size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* CM Profile Section */}
-        <div className="bg-gradient-to-r from-saffron-600/20 to-green-600/20 rounded-lg p-4 mb-6">
-          <div className="flex items-center justify-center">
-            <img
-              src="https://jankalyanFile.Rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
-              alt="Shri BhajanLal Sharma"
-              className="h-16 w-16 rounded-full object-cover mr-4 border-2 border-white"
-            />
-            <div className="text-center">
-              <p className="font-semibold text-lg">Shri BhajanLal Sharma</p>
-              <p className="text-gray-200">Hon'ble Chief Minister, Jaipur</p>
-              <p className="text-xs text-gray-300 mt-1">"Committed to the development and prosperity of Jaipur"</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-500 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-200 mb-4 md:mb-0">
-              <p>© 2025 Government of Jaipur. All Rights Reserved.</p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center md:justify-end space-x-4 text-sm">
-              <a href="/" className="hover:text-yellow-300 transition-colors">Terms & Conditions</a>
-              <a href="/" className="hover:text-yellow-300 transition-colors">Privacy Policy</a>
-              <a href="/" className="hover:text-yellow-300 transition-colors">Disclaimer</a>
-              <a href="/" className="hover:text-yellow-300 transition-colors">Accessibility</a>
-              <a href="/" className="hover:text-yellow-300 transition-colors">Sitemap</a>
-            </div>
-          </div>
-          
-          {/* Government Credits */}
-          <div className="mt-4 text-center">
-            <p className="text-xs text-gray-300">
-              Website Content Managed by District Administration | Technical Support by NIC Jaipur
-            </p>
-            <p className="text-xs text-gray-400 mt-1">
-              Last Updated: {new Date().toLocaleDateString()} | Best viewed in Chrome, Firefox, Safari
-            </p>
           </div>
         </div>
       </div>
