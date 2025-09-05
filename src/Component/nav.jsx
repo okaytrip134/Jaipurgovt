@@ -38,7 +38,7 @@ function Navbar() {
               <span className="flex items-center gap-1 hover:text-blue-600">
                 About Us <ChevronDown size={16} />
               </span>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu ">
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Local Produce</a></li>
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-300">Culinary Delights</a></li>
                 <li className="relative group cursor-pointer">
@@ -149,7 +149,7 @@ function Navbar() {
           {/* CM Profile */}
           <div className="hidden xl:flex items-center gap-2 text-right pr-4">
             <img
-              src="https://jankalyanFile.Jaipur.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
+              src="https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
               alt="Shri BhajanLal Sharma"
               className="h-18 w-18 rounded-full object-cover"
             />
