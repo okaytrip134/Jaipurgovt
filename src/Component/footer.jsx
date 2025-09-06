@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhone, FaEnvelope, Fa
 
 function Footer() {
   return (
-    <footer className="relative bg-contain bg-center text-white py-8" style={{ backgroundImage: "url('https://img.freepik.com/free-vector/hand-drawn-boho-background_23-2149033412.jpg?t=st=1757090311~exp=1757093911~hmac=aa30a2f2eb2e6894db4bbf9ff1420dae86907ba9f1e11bf79475d491d9e18de1&w=1480')" }}>
+    <footer className="relative bg-contain bg-center text-white py-8 bg-[#FFAC00]" style={{ backgroundImage: "url('')" }}>
       {/* Black overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       
