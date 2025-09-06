@@ -16,7 +16,7 @@ const Topbar = () => {
               ⏭ Skip To Main Content
             </a>
             {/* <a
-              href="https://emitra.rajasthan.gov.in/"
+              href="https://emitra.Jaipur.gov.in/"
               target="_blank"
               className="flex items-center gap-1 hover:text-blue-600"
               rel="noreferrer"
@@ -51,11 +51,9 @@ const Topbar = () => {
 
               {/* Dropdown */}
               <div
-                className="absolute left-1/2 transform -translate-x-1/2 mt-6 
+                className="absolute left-1/2 transform -translate-x-1/2 dropdown-menu
       w-72 bg-white border rounded shadow-lg z-50
-      opacity-0 invisible translate-y-2 pointer-events-none
-      group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
-      transition-all duration-300 ease-out"
+      opacity-0 invisible translate-y-2 pointer-events-none"
               >
                 <ul className="grid grid-cols-2 gap-2 p-3 text-sm">
                   <li>

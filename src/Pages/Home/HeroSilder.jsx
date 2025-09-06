@@ -7,7 +7,7 @@ const slides = [
 ];
 
 const stats = [
-  { value: "5,92,97,676", label: "MYGOV SAATHIS" },
+  { value: "5,92,97,676", label: "Jaipur Tourism" },
   { value: "17.89", suffix: " + Lakh", label: "SUBMISSIONS IN TASKS" },
   { value: "55.89", suffix: " + Lakh", label: "COMMENTS IN DISCUSSIONS" },
   { value: "38.76", suffix: " + Lakh", label: "VOTES IN POLLS" },
@@ -57,7 +57,7 @@ export default function HeroSlider() {
       </section>
 
       {/* STATISTICS STRIP */}
-      <div className="w-full bg-white border-t border-gray-200 shadow-md z-50">
+      <div className="w-full bg-white border rounded-xl border-gray-200 shadow-sm mt-4 z-50">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-6 py-5">
             <div className="relative shrink-0">
@@ -68,7 +68,7 @@ export default function HeroSlider() {
               </svg> */}
             </div>
 
-            <div className="flex-1 overflow-x-auto flex items-center">
+            <div className="flex-1 overflow-hidden flex items-center">
               <div className="min-w-max mx-auto flex items-end gap-6 pr-3">
                 {stats.map((st) => (
                   <div key={st.label} className="flex flex-col">
@@ -89,12 +89,13 @@ export default function HeroSlider() {
               title="Join on WhatsApp"
             >
               <span className="text-[12px] text-emerald-700 font-semibold">
-                JOIN <span className="text-[#1d9b50]">My</span>
-                <span className="text-[#6c63ff]">Gov</span> ON
+                JOIN <span className="text-[#1d9b50] ms-2 me-1">Jaipur</span>
+                <span className="text-[#1d9b50]">Comunnity
+                </span>
               </span>
               <span className="flex items-center gap-2">
                 <img
-                  src="/WhatsApp.svg.webp"
+                  src="https://img.icons8.com/?size=100&id=QkXeKixybttw&format=png&color=000000"
                   alt="WhatsApp"
                   className="h-6 w-6 object-contain"
                   loading="lazy"

@@ -5,16 +5,20 @@ import GetInvolved from './GetInvolved'
 import MediaSection from './MediaSection'
 import PressReleasesSection from './PressReleaseSection'
 import QuizSection from './QuizSection'
+import Involved from './Involved'
 
 const Home = () => {
   return (
     <>
+    <div className='overflow-hidden'>
     <Hero/>
     <GetInvolved/>
     <Article/>
-    <MediaSection/>
     <PressReleasesSection/>
+    <MediaSection/>
     <QuizSection/>
+    <Involved/>
+    </div>
     </>
   )
 }
