@@ -57,7 +57,7 @@ export default function HeroSlider() {
       </section>
 
       {/* STATISTICS STRIP */}
-      <div className="w-full bg-white border rounded-xl border-gray-200 shadow-sm mt-4 z-50">
+      <div className="w-full bg-white border border-gray-200 shadow-sm z-50">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-6 py-5">
             <div className="relative shrink-0">

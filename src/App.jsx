@@ -3,6 +3,7 @@ import Navbar from "./Component/nav";
 import Home from "./Pages/Home/Home";
 import Footer from "./Component/footer";
 import Loader from "./Component/Loader";
+import MobileNavbar from "./Component/MobileNavbar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -17,6 +18,7 @@ function App() {
     <div>
       {loading ? <Loader /> : (
         <>
+        <MobileNavbar/>
           <Navbar />
           <Home />
           <Footer />

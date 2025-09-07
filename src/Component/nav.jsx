@@ -1,11 +1,11 @@
 import React from "react";
-import { ChevronDown, List } from "lucide-react";
+import { ChevronDown} from "lucide-react";
 import "./nav.css";
 import Topbar from "./topbar";
 
 function Navbar() {
   return (
-    <header className="w-full">
+    <header className="w-full hidden md:block">
       <Topbar />
       {/* ---------- Navbar ---------- */}
       <nav className="w-full border-b sticky top-0 z-20">
@@ -18,11 +18,6 @@ function Navbar() {
               className="h-16"
             />
           </a>
-
-          {/* Mobile toggle */}
-          <button className="xl:hidden p-2 flex-shrink-0">
-            <List size={24} />
-          </button>
 
           {/* Nav links */}
           <ul className="hidden xl:flex flex-1 justify-center text-black font-medium gap-6 md:gap-8 lg:gap-12">

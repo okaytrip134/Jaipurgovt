@@ -6,8 +6,8 @@ function Footer() {
     <footer className="relative bg-contain bg-center text-white py-8 bg-[#FFAC00]" style={{ backgroundImage: "url('')" }}>
       {/* Black overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
-      
-      <div className=" mx-auto px-6 md:px-12 relative z-20">
+
+      <div className="mx-auto px-6 md:px-12 relative z-20">
         {/* Government Header */}
         <div className="text-center mb-8">
           <div className="flex justify-center items-center mb-4">
@@ -21,12 +21,13 @@ function Footer() {
               <p className="text-gray-200">District Administration Portal</p>
             </div>
           </div>
+          <p className="max-w-3xl mx-auto text-sm text-gray-200">
+            This portal serves as the official gateway to information, services, and resources of the Jaipur District Administration. Citizens, businesses, and visitors can explore important updates, access documents, and connect with government departments.
+          </p>
         </div>
 
         {/* Main Footer Links - Full Navbar Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6 mb-8">
-
-
           {/* About Us */}
           <div>
             <h4 className="font-semibold text-lg mb-3 text-yellow-300 border-b border-yellow-300 pb-1">About Us</h4>
@@ -116,7 +117,7 @@ function Footer() {
         </div>
 
         {/* Contact Information Bar */}
-        <div className="bg-black/30 rounded-lg p-4 ">
+        <div className="bg-black/30 rounded-lg p-4 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div className="flex items-center justify-center">
               <FaPhone className="mr-2 text-yellow-300" size={16} />
@@ -130,6 +131,16 @@ function Footer() {
               <FaMapMarkerAlt className="mr-2 text-yellow-300" size={16} />
               <span>District Collectorate, Jaipur</span>
             </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-yellow-300 pt-4 flex flex-col md:flex-row items-center justify-between text-xs text-gray-200">
+          <p className="mb-2 md:mb-0">© {new Date().getFullYear()} Government of Jaipur. All Rights Reserved.</p>
+          <div className="flex space-x-4">
+            <a href="/terms" className="hover:text-blue-300 transition-colors">Terms & Conditions</a>
+            <a href="/privacy" className="hover:text-blue-300 transition-colors">Privacy Policy</a>
+            <a href="/disclaimer" className="hover:text-blue-300 transition-colors">Disclaimer</a>
           </div>
         </div>
       </div>
