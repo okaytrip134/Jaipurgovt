@@ -120,12 +120,8 @@ export default function GetInvolved() {
   const [activeTab, setActiveTab] = useState("do");
 
   return (
-    <div style={{
-        backgroundImage: "url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')", // 👈 apna background image path yaha do
-        backgroundSize: "contain",
-        backgroundPosition: "center",
-      }} >
-    <section className="py-10 px-6  max-w-7xl mx-auto">
+
+    <section className="py-10 px-6  max-w-7xl mx-auto bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-sky-600">GET INVOLVED</h2>
         <p className="text-gray-600">Participate in nation-building activities</p>
@@ -151,8 +147,8 @@ export default function GetInvolved() {
       </div>
 
       {/* Content */}
-      <div className="mb-6 text-center">
-        <h3 className="text-xl font-bold text-gray-800">{content[activeTab]?.title}</h3>
+      <div className="mb-10 text-center">
+        <h3 className="text-xl mb-4 font-bold text-gray-800">{content[activeTab]?.title}</h3>
         <p className="text-gray-500">{content[activeTab]?.subtitle}</p>
       </div>
 
@@ -167,6 +163,5 @@ export default function GetInvolved() {
         ))}
       </div>
     </section>
-    </div>
   );
 }
