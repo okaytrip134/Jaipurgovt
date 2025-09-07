@@ -154,7 +154,7 @@ export default function GetInvolved() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {content[activeTab]?.items?.map((item, i) => (
-          <div key={i} className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+          <div key={i} className="rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <img src={item.img} alt={item.text} className="w-full h-48 object-cover" />
             <div className="p-4">
               <p className="text-sm text-gray-700 font-medium">{item.text}</p>
