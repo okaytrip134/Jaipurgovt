@@ -6,7 +6,7 @@ const Article = () => {
     <section className="w-full bg-white px-6 sm:px-8 py-12 z-40 mt-2">
       {/* Section Eyebrow + Title */}
       <div className="max-w-[1400px] mx-auto">
-        <span className="inline-block text-xs font-semibold tracking-wide text-orange-600 bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
+        <span className="inline-block text-xs font-semibold tracking-wide text-[#C46340] bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
           Deep Insights
         </span>
 
@@ -80,7 +80,7 @@ const Article = () => {
               <span className="text-xs text-gray-500">4 min read</span>
               <a
                 href="#"
-                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
+                className="text-sm font-semibold text-gray-800 hover:text-[#C46340]"
               >
                 Read More
               </a>
@@ -99,7 +99,7 @@ const Article = () => {
               <span className="text-xs text-gray-500">5 min read</span>
               <a
                 href="#"
-                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
+                className="text-sm font-semibold text-gray-800 hover:text-[#C46340]"
               >
                 Read More
               </a>

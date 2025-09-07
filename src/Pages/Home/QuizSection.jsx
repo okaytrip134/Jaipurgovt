@@ -44,10 +44,10 @@ const QuizSection = () => {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
-              Most Popular Quizzes for you!
+              Most Popular News From Jaipur!
             </h2>
             <p className="text-gray-600 text-sm md:text-base">
-              You may participate in a quiz
+              You may have to look out for these news.
             </p>
           </div>
           <button className="hidden md:block border border-gray-300 rounded-md px-5 py-2 text-sm font-medium hover:bg-gray-100">

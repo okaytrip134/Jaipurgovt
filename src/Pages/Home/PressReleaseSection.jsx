@@ -91,7 +91,7 @@ const InfoSection = () => {
     <section
       className="relative py-16 px-6 md:px-12"
       style={{
-        backgroundImage: "url('https://img.freepik.com/free-vector/hand-drawn-boho-background_23-2149033412.jpg?t=st=1757090311~exp=1757093911~hmac=aa30a2f2eb2e6894db4bbf9ff1420dae86907ba9f1e11bf79475d491d9e18de1&w=1480')", // 👈 apna background image path yaha do
+        backgroundImage: "url('https://tennesseequilts.com/assets/images/thumbnails/sep24jncs49_thumbnail.jpg')", // 👈 apna background image path yaha do
         backgroundSize: "contain",
         backgroundPosition: "center",
       }}
