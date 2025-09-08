@@ -91,13 +91,13 @@ const InfoSection = () => {
     <section
       className="relative py-16 px-6 md:px-12"
       style={{
-        backgroundImage: "url('https://tennesseequilts.com/assets/images/thumbnails/sep24jncs49_thumbnail.jpg')", // 👈 apna background image path yaha do
+        backgroundImage: "url('https://www.mygov.in/sites/all/themes/mygov/images/paralex-bg.png')", // 👈 apna background image path yaha do
         backgroundSize: "contain",
-        backgroundPosition: "center",
+        backgroundPosition: "center", 
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-white/40"></div>
 
       {/* Content */}
       <div className="relative max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-9">

@@ -38,7 +38,7 @@ const quizzes = [
 
 const QuizSection = () => {
   return (
-    <section className="py-12 px-6 md:px-12 bg-gray-50">
+    <section className="py-12 px-6 md:px-12">
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
@@ -70,7 +70,7 @@ const QuizSection = () => {
         >
           {quizzes.map((quiz) => (
             <SwiperSlide key={quiz.id}>
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition m-7">
                 <img
                   src={quiz.image}
                   alt={quiz.title}

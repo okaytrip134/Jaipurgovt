@@ -10,7 +10,7 @@ import Involved from './Involved'
 const Home = () => {
   return (
     <>
-    <div className='overflow-hidden'>
+    <div className="overflow-hidden bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top">
     <Hero/>
     <GetInvolved/>
     <Article/>

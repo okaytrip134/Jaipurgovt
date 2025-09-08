@@ -3,7 +3,7 @@ import Card from "../../Component/card";
 
 const Article = () => {
   return (
-    <section className="w-full bg-white px-6 sm:px-8 py-12 z-40 mt-2">
+    <section className="w-full px-6 sm:px-8 py-12 z-40 mt-2">
       {/* Section Eyebrow + Title */}
       <div className="max-w-[1400px] mx-auto">
         <span className="inline-block text-xs font-semibold tracking-wide text-[#C46340] bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
