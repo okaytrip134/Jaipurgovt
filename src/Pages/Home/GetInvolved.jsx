@@ -35,13 +35,13 @@ export default function GetInvolved() {
 
   const content = {
     do: {
-      title: "Event happend in jaipur",
+      title: "Recent event happend in jaipur",
       subtitle:
         "Find a variety of online & on ground skill-building tasks, activities & contests",
       items: [
         {
-          img: "https://ddnews.gov.in/wp-content/uploads/2025/02/image001ZAVI.jpg",
-          text: "India to host 12th regional 3R and circular economy forum in Jaipur",
+          img: "https://static.pib.gov.in/WriteReadData/userfiles/image/WhatsAppImage2025-02-27at4.46.01PMFLZ3.jpeg",
+          text: "Jaipur 3R Decadal Declaration to be adopted for enabling a transition to a resource-efficient, circular economy in Asia-Pacific countries",
         },
         {
           img: "https://indianexpress.com/wp-content/uploads/2023/12/PTI12_15_2023_000186A.jpg",
@@ -110,7 +110,7 @@ export default function GetInvolved() {
     <section className="py-10 px-6 max-w-7xl mx-auto bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-sky-600">GET INVOLVED</h2>
-        <p className="text-gray-600">Participate in nation-building activities</p>
+        <p className="text-gray-900 mt-2">Participate in nation-building activities</p>
       </div>
 
       {/* Tabs */}
@@ -123,7 +123,7 @@ export default function GetInvolved() {
               onClick={() => setActiveTab(tab.key)}
               className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline  focus:ring-[${activeColor}] ${
                 active
-                  ? "border-2 border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg"
+                  ? "border-2 border-orange-600 bg-orange-50 text-orange-600 shadow-lg"
                   : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md"
               }`}
               role="tab"
@@ -146,7 +146,7 @@ export default function GetInvolved() {
         <h3 className="text-xl mb-4 font-bold text-gray-800">
           {content[activeTab]?.title}
         </h3>
-        <p className="text-gray-800">{content[activeTab]?.subtitle}</p>
+        <p className="text-gray-900">{content[activeTab]?.subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
