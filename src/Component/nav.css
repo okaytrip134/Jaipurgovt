@@ -52,4 +52,8 @@ li.group { position: relative; }
 .dropdown-menu .group:hover > .dropdown-menu {
   top: 0;
   left: 100%;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8392bed364289ff244f4915e398b304a6540103f
