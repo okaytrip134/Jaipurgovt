@@ -1,0 +1,85 @@
+{
+  "tabs": [
+    { "key": "do", "label": "Event In Jaipur", "icon": "/checkbox.svg" },
+    { "key": "poll", "label": "POLL/SURVEY", "icon": "/questionnaire.svg" },
+    { "key": "blog", "label": "BLOG", "icon": "/blog.svg" },
+    { "key": "campaign", "label": "CAMPAIGN", "icon": "/Places.svg" },
+    { "key": "podcast", "label": "PODCAST", "icon": "/podcast.svg" }
+  ],
+  "items": [
+{
+      "id": 1,
+      "slug": "artha-chitra-poster-financial-literacy",
+      "title": "Artha Chitra – Online Poster Making Competition on Financial Literacy",
+      "image": "/contest1.png",
+      "categoryKey": "do",
+      "excerpt": "Join the online poster competition on financial literacy.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Artha Chitra</h2><p class='mb-4'>Create a poster to spread financial awareness. Top entries will be showcased online.</p><ul class='list-disc ml-6 space-y-1'><li>Theme: Financial Literacy</li><li>Eligibility: 14+ years</li><li>Deadline: 5 Oct 2025</li></ul><table class='table-auto border-collapse border border-gray-300 mt-4'><thead><tr><th class='border px-3 py-1'>Prize</th><th class='border px-3 py-1'>Reward</th></tr></thead><tbody><tr><td class='border px-3 py-1'>1st</td><td class='border px-3 py-1'>₹15,000 + Certificate</td></tr><tr><td class='border px-3 py-1'>2nd</td><td class='border px-3 py-1'>₹10,000 + Certificate</td></tr><tr><td class='border px-3 py-1'>3rd</td><td class='border px-3 py-1'>₹5,000 + Certificate</td></tr></tbody></table>"
+    },
+    {
+      "id": 2,
+      "slug": "logo-contest-kashi",
+      "title": "Logo Making Contest for the World’s Oldest Living City - Kashi",
+      "image": "/contest2.png",
+      "categoryKey": "do",
+      "excerpt": "Design a logo that reflects Kashi's heritage.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Kashi Logo Contest</h2><p>Submit your creative logo. Shortlisted designs will go for public voting.</p>"
+    },
+    {
+      "id": 3,
+      "slug": "reel-emerging-sti",
+      "title": "Reel Making Contest for Engaging Youth in Emerging STI for Viksit Bharat",
+      "image": "/contest3.png",
+      "categoryKey": "do",
+      "excerpt": "Make a short reel on science, tech & innovation themes.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>STI Reels</h2><p>Record a 30–60s reel highlighting an STI theme that excites you.</p>"
+    },
+    {
+      "id": 4,
+      "slug": "poster-emerging-sti",
+      "title": "Poster Making Contest on Emerging STI for National Priorities towards Viksit Bharat",
+      "image": "/contest4.png",
+      "categoryKey": "do",
+      "excerpt": "Poster contest on national priority STI topics.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>STI Posters</h2><p>Create a poster around national priorities in STI.</p>"
+    },
+
+    {
+      "id": 5,
+      "slug": "unani-comic-winners",
+      "title": "Winner Announcement for Comic Story competition on Unani Medicine",
+      "image": "/blog1.png",
+      "categoryKey": "blog",
+      "excerpt": "Comic Story winners are out.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Unani Comic Winners</h2><p>Congratulations to the winners. Full list and entries inside.</p>"
+    },
+    {
+      "id": 6,
+      "slug": "unani-poem-winners",
+      "title": "Winner Announcement for Poem Competition on Unani Medicine",
+      "image": "/blog2.png",
+      "categoryKey": "blog",
+      "excerpt": "Poem competition winners announced.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Unani Poem Winners</h2><p>Read the winning poems and jury notes.</p>"
+    },
+    {
+      "id": 7,
+      "slug": "unani-poster-winners",
+      "title": "Winner Announcement for Poster Competition on Unani Medicine",
+      "image": "/blog3.png",
+      "categoryKey": "blog",
+      "excerpt": "Poster competition results published.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Unani Poster Winners</h2><p>Top posters with feedback and scoring.</p>"
+    },
+    {
+      "id": 8,
+      "slug": "delhi-book-fair-quiz-winners",
+      "title": "Winner Announcement for Delhi Book Fair 2025 Quiz",
+      "image": "/blog4.png",
+      "categoryKey": "blog",
+      "excerpt": "DBF 2025 quiz winners.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>DBF Quiz Winners</h2><p>Here’s the final list of winners and prizes.</p>"
+    }
+
+  ]
+}
