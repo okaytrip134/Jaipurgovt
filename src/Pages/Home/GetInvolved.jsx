@@ -1,13 +1,25 @@
 import { useState } from "react";
-function IconImg({ src, alt = "" }) {
+
+/**
+ * Colorable icon from an external SVG file using CSS mask.
+ * Works best with monochrome/solid-shape SVGs.
+ */
+function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
   if (!src) return null;
+  const style = {
+    width: size,
+    height: size,
+    backgroundColor: color,
+    WebkitMask: `url(${src}) no-repeat center / contain`,
+    mask: `url(${src}) no-repeat center / contain`,
+    display: "inline-block",
+  };
   return (
-    <img
-      src={src}
-      alt={alt}
-      className="w-8 h-8 object-contain"
-      loading="lazy"
+    <span
+      style={style}
       aria-hidden={alt === ""}
+      role={alt ? "img" : undefined}
+      aria-label={alt || undefined}
     />
   );
 }
@@ -24,30 +36,75 @@ export default function GetInvolved() {
   const content = {
     do: {
       title: "Do/Task",
-      subtitle: "Find a variety of online & on ground skill-building tasks, activities & contests",
+      subtitle:
+        "Find a variety of online & on ground skill-building tasks, activities & contests",
       items: [
-        { img: "/contest1.png", text: "Artha Chitra – Online Poster Making Competition on Financial Literacy" },
-        { img: "/contest2.png", text: "Logo Making Contest for the World’s Oldest Living City - Kashi" },
-        { img: "/contest3.png", text: "Reel Making Contest for Engaging Youth in Emerging STI for Viksit Bharat" },
-        { img: "/contest4.png", text: "Poster Making Contest on Emerging STI for National Priorities towards Viksit Bharat" },
+        {
+          img: "/contest1.png",
+          text: "Artha Chitra – Online Poster Making Competition on Financial Literacy",
+        },
+        {
+          img: "/contest2.png",
+          text: "Logo Making Contest for the World’s Oldest Living City - Kashi",
+        },
+        {
+          img: "/contest3.png",
+          text: "Reel Making Contest for Engaging Youth in Emerging STI for Viksit Bharat",
+        },
+        {
+          img: "/contest4.png",
+          text: "Poster Making Contest on Emerging STI for National Priorities towards Viksit Bharat",
+        },
       ],
     },
     blog: {
       title: "Blog",
-      subtitle: "Get an insight on the citizen’s success stories, contest’s winner announcements, positive news.",
+      subtitle:
+        "Get an insight on the citizen’s success stories, contest’s winner announcements, positive news.",
       items: [
-        { img: "/blog1.png", text: "Winner Announcement for Comic Story competition on Unani Medicine for Innovative Health Solutions" },
-        { img: "/blog2.png", text: "Winner Announcement for Poem Competition on Unani Medicine for Innovative Health Solutions" },
-        { img: "/blog3.png", text: "Winner Announcement for Poster Competition on Unani Medicine for Innovative Health Solutions" },
-        { img: "/blog4.png", text: "Winner Announcement for Delhi Book Fair 2025 Quiz" },
+        {
+          img: "/blog1.png",
+          text:
+            "Winner Announcement for Comic Story competition on Unani Medicine for Innovative Health Solutions",
+        },
+        {
+          img: "/blog2.png",
+          text:
+            "Winner Announcement for Poem Competition on Unani Medicine for Innovative Health Solutions",
+        },
+        {
+          img: "/blog3.png",
+          text:
+            "Winner Announcement for Poster Competition on Unani Medicine for Innovative Health Solutions",
+        },
+        {
+          img: "/blog4.png",
+          text: "Winner Announcement for Delhi Book Fair 2025 Quiz",
+        },
       ],
     },
-    poll: { title: "Polls/Surveys", subtitle: "Share your opinion to help shape better policy.", items: [] },
-    campaign: { title: "Campaigns", subtitle: "Participate and spread the word.", items: [] },
-    podcast: { title: "Podcast", subtitle: "Listen to stories and updates.", items: [] },
+    poll: {
+      title: "Polls/Surveys",
+      subtitle: "Share your opinion to help shape better policy.",
+      items: [],
+    },
+    campaign: {
+      title: "Campaigns",
+      subtitle: "Participate and spread the word.",
+      items: [],
+    },
+    podcast: {
+      title: "Podcast",
+      subtitle: "Listen to stories and updates.",
+      items: [],
+    },
   };
 
   const [activeTab, setActiveTab] = useState("do");
+
+  // Colors
+  const activeColor = "#C46340"; // orange
+  const inactiveColor = "#6B7280"; // gray-500
 
   return (
     <section className="py-10 px-6 max-w-7xl mx-auto bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top">
@@ -64,13 +121,20 @@ export default function GetInvolved() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#C46340] ${
-                active ? "border-2 border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg" : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md"
+              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[${activeColor}] ${
+                active
+                  ? "border-2 border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg"
+                  : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md"
               }`}
               role="tab"
               aria-selected={active}
             >
-              <IconImg src={tab.icon} alt={tab.label} />
+              <IconMasked
+                src={tab.icon}
+                alt={tab.label}
+                size={32}
+                color={active ? activeColor : inactiveColor}
+              />
               <p className="mt-2 text-sm font-semibold text-center">{tab.label}</p>
             </button>
           );
@@ -79,21 +143,32 @@ export default function GetInvolved() {
 
       {/* Content */}
       <div className="mb-10 text-center">
-        <h3 className="text-xl mb-4 font-bold text-gray-800">{content[activeTab]?.title}</h3>
+        <h3 className="text-xl mb-4 font-bold text-gray-800">
+          {content[activeTab]?.title}
+        </h3>
         <p className="text-gray-500">{content[activeTab]?.subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {content[activeTab]?.items?.map((item, i) => (
-          <div key={i} className="rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img src={item.img} alt={item.text} className="w-full h-48 object-cover" />
+          <div
+            key={i}
+            className="rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <img
+              src={item.img}
+              alt={item.text}
+              className="w-full h-48 object-cover"
+            />
             <div className="p-4">
               <p className="text-sm text-gray-700 font-medium">{item.text}</p>
             </div>
           </div>
         ))}
         {!content[activeTab]?.items?.length && (
-          <div className="col-span-full text-center text-sm text-gray-500">No items yet.</div>
+          <div className="col-span-full text-center text-sm text-gray-500">
+            No items yet.
+          </div>
         )}
       </div>
     </section>

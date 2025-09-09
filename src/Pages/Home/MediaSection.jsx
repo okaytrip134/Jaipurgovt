@@ -35,9 +35,9 @@ const MediaSection = () => {
   const [currentVideo, setCurrentVideo] = useState(videos[0]);
 
   return (
-    <section className="bg-amber-50 py-10 px-6 md:px-12">
+    <section className="bg-lime-50/90 mix-blend-overlay inset-0 py-10 px-6 md:px-12">
       <div className="max-w-[1400px] mx-auto">
-        <h2 className="text-2xl font-bold text-sky-700">Jaipur Media</h2>
+        <h2 className="text-2xl font-bold text-sky-700 underline">Jaipur News Media</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
           {/* Main video player */}

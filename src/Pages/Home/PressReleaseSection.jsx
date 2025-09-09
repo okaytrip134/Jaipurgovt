@@ -94,6 +94,7 @@ const InfoSection = () => {
         backgroundImage: "url('https://www.mygov.in/sites/all/themes/mygov/images/paralex-bg.png')", // 👈 apna background image path yaha do
         backgroundSize: "contain",
         backgroundPosition: "center", 
+        
       }}
     >
       {/* Overlay */}

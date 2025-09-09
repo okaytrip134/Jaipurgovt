@@ -1,9 +1,13 @@
+/* Container with decorative bg via pseudo element */
 .navbar-bg {
   position: relative;
   display: flex;
-  background: none; /* remove direct image */
+  overflow: visible;           /* don't clip dropdowns */
+  isolation: isolate;          /* extra safety */
+  background: none;
 }
 
+/* Put the background behind everything, no need to lift children */
 .navbar-bg::before {
   content: "";
   position: absolute;
@@ -11,15 +15,41 @@
   background-image: url('../assets/1.jpg');
   background-repeat: repeat-x;
   background-size: auto 100%;
-  opacity: 0.2; /* 👈 adjust this (0 = invisible, 1 = full) */
-  z-index: 0;
+  opacity: 0.2;
+  z-index: -1;                 /* << key: behind all content */
 }
 
+/* ✂️ REMOVE this nonsense that broke stacking
 .navbar-bg > * {
   position: relative;
-  z-index: 1; /* keep navbar content above the faded bg */  
+  z-index: 1;
+}
+*/
+
+.searchop { border: .01px solid #b7b5b5; }
+
+/* Ensure parent li is the positioning context */
+li.group { position: relative; }
+
+/* Base dropdown styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 16rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+  display: none;
+  z-index: 9999;               /* will finally sit above CM photo */
 }
 
-.searchop {
-  border: .01px solid #b7b5b5;
+/* Show on hover */
+.group:hover > .dropdown-menu { display: block; }
+
+/* Optional: nested dropdowns open to the right */
+.dropdown-menu .group:hover > .dropdown-menu {
+  top: 0;
+  left: 100%;
 }

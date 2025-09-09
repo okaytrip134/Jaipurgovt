@@ -10,15 +10,24 @@ import Involved from './Involved'
 const Home = () => {
   return (
     <>
-    <div className="overflow-hidden bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top">
-    <Hero/>
-    <GetInvolved/>
-    <Article/>
-    <PressReleasesSection/>
-    <MediaSection/>
-    <QuizSection/>
-    <Involved/>
-    </div>
+      <div className="relative overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top" />
+
+        {/* Overlay Layer (adjust color/opacity as needed) */}
+        <div className="absolute inset-0 bg-blue-900/30 mix-blend-overlay" />
+
+        {/* Main Content Layer */}
+        <div className="relative z-10">
+          <Hero />
+          <GetInvolved />
+          <Article />
+          <PressReleasesSection />
+          <MediaSection />
+          <QuizSection />
+          <Involved />
+        </div>
+      </div>
     </>
   )
 }
