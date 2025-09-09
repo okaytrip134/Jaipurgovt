@@ -32,6 +32,7 @@
 li.group { position: relative; }
 
 /* Base dropdown styling */
+/* Base dropdown styling with animation prep */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -41,17 +42,26 @@ li.group { position: relative; }
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
-  display: none;
-  z-index: 9999;               /* will finally sit above CM photo */
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 9999;
 }
 
-/* Show on hover */
-.group:hover > .dropdown-menu { display: block; }
+/* Show with fade-up on hover */
+li.group:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-/* Optional: nested dropdowns open to the right */
 .dropdown-menu .group:hover > .dropdown-menu {
   top: 0;
   left: 100%;
 
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
- 
