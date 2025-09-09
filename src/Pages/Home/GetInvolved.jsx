@@ -26,34 +26,34 @@ function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
 
 export default function GetInvolved() {
   const tabs = [
-    { key: "do", label: "Event In Jaipur", icon: "/checkbox.svg" },
+    { key: "do", label: "Event In Jaipur", icon: "/Festival.svg" },
     { key: "poll", label: "POLL/SURVEY", icon: "/questionnaire.svg" },
     { key: "blog", label: "BLOG", icon: "/blog.svg" },
-    { key: "campaign", label: "CAMPAIGN", icon: "/campaign.svg" },
+    { key: "campaign", label: "Places to Visit", icon: "/Places.svg" },
     { key: "podcast", label: "PODCAST", icon: "/podcast.svg" },
   ];
 
   const content = {
     do: {
-      title: "Do/Task",
+      title: "Event happend in jaipur",
       subtitle:
         "Find a variety of online & on ground skill-building tasks, activities & contests",
       items: [
         {
-          img: "/contest1.png",
-          text: "Artha Chitra – Online Poster Making Competition on Financial Literacy",
+          img: "https://ddnews.gov.in/wp-content/uploads/2025/02/image001ZAVI.jpg",
+          text: "India to host 12th regional 3R and circular economy forum in Jaipur",
         },
         {
-          img: "/contest2.png",
-          text: "Logo Making Contest for the World’s Oldest Living City - Kashi",
+          img: "https://indianexpress.com/wp-content/uploads/2023/12/PTI12_15_2023_000186A.jpg",
+          text: "Prime Minister Narendra Modi being greeted by new Rajasthan Chief Minister Bhajan Lal Sharma during the latter's swearing-in ceremony, in Jaipur",
         },
         {
-          img: "/contest3.png",
-          text: "Reel Making Contest for Engaging Youth in Emerging STI for Viksit Bharat",
+          img: "https://media.assettype.com/freepressjournal/2025-08-21/o9dofbve/1500x500-2.jpg?width=1200",
+          text: "Rising Rajasthan 2025': State Gears Up For Global Investors Meet In December",
         },
         {
-          img: "/contest4.png",
-          text: "Poster Making Contest on Emerging STI for National Priorities towards Viksit Bharat",
+          img: "https://pbs.twimg.com/media/G0JmazPWUAAqcWp.jpg",
+          text: "Rajasthan CM Bhajanlal Sharma flags off 162 new roadways buses in Jaipur",
         },
       ],
     },
@@ -146,21 +146,21 @@ export default function GetInvolved() {
         <h3 className="text-xl mb-4 font-bold text-gray-800">
           {content[activeTab]?.title}
         </h3>
-        <p className="text-gray-500">{content[activeTab]?.subtitle}</p>
+        <p className="text-gray-800">{content[activeTab]?.subtitle}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {content[activeTab]?.items?.map((item, i) => (
           <div
             key={i}
-            className="rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+            className="rounded-xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
           >
             <img
               src={item.img}
               alt={item.text}
-              className="w-full h-48 object-cover"
+              className="w-full h-52 object-cover  "
             />
-            <div className="p-4">
+            <div className="p-3">
               <p className="text-sm text-gray-700 font-medium">{item.text}</p>
             </div>
           </div>
