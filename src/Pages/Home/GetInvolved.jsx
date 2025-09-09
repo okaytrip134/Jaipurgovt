@@ -121,7 +121,7 @@ export default function GetInvolved() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[${activeColor}] ${
+              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline  focus:ring-[${activeColor}] ${
                 active
                   ? "border-2 border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg"
                   : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md"
