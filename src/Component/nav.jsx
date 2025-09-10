@@ -23,7 +23,7 @@ function Navbar() {
           {/* Nav links */}
           <ul className="hidden xl:flex flex-1 justify-center text-black font-medium gap-6 md:gap-8 lg:gap-12">
             <li>
-              <a href="/home/dptHome/37" className="flex items-center gap-1 hover:text-blue-600">
+              <a href="/" className="flex items-center gap-1 hover:text-blue-600">
                 Home
               </a>
             </li>

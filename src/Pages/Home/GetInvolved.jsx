@@ -1,9 +1,7 @@
-import { useState } from "react";
+import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
+import data from "../../data/involvedPosts.json";
 
-/**
- * Colorable icon from an external SVG file using CSS mask.
- * Works best with monochrome/solid-shape SVGs.
- */
 function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
   if (!src) return null;
   const style = {
@@ -25,92 +23,54 @@ function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
 }
 
 export default function GetInvolved() {
-  const tabs = [
-    { key: "do", label: "Event In Jaipur", icon: "/checkbox.svg" },
-    { key: "poll", label: "POLL/SURVEY", icon: "/questionnaire.svg" },
-    { key: "blog", label: "BLOG", icon: "/blog.svg" },
-    { key: "campaign", label: "CAMPAIGN", icon: "/campaign.svg" },
-    { key: "podcast", label: "PODCAST", icon: "/podcast.svg" },
-  ];
+  const tabs = data.tabs;
+  const [activeTab, setActiveTab] = useState(tabs?.[0]?.key || "do");
 
-  const content = {
+  const itemsByTab = useMemo(() => {
+    const map = {};
+    for (const item of data.items) {
+      const k = item.categoryKey;
+      if (!map[k]) map[k] = [];
+      map[k].push(item);
+    }
+    return map;
+  }, []);
+
+  const activeColor = "#C46340";
+  const inactiveColor = "#6B7280";
+
+  const contentMeta = {
     do: {
-      title: "Do/Task",
+      title: "Recent News & Events happend ",
       subtitle:
         "Find a variety of online & on ground skill-building tasks, activities & contests",
-      items: [
-        {
-          img: "/contest1.png",
-          text: "Artha Chitra – Online Poster Making Competition on Financial Literacy",
-        },
-        {
-          img: "/contest2.png",
-          text: "Logo Making Contest for the World’s Oldest Living City - Kashi",
-        },
-        {
-          img: "/contest3.png",
-          text: "Reel Making Contest for Engaging Youth in Emerging STI for Viksit Bharat",
-        },
-        {
-          img: "/contest4.png",
-          text: "Poster Making Contest on Emerging STI for National Priorities towards Viksit Bharat",
-        },
-      ],
     },
     blog: {
       title: "Blog",
       subtitle:
-        "Get an insight on the citizen’s success stories, contest’s winner announcements, positive news.",
-      items: [
-        {
-          img: "/blog1.png",
-          text:
-            "Winner Announcement for Comic Story competition on Unani Medicine for Innovative Health Solutions",
-        },
-        {
-          img: "/blog2.png",
-          text:
-            "Winner Announcement for Poem Competition on Unani Medicine for Innovative Health Solutions",
-        },
-        {
-          img: "/blog3.png",
-          text:
-            "Winner Announcement for Poster Competition on Unani Medicine for Innovative Health Solutions",
-        },
-        {
-          img: "/blog4.png",
-          text: "Winner Announcement for Delhi Book Fair 2025 Quiz",
-        },
-      ],
+        "Get an insight on citizen’s success stories, contest winner announcements, and positive news.",
     },
     poll: {
       title: "Polls/Surveys",
       subtitle: "Share your opinion to help shape better policy.",
-      items: [],
     },
     campaign: {
       title: "Campaigns",
       subtitle: "Participate and spread the word.",
-      items: [],
     },
     podcast: {
       title: "Podcast",
       subtitle: "Listen to stories and updates.",
-      items: [],
     },
   };
 
-  const [activeTab, setActiveTab] = useState("do");
-
-  // Colors
-  const activeColor = "#C46340"; // orange
-  const inactiveColor = "#6B7280"; // gray-500
-
   return (
-    <section className="py-10 px-6 max-w-7xl mx-auto bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top">
+    <section className="py-10 px-6 max-w-7xl mx-auto ">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-sky-600">GET INVOLVED</h2>
-        <p className="text-gray-600">Participate in nation-building activities</p>
+        <p className="text-gray-600">
+          Participate in nation-building activities
+        </p>
       </div>
 
       {/* Tabs */}
@@ -121,10 +81,10 @@ export default function GetInvolved() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[${activeColor}] ${
+              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                 active
-                  ? "border-2 border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg"
-                  : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md"
+                  ? "border-0 border-[#C46340] bg-orange-50 text-[#C46340] shadow-xl focus:ring-[#C46340]"
+                  : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
               }`}
               role="tab"
               aria-selected={active}
@@ -135,37 +95,59 @@ export default function GetInvolved() {
                 size={32}
                 color={active ? activeColor : inactiveColor}
               />
-              <p className="mt-2 text-sm font-semibold text-center">{tab.label}</p>
+              <p className="mt-2 text-sm font-semibold text-center">
+                {tab.label}
+              </p>
             </button>
           );
         })}
       </div>
 
-      {/* Content */}
+      {/* Content header */}
       <div className="mb-10 text-center">
         <h3 className="text-xl mb-4 font-bold text-gray-800">
-          {content[activeTab]?.title}
+          {contentMeta[activeTab]?.title}
         </h3>
-        <p className="text-gray-500">{content[activeTab]?.subtitle}</p>
+        <p className="text-gray-500">{contentMeta[activeTab]?.subtitle}</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {content[activeTab]?.items?.map((item, i) => (
-          <div
-            key={i}
-            className="rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+      {/* Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        {(itemsByTab[activeTab] || []).map((item) => (
+          <article
+            key={item.id}
+            className="h-full flex flex-col rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            <img
-              src={item.img}
-              alt={item.text}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <p className="text-sm text-gray-700 font-medium">{item.text}</p>
+            <div className="aspect-[16/9] w-full bg-gray-100">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
-          </div>
+
+            <div className="p-2 flex flex-col flex-1">
+              <h3 className="text-sm text-gray-700 font-medium leading-6 line-clamp-2 min-h-[48px]">
+                {item.title}
+              </h3>
+              <p className="text-xs text-gray-600 mt-2 line-clamp-2">
+                {item.excerpt}
+              </p>
+
+              <div className="mt-auto pt-4">
+                <Link
+                  to={`/involved/${item.slug}`}
+                  className="inline-block text-sm font-semibold text-[#C46340] border border-[#C46340] hover:bg-[#C46340] hover:text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  Read more
+                </Link>
+              </div>
+            </div>
+          </article>
         ))}
-        {!content[activeTab]?.items?.length && (
+
+        {!itemsByTab[activeTab]?.length && (
           <div className="col-span-full text-center text-sm text-gray-500">
             No items yet.
           </div>

@@ -1,0 +1,85 @@
+{
+  "tabs": [
+    { "key": "do", "label": "Event In Jaipur", "icon": "/Festival.svg" },
+    { "key": "poll", "label": "POLL/SURVEY", "icon": "/questionnaire.svg" },
+    { "key": "blog", "label": "BLOG", "icon": "/blog.svg" },
+    { "key": "campaign", "label": "CAMPAIGN", "icon": "/Places.svg" },
+    { "key": "podcast", "label": "PODCAST", "icon": "/podcast.svg" }
+  ],
+  "items": [
+{
+      "id": 1,
+      "slug": "jaipur-metro-phase-2",
+      "title": "CM Approves Jaipur Metro Phase-II DPR",
+      "image": "https://i0.wp.com/media.indiatimes.in/media/content/2015/Jun/jaipur-metro-3_1433310334.jpg",
+      "categoryKey": "do",
+      "excerpt": "Bhajanlal Sharma clears DPR for 42.8 km Metro Phase-II from Todi Mode to Prahladpura.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Metro Expansion in Jaipur</h2><p class='mb-4'>Chief Minister Bhajanlal Sharma approved the Detailed Project Report (DPR) for Jaipur Metro Phase-II. The project spans 42.8 km from Todi Mode to Prahladpura, with 36 stations including elevated and underground ones. It will significantly improve Jaipur’s urban connectivity.</p>"
+    },
+    {
+      "id": 2,
+      "slug": "rsrtc-buses-launch",
+      "title": "CM Flags Off 162 New RSRTC Buses",
+      "image": "https://static.toiimg.com/thumb/msid-123739266,width-1280,height-720,resizemode-75/123739266.jpg",
+      "categoryKey": "do",
+      "excerpt": "CM launched new luxury & AC buses from Jaipur, including Kainchi Dham service.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Public Transport Boost</h2><p class='mb-4'>CM Bhajanlal Sharma flagged off 162 RSRTC buses from Jaipur, including luxury and AC coaches. These services include a special Jaipur–Kainchi Dham route, enhancing comfort and connectivity for citizens and pilgrims.</p>"
+    },
+    {
+      "id": 3,
+      "slug": "led-streetlights-drive",
+      "title": "Jaipur Gets 2 Lakh LED Streetlights",
+      "image": "https://static.toiimg.com/thumb/msid-123684464,width-1280,height-720,resizemode-75/123684464.jpg",
+      "categoryKey": "do",
+      "excerpt": "CM launches campaign to install 200,000 LED streetlights in Jaipur under City Chalo drive.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Chalo Campaign</h2><p class='mb-4'>Ahead of the festive season, the Rajasthan government under CM Bhajanlal Sharma announced the installation of 2 lakh LED streetlights across Jaipur. A new helpline (181) was also launched for citizen feedback on civic services.</p>"
+    },
+    {
+      "id": 4,
+      "slug": "spice-producers-panel",
+      "title": "CM Announces Panel for Spice Producers",
+      "image": "https://static.toiimg.com/thumb/msid-123773078,width-1280,height-720,resizemode-75/123773078.jpg",
+      "categoryKey": "do",
+      "excerpt": "A special committee to give Jaipur spice producers a global platform.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Empowering Spice Industry</h2><p class='mb-4'>CM Bhajanlal Sharma announced a new panel to support Rajasthan spice producers with GI tags and export guidance. The state will also host a Global Rajasthan Agritech Meet to provide international exposure to Jaipur’s agri-business sector.</p>"
+    },
+
+    {
+      "id": 5,
+      "slug": "unani-comic-winners",
+      "title": "Winner Announcement for Comic Story competition on Unani Medicine",
+      "image": "/blog1.png",
+      "categoryKey": "blog",
+      "excerpt": "Comic Story winners are out.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Unani Comic Winners</h2><p>Congratulations to the winners. Full list and entries inside.</p>"
+    },
+    {
+      "id": 6,
+      "slug": "unani-poem-winners",
+      "title": "Winner Announcement for Poem Competition on Unani Medicine",
+      "image": "/blog2.png",
+      "categoryKey": "blog",
+      "excerpt": "Poem competition winners announced.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Unani Poem Winners</h2><p>Read the winning poems and jury notes.</p>"
+    },
+    {
+      "id": 7,
+      "slug": "unani-poster-winners",
+      "title": "Winner Announcement for Poster Competition on Unani Medicine",
+      "image": "/blog3.png",
+      "categoryKey": "blog",
+      "excerpt": "Poster competition results published.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Unani Poster Winners</h2><p>Top posters with feedback and scoring.</p>"
+    },
+    {
+      "id": 8,
+      "slug": "delhi-book-fair-quiz-winners",
+      "title": "Winner Announcement for Delhi Book Fair 2025 Quiz",
+      "image": "/blog4.png",
+      "categoryKey": "blog",
+      "excerpt": "DBF 2025 quiz winners.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>DBF Quiz Winners</h2><p>Here’s the final list of winners and prizes.</p>"
+    }
+
+  ]
+}

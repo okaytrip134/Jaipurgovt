@@ -3,10 +3,10 @@ import Card from "../../Component/card";
 
 const Article = () => {
   return (
-    <section className="w-full px-6 sm:px-8 py-12 z-40 mt-2">
+    <section className="w-full px-6 sm:px-8 py-9 z-40 mt-2 bg-white/70">
       {/* Section Eyebrow + Title */}
       <div className="max-w-[1400px] mx-auto">
-        <span className="inline-block text-xs font-semibold tracking-wide text-[#C46340] bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
+        <span className="inline-block text-xs font-semibold tracking-wide text-orange-600 bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
           Deep Insights
         </span>
 
@@ -68,7 +68,7 @@ const Article = () => {
 
         {/* Right stacked cards */}
         <div className="flex flex-col gap-6">
-          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition">
+          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition bg-white">
             <Card
               image="https://maverickbird.com/wp-content/uploads/2019/05/29064314_2088915684458801_6697876526559831881_o.jpg"
               title="Jaipur hand block print: a hands-on experience"
@@ -80,14 +80,14 @@ const Article = () => {
               <span className="text-xs text-gray-500">4 min read</span>
               <a
                 href="#"
-                className="text-sm font-semibold text-gray-800 hover:text-[#C46340]"
+                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
               >
                 Read More
               </a>
             </div>
           </div>
 
-          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition">
+          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition bg-white">
             <Card
               image="https://i0.wp.com/travelshoebum.com/wp-content/uploads/2020/09/IMG_20200718_212254_280.jpg?fit=1200%2C900&ssl=1"
               title="Crafted in Jaipur: The Artisans Behind Pots, Clayware & More"
@@ -99,7 +99,7 @@ const Article = () => {
               <span className="text-xs text-gray-500">5 min read</span>
               <a
                 href="#"
-                className="text-sm font-semibold text-gray-800 hover:text-[#C46340]"
+                className="text-sm font-semibold text-gray-800 hover:text-orange-600"
               >
                 Read More
               </a>
