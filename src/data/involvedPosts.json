@@ -1,47 +1,47 @@
 {
   "tabs": [
-    { "key": "do", "label": "Event In Jaipur", "icon": "/checkbox.svg" },
+    { "key": "do", "label": "Event In Jaipur", "icon": "/Festival.svg" },
     { "key": "poll", "label": "POLL/SURVEY", "icon": "/questionnaire.svg" },
     { "key": "blog", "label": "BLOG", "icon": "/blog.svg" },
     { "key": "campaign", "label": "CAMPAIGN", "icon": "/Places.svg" },
     { "key": "podcast", "label": "PODCAST", "icon": "/podcast.svg" }
   ],
   "items": [
-{
+  {
       "id": 1,
-      "slug": "artha-chitra-poster-financial-literacy",
-      "title": "Artha Chitra – Online Poster Making Competition on Financial Literacy",
-      "image": "/contest1.png",
+      "slug": "jaipur-metro-phase-2",
+      "title": "CM Approves Jaipur Metro Phase-II DPR",
+      "image": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-10/05/thumb/featurecrop/1200X900/1728139364-6128.jpg",
       "categoryKey": "do",
-      "excerpt": "Join the online poster competition on financial literacy.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Artha Chitra</h2><p class='mb-4'>Create a poster to spread financial awareness. Top entries will be showcased online.</p><ul class='list-disc ml-6 space-y-1'><li>Theme: Financial Literacy</li><li>Eligibility: 14+ years</li><li>Deadline: 5 Oct 2025</li></ul><table class='table-auto border-collapse border border-gray-300 mt-4'><thead><tr><th class='border px-3 py-1'>Prize</th><th class='border px-3 py-1'>Reward</th></tr></thead><tbody><tr><td class='border px-3 py-1'>1st</td><td class='border px-3 py-1'>₹15,000 + Certificate</td></tr><tr><td class='border px-3 py-1'>2nd</td><td class='border px-3 py-1'>₹10,000 + Certificate</td></tr><tr><td class='border px-3 py-1'>3rd</td><td class='border px-3 py-1'>₹5,000 + Certificate</td></tr></tbody></table>"
+      "excerpt": "Bhajanlal Sharma clears DPR for 42.8 km Metro Phase-II from Todi Mode to Prahladpura.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Metro Expansion in Jaipur</h2><p class='mb-4'>Chief Minister Bhajanlal Sharma approved the Detailed Project Report (DPR) for Jaipur Metro Phase-II. The project spans 42.8 km from Todi Mode to Prahladpura, with 36 stations including elevated and underground ones. It will significantly improve Jaipur’s urban connectivity.</p>"
     },
     {
       "id": 2,
-      "slug": "logo-contest-kashi",
-      "title": "Logo Making Contest for the World’s Oldest Living City - Kashi",
-      "image": "/contest2.png",
+      "slug": "rsrtc-buses-launch",
+      "title": "CM Flags Off 162 New RSRTC Buses",
+      "image": "https://static.toiimg.com/thumb/msid-123739266,width-1280,height-720,resizemode-75/123739266.jpg",
       "categoryKey": "do",
-      "excerpt": "Design a logo that reflects Kashi's heritage.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Kashi Logo Contest</h2><p>Submit your creative logo. Shortlisted designs will go for public voting.</p>"
+      "excerpt": "CM launched new luxury & AC buses from Jaipur, including Kainchi Dham service.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Public Transport Boost</h2><p class='mb-4'>CM Bhajanlal Sharma flagged off 162 RSRTC buses from Jaipur, including luxury and AC coaches. These services include a special Jaipur–Kainchi Dham route, enhancing comfort and connectivity for citizens and pilgrims.</p>"
     },
     {
       "id": 3,
-      "slug": "reel-emerging-sti",
-      "title": "Reel Making Contest for Engaging Youth in Emerging STI for Viksit Bharat",
-      "image": "/contest3.png",
+      "slug": "led-streetlights-drive",
+      "title": "Jaipur Gets 2 Lakh LED Streetlights",
+      "image": "https://static.toiimg.com/thumb/msid-123684464,width-1280,height-720,resizemode-75/123684464.jpg",
       "categoryKey": "do",
-      "excerpt": "Make a short reel on science, tech & innovation themes.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>STI Reels</h2><p>Record a 30–60s reel highlighting an STI theme that excites you.</p>"
+      "excerpt": "CM launches campaign to install 200,000 LED streetlights in Jaipur under City Chalo drive.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Chalo Campaign</h2><p class='mb-4'>Ahead of the festive season, the Rajasthan government under CM Bhajanlal Sharma announced the installation of 2 lakh LED streetlights across Jaipur. A new helpline (181) was also launched for citizen feedback on civic services.</p>"
     },
     {
       "id": 4,
-      "slug": "poster-emerging-sti",
-      "title": "Poster Making Contest on Emerging STI for National Priorities towards Viksit Bharat",
-      "image": "/contest4.png",
+      "slug": "spice-producers-panel",
+      "title": "CM Announces Panel for Spice Producers",
+      "image": "https://static.toiimg.com/thumb/msid-123773078,width-1280,height-720,resizemode-75/123773078.jpg",
       "categoryKey": "do",
-      "excerpt": "Poster contest on national priority STI topics.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>STI Posters</h2><p>Create a poster around national priorities in STI.</p>"
+      "excerpt": "A special committee to give Jaipur spice producers a global platform.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Empowering Spice Industry</h2><p class='mb-4'>CM Bhajanlal Sharma announced a new panel to support Rajasthan spice producers with GI tags and export guidance. The state will also host a Global Rajasthan Agritech Meet to provide international exposure to Jaipur’s agri-business sector.</p>"
     },
 
     {

@@ -68,7 +68,7 @@ const Article = () => {
 
         {/* Right stacked cards */}
         <div className="flex flex-col gap-6">
-          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition bg-white">
+          <div className="group rounded-2xl border border-gray-200 p-3 hover:shadow-md transition bg-gray-50">
             <Card
               image="https://maverickbird.com/wp-content/uploads/2019/05/29064314_2088915684458801_6697876526559831881_o.jpg"
               title="Jaipur hand block print: a hands-on experience"
@@ -87,7 +87,7 @@ const Article = () => {
             </div>
           </div>
 
-          <div className="group rounded-2xl border border-gray-100 p-3 hover:shadow-md transition bg-white">
+          <div className="group rounded-2xl border border-gray-200 p-3 hover:shadow-md transition bg-gray-50">
             <Card
               image="https://i0.wp.com/travelshoebum.com/wp-content/uploads/2020/09/IMG_20200718_212254_280.jpg?fit=1200%2C900&ssl=1"
               title="Crafted in Jaipur: The Artisans Behind Pots, Clayware & More"

@@ -45,7 +45,7 @@ export default function GetInvolved() {
   // Content meta (title/subtitle) per tab, so your existing text stays same
   const contentMeta = {
     do: {
-      title: "Do/Task",
+      title: "Events happend in past",
       subtitle:
         "Find a variety of online & on ground skill-building tasks, activities & contests"
     },
@@ -69,7 +69,7 @@ export default function GetInvolved() {
   };
 
   return (
-    <section className="py-10 px-6 max-w-7xl mx-auto bg-[url('https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png')] bg-repeat bg-left-top">
+    <section className="py-10 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-sky-600">GET INVOLVED</h2>
         <p className="text-gray-600">Participate in nation-building activities</p>
@@ -83,9 +83,9 @@ export default function GetInvolved() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-200 rounded-xl focus:outline-none focus:ring focus:ring-offset ${
                 active
-                  ? "border-2 border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
+                  ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
                   : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
               }`}
               role="tab"
@@ -117,10 +117,10 @@ export default function GetInvolved() {
   {(itemsByTab[activeTab] || []).map((item) => (
     <article
       key={item.id}
-      className="h-full flex flex-col rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+        className="h-full flex flex-col rounded-2xl bg-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
     >
       {/* Fixed aspect image wrapper so sab ki height same */}
-      <div className="aspect-[16/9] w-full bg-gray-100">
+      <div className="aspect-[4/3] w-full bg-gray-100">
         <img
           src={item.image}
           alt={item.title}
@@ -130,11 +130,12 @@ export default function GetInvolved() {
       </div>
 
       {/* Content area grows, button sticks to bottom */}
-      <div className="p-4 flex flex-col flex-1">
+      <div className="p-3 flex flex-col flex-1">
         {/* Title with fixed min-height so rows align */}
-        <h3 className="text-sm text-gray-700 font-medium leading-6 line-clamp-3 min-h-[72px]">
-          {item.title}
-        </h3>
+    <h3 className="text-sm text-gray-700 font-medium leading-6 line-clamp-2 px-2 rounded">
+      {item.title}
+    </h3>
+
 
         {/* Spacer pushes button down */}
         <div className="mt-auto pt-4">

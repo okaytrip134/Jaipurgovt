@@ -8,6 +8,12 @@ body {
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
+  background:url("https://urban.rajasthan.gov.in/body_bg.96d9d8f9d5f8ab54.png");
+  background-repeat: repeat;  
+  background-position: left top;
+  background-color: #fff;
+  background-attachment: fixed;
+  background-size: auto;
 }
 /* CSS to handle dropdown visibility and smooth transitions */
 .dropdown-menu {
