@@ -72,7 +72,7 @@ export default function ImportantLinks() {
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col items-center justify-center text-center w-45 h-44 p-3 rounded-lg shadow-sm hover:shadow-lg transition-transform hover:scale-105 bg-cover bg-center"
+              className="flex flex-col items-center justify-center text-center w-45  h-44 p-3 rounded-lg shadow-sm hover:shadow-lg transition-transform hover:scale-105 bg-cover bg-center"
               style={{
                 backgroundImage: `url(${im})`,
               }}

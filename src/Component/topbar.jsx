@@ -58,7 +58,7 @@ const Topbar = () => {
                 <ul className="grid grid-cols-2 gap-2 p-3 text-sm">
                   <li>
                     <a
-                      href="https://www.mygov.in/"
+                      href="/"
                       className="block px-3 py-2 bg-blue-100 hover:bg-blue-200 rounded text-center"
                     >
                       English
@@ -66,7 +66,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/hi/"
+                      href="/"
                       className="block px-3 py-2 bg-green-100 hover:bg-green-200 rounded text-center"
                     >
                       हिन्दी
@@ -74,7 +74,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--p5bj3d4cc1c9scc.xn--45br5cyl/"
+                      href="/"
                       className="block px-3 py-2 bg-yellow-100 hover:bg-yellow-200 rounded text-center"
                     >
                       অসমীয়া
@@ -82,7 +82,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--p5b3cgab9b4be4e.xn--45brj9c/"
+                      href="/"
                       className="block px-3 py-2 bg-pink-100 hover:bg-pink-200 rounded text-center"
                     >
                       বাংলা
@@ -90,7 +90,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--0dc3cgab9b4bm5d.xn--gecrj9c/"
+                      href="/"
                       className="block px-3 py-2 bg-purple-100 hover:bg-purple-200 rounded text-center"
                     >
                       ગુજરાતી
@@ -98,7 +98,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/kn/"
+                      href="/"
                       className="block px-3 py-2 bg-orange-100 hover:bg-orange-200 rounded text-center"
                     >
                       ಕನ್ನಡ
@@ -106,7 +106,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/ml/"
+                      href="/"
                       className="block px-3 py-2 bg-red-100 hover:bg-red-200 rounded text-center"
                     >
                       മലയാളം
@@ -114,7 +114,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--11bp4cjb9b0be1f.xn--h2brj9c/"
+                      href="/"
                       className="block px-3 py-2 bg-indigo-100 hover:bg-indigo-200 rounded text-center"
                     >
                       मराठी
@@ -122,7 +122,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--ohc3cgab9b4be4e.xn--3hcrj9c/"
+                      href="/"
                       className="block px-3 py-2 bg-teal-100 hover:bg-teal-200 rounded text-center"
                     >
                       ଓଡ଼ିଆ
@@ -130,7 +130,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--d9b3cgab9b4bm5d.xn--s9brj9c/"
+                      href="/"
                       className="block px-3 py-2 bg-lime-100 hover:bg-lime-200 rounded text-center"
                     >
                       ਪੰਜਾਬੀ
@@ -138,7 +138,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/ta/"
+                      href="/"
                       className="block px-3 py-2 bg-cyan-100 hover:bg-cyan-200 rounded text-center"
                     >
                       தமிழ்
@@ -146,7 +146,7 @@ const Topbar = () => {
                   </li>
                   <li>
                     <a
-                      href="https://xn--zoc3cgab9b4be4e2cd.xn--fpcrj9c3d/"
+                      href="/"
                       className="block px-3 py-2 bg-rose-100 hover:bg-rose-200 rounded text-center"
                     >
                       తెలుగు
