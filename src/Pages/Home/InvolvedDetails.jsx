@@ -24,7 +24,7 @@ export default function InvolvedDetail() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px- py-10">
+    <div className="max-w-5xl mx-auto px-6 py-10">
       <div className="mb-4">
         <Link to="/" className="text-sm text-[#C46340] hover:underline">
           ← Back to Get Involved
@@ -33,17 +33,17 @@ export default function InvolvedDetail() {
 
       <h1 className="text-3xl font-bold mb-4 text-gray-900">{post.title}</h1>
 
-      <div className="w-full  bg-gray-100 rounded-xl overflow-hidden mb-6">
+      <div className="w-full aspect-[16/9] bg-gray-100 rounded-xl overflow-hidden mb-6">
         <img
           src={post.image}
           alt={post.title}
-          className="w-full h-110 object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
 
 <div
   className="
-    text-gray-800 leading-relaxed max-w-6xl mx-auto
+    text-gray-800 leading-relaxed max-w-3xl mx-auto
     [&>h1]:text-4xl [&>h1]:font-semibold [&>h1]:tracking-tight [&>h1]:text-gray-900 [&>h1]:mt-6 [&>h1]:mb-4
     [&>h2]:text-3xl [&>h2]:font-semibold [&>h2]:tracking-tight [&>h2]:text-gray-900 [&>h2]:mt-10 [&>h2]:mb-4
     [&>h3]:text-2xl [&>h3]:font-semibold [&>h3]:text-gray-900 [&>h3]:mt-8 [&>h3]:mb-3
