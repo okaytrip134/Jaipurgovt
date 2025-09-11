@@ -1,17 +1,25 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import "./nav.css";
 import Topbar from "./topbar";
 
 function Navbar() {
+  const { t, i18n } = useTranslation();
+
+  // Change language function
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <header className="w-full hidden md:block">
       <Topbar />
 
-      {/* isolate => apna stacking context */}
       <nav className="w-full border-b sticky top-0 z-30 isolate">
         <div className="max-w-full mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
-          {/* Logo fully left */}
+          {/* Logo */}
           <a href="/" className="flex items-center pl-4">
             <img
               src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
@@ -24,66 +32,65 @@ function Navbar() {
           <ul className="hidden xl:flex flex-1 justify-center text-black font-medium gap-6 md:gap-8 lg:gap-12">
             <li>
               <a href="/" className="flex items-center gap-1 hover:text-blue-600">
-                Home
+                {t("home")}
               </a>
             </li>
 
             {/* About Us */}
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
-                About Us <ChevronDown size={16} />
+                {t("about_us")} <ChevronDown size={16} />
               </span>
               <ul className="dropdown-menu z-[9999]">
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Local Produce</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Culinary Delights</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("local_produce")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("culinary_delights")}</a></li>
                 <li className="relative group cursor-pointer">
                   <span className="px-4 py-2 hover:bg-gray-100 flex justify-between items-center">
-                    Administrative Hierarchy <ChevronDown size={14} />
+                    {t("administrative_hierarchy")} <ChevronDown size={14} />
                   </span>
                   <ul className="dropdown-menu z-[10000]">
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Sub Item 1</a></li>
-                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Sub Item 2</a></li>
+                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("sub_item_1")}</a></li>
+                    <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("sub_item_2")}</a></li>
                   </ul>
                 </li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Organization Chart</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">About District</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Location & Area</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Geographical & Physical Features</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">History</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("organization_chart")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("about_district")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("location_area")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("geographical_features")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("history")}</a></li>
               </ul>
             </li>
 
             {/* Contact Us */}
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
-                Contact Us <ChevronDown size={16} />
+                {t("contact_us")} <ChevronDown size={16} />
               </span>
               <ul className="dropdown-menu z-[9999]">
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">District Administration</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">District Level Officers</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Block Level Officers</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Janaadhar Helpdesk</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Helpline</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">District War Room</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Right To Information</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("district_administration")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("district_officers")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("block_officers")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("janaadhar_helpdesk")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("helpline")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("district_war_room")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("rti")}</a></li>
               </ul>
             </li>
 
-            {/* Business */}
-            <li className="relative group cursor-pointer">
-              <span className="flex items-center gap-1 hover:text-blue-600">
-                Business <ChevronDown size={16} />
-              </span>
-              <ul className="dropdown-menu z-[9999]">
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Business Opportunity</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Economy</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Infrastructure</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Special Economic Zones</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Supporting Institutions</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Tenders</a></li>
-              </ul>
-            </li>
-
+{/* Business */}
+        <li className="relative group cursor-pointer">
+          <span className="flex items-center gap-1 hover:text-blue-600">
+            {t("business")} <ChevronDown size={16} />
+          </span>
+          <ul className="dropdown-menu z-[9999]">
+            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("business_opportunity")}</a></li>
+            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("economy")}</a></li>
+            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("infrastructure")}</a></li>
+            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("special_economic_zones")}</a></li>
+            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("supporting_institutions")}</a></li>
+            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("tenders")}</a></li>
+          </ul>
+        </li>
             {/* Media Gallery */}
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
@@ -142,9 +149,10 @@ function Navbar() {
                 <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Important Websites / Portals</a></li>
               </ul>
             </li>
+
           </ul>
 
-          {/* CM Profile — koi z-index mat do */}
+          {/* CM Profile */}
           <div className="hidden xl:flex items-center text-right pr-4">
             <img
               src="https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
@@ -152,8 +160,8 @@ function Navbar() {
               className="h-18 w-18 rounded-full object-cover"
             />
             <div>
-              <p className="m-0 font-medium text-sm">Shri BhajanLal Sharma</p>
-              <small className="text-gray-800">Hon'ble Chief Minister</small>
+              <p className="m-0 font-medium text-sm">{t("cm_name")}</p>
+              <small className="text-gray-800">{t("cm_title")}</small>
             </div>
           </div>
         </div>

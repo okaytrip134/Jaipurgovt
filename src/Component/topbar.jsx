@@ -1,13 +1,22 @@
-import React from 'react'
-import {
-  Globe,
-  Search,
-} from "lucide-react";
-import "./nav.css";
+import React, { useState } from 'react';
+import { Globe, Search, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
 const Topbar = () => {
+  const { t, i18n } = useTranslation();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    setIsDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <>
-      {/* ---------- Topbar ---------- */}
       <div className="w-full bg-white text-sm border-b">
         <div className="max-w-auto mx-auto flex flex-wrap justify-between items-center px-4 py-2">
           {/* Left side */}
@@ -15,17 +24,9 @@ const Topbar = () => {
             <a href="#SkipContent" className="hover:text-blue-600">
               ⏭ Skip To Main Content
             </a>
-            {/* <a
-              href="https://emitra.Jaipur.gov.in/"
-              target="_blank"
-              className="flex items-center gap-1 hover:text-blue-600"
-              rel="noreferrer"
-            >
-              <ArrowDownRight size={16} /> Avail Services
-            </a> */}
           </div>
 
-          {/* --------- News Marquee --------- */}
+          {/* News Marquee */}
           <div className="flex-1 mx-6 overflow-hidden">
             <marquee
               behavior="scroll"
@@ -33,135 +34,49 @@ const Topbar = () => {
               scrollamount="5"
               className="text-red-600 font-medium"
             >
-              📰 Latest News: 3 Sep, 2025	सतलुज नदी के रसायनयुक्त पानी की रोकथाम के लिए किये जा रहे हैं हर संभव प्रयास - जन स्वास्थ्य अभियांत्रिकी मंत्री | |
-              3 Sep, 2025	अंता विधानसभा उप चुनाव की तैयारियां शुरू- मतदाता सूचियों के विशेष संक्षिप्त पुनरीक्षण कार्यक्रम को लेकर राजनैतिक दलों के साथ बैठक आयोजित
+              📰 Latest News: 3 Sep, 2025 सतलुज नदी के रसायनयुक्त पानी की रोकथाम के लिए किये जा रहे हैं हर संभव प्रयास - जन स्वास्थ्य अभियांत्रिकी मंत्री | |
+              3 Sep, 2025 अंता विधानसभा उप चुनाव की तैयारियां शुरू- मतदाता सूचियों के विशेष संक्षिप्त पुनरीक्षण कार्यक्रम को लेकर राजनैतिक दलों के साथ बैठक आयोजित
             </marquee>
           </div>
 
           {/* Right side */}
           <div className="flex items-center gap-6">
             {/* Language Switch */}
-            <div className="flex gap-2 relative group">
-              <a
-                href="javascript:void(0)"
-                className="flex items-center gap-1 hover:text-blue-600"
+            <div className="relative group">
+              <button
+                onClick={toggleDropdown}
+                className="flex items-center gap-1 px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
               >
-                <Globe size={16} /> Lang
-              </a>
+                <Globe size={16} />
+                <span>{t("lang")}</span>
+                <ChevronDown size={14} className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
 
               {/* Dropdown */}
-              <div
-                className="absolute left-1/2 transform -translate-x-1/2 dropdown-menu
-      w-72 bg-white border rounded shadow-lg z-50
-      opacity-0 invisible translate-y-2 pointer-events-none"
-              >
-                <ul className="grid grid-cols-2 gap-2 p-3 text-sm">
-                  <li>
-                    <a
-                      href="https://www.mygov.in/"
-                      className="block px-3 py-2 bg-blue-100 hover:bg-blue-200 rounded text-center"
-                    >
-                      English
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/hi/"
-                      className="block px-3 py-2 bg-green-100 hover:bg-green-200 rounded text-center"
-                    >
-                      हिन्दी
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--p5bj3d4cc1c9scc.xn--45br5cyl/"
-                      className="block px-3 py-2 bg-yellow-100 hover:bg-yellow-200 rounded text-center"
-                    >
-                      অসমীয়া
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--p5b3cgab9b4be4e.xn--45brj9c/"
-                      className="block px-3 py-2 bg-pink-100 hover:bg-pink-200 rounded text-center"
-                    >
-                      বাংলা
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--0dc3cgab9b4bm5d.xn--gecrj9c/"
-                      className="block px-3 py-2 bg-purple-100 hover:bg-purple-200 rounded text-center"
-                    >
-                      ગુજરાતી
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/kn/"
-                      className="block px-3 py-2 bg-orange-100 hover:bg-orange-200 rounded text-center"
-                    >
-                      ಕನ್ನಡ
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/ml/"
-                      className="block px-3 py-2 bg-red-100 hover:bg-red-200 rounded text-center"
-                    >
-                      മലയാളം
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--11bp4cjb9b0be1f.xn--h2brj9c/"
-                      className="block px-3 py-2 bg-indigo-100 hover:bg-indigo-200 rounded text-center"
-                    >
-                      मराठी
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--ohc3cgab9b4be4e.xn--3hcrj9c/"
-                      className="block px-3 py-2 bg-teal-100 hover:bg-teal-200 rounded text-center"
-                    >
-                      ଓଡ଼ିଆ
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--d9b3cgab9b4bm5d.xn--s9brj9c/"
-                      className="block px-3 py-2 bg-lime-100 hover:bg-lime-200 rounded text-center"
-                    >
-                      ਪੰਜਾਬੀ
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--11b3cgab9b4bm5d.xn--h2brj9c/ta/"
-                      className="block px-3 py-2 bg-cyan-100 hover:bg-cyan-200 rounded text-center"
-                    >
-                      தமிழ்
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://xn--zoc3cgab9b4be4e2cd.xn--fpcrj9c3d/"
-                      className="block px-3 py-2 bg-rose-100 hover:bg-rose-200 rounded text-center"
-                    >
-                      తెలుగు
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              {isDropdownOpen && (
+                <div className="absolute top-full right-0 mt-1 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50 py-1">
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="block w-full text-left px-4 py-2 text-sm hover:bg-blue-50 transition-colors"
+                  >
+                    {t("english")}
+                  </button>
+                  <button
+                    onClick={() => changeLanguage("hi")}
+                    className="block w-full text-left px-4 py-2 text-sm hover:bg-blue-50 transition-colors"
+                  >
+                    {t("hindi")}
+                  </button>
+                  {/* Add other languages similarly */}
+                </div>
+              )}
             </div>
-
 
             {/* Font Resize */}
             <div className="flex gap-2">
-              <a className="cursor-pointer hover:text-blue-600">A+</a>
-              <a className="cursor-pointer hover:text-blue-600">A-</a>
-              <a className="cursor-pointer hover:text-blue-600">A</a>
+              <button className="cursor-pointer hover:text-blue-600">A+</button>
+              <button className="cursor-pointer hover:text-blue-600">A-</button>
+              <button className="cursor-pointer hover:text-blue-600">A</button>
             </div>
 
             {/* Theme Buttons */}
@@ -172,10 +87,10 @@ const Topbar = () => {
             </div>
 
             {/* Search */}
-            <form className="flex items-center border searchop rounded-2xl px-2">
+            <form className="hidden md:flex items-center border rounded-full px-1 py-1">
               <input
                 type="text"
-                placeholder="Search"
+                placeholder={t("search_placeholder")}
                 className="outline-none px-1 py-0.5 text-sm"
               />
               <button type="submit">
@@ -186,7 +101,7 @@ const Topbar = () => {
         </div>
       </div>
     </>
-  )
+  );
 }
 
 export default Topbar;
