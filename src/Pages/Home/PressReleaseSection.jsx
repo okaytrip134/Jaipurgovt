@@ -1,117 +1,167 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Calendar, FileText, ArrowRight } from "lucide-react";
 
-const InfoSection = () => {
+const NewsSection = () => {
   const pressReleases = [
     {
       date: "02 Sep, 2025",
-      text: "PM inaugurates the ‘Digital Bharat’ campaign to boost AI adoption in governance.",
+      title: "PM inaugurates the 'Digital Bharat' campaign to boost AI adoption in governance."
     },
     {
-      date: "28 Aug, 2025",
-      text: "Union Cabinet approves new Startup Support Scheme for emerging entrepreneurs.",
+      date: "28 Aug, 2025", 
+      title: "Union Cabinet approves new Startup Support Scheme for emerging entrepreneurs."
     },
     {
       date: "21 Aug, 2025",
-      text: "India signs MoU with Japan on renewable energy cooperation.",
+      title: "India signs MoU with Japan on renewable energy cooperation."
     },
     {
       date: "15 Aug, 2025",
-      text: "Independence Day 2025: Government launches National Innovation Mission.",
-    },
+      title: "Independence Day 2025: Government launches National Innovation Mission."
+    }
   ];
 
-  const documents = [
+  const quizzes = [
     {
-      date: "01 Sep, 2025",
-      text: "Guidelines for State-level implementation of Clean Energy Policy.",
+      title: "National Space Day Quiz 2025 (Telugu)",
+      image: "/quiz-telugu.jpg",
+      deadline: "20/09/2025 18:15 (IST)",
+      prize: true
     },
     {
-      date: "24 Aug, 2025",
-      text: "Annual Report 2024–25: Ministry of Education.",
+      title: "National Space Day Quiz 2025 (Tamil)",
+      image: "/quiz-tamil.jpg", 
+      deadline: "20/09/2025 18:15 (IST)",
+      prize: true
     },
     {
-      date: "10 Aug, 2025",
-      text: "Policy framework for National Cyber Security preparedness.",
+      title: "National Space Day Quiz 2025 (Punjabi)",
+      image: "/quiz-punjabi.jpg",
+      deadline: "20/09/2025 18:15 (IST)", 
+      prize: true
     },
     {
-      date: "30 Jul, 2025",
-      text: "White Paper on Smart Cities and Urban Planning.",
-    },
+      title: "National Space Day Quiz 2025 (Hindi)",
+      image: "/quiz-hindi.jpg",
+      deadline: "20/09/2025 18:15 (IST)",
+      prize: true
+    }
   ];
-
-  const tenders = [
-    {
-      date: "29 Aug, 2025",
-      text: "Tender for supply of electric buses under Green Mobility Project.",
-    },
-    {
-      date: "20 Aug, 2025",
-      text: "Procurement of solar panels for government buildings.",
-    },
-    {
-      date: "11 Aug, 2025",
-      text: "Bids invited for AI-based citizen grievance redressal system.",
-    },
-    {
-      date: "01 Aug, 2025",
-      text: "Tender for construction of rural health centres in Tier-2 cities.",
-    },
-  ];
-
-  const Card = ({ title, color, items }) => (
-    <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-      {/* Header */}
-      <div className={`flex justify-between items-center px-5 py-3 ${color}`}>
-        <h2 className="text-lg font-semibold text-white">{title}</h2>
-        <button className="bg-white text-gray-900 text-xs font-medium px-3 py-1 rounded-full hover:bg-gray-100 transition">
-          View All
-        </button>
-      </div>
-
-      {/* Content */}
-      <div className="p-5 space-y-4">
-        {items.map((item, idx) => (
-          <div
-            key={idx}
-            className="group border-b pb-3 last:border-0 hover:bg-gray-50 rounded-md px-2 transition"
-          >
-            <span className="inline-block bg-gray-200 text-gray-700 text-xs font-medium px-2 py-1 rounded-md">
-              {item.date}
-            </span>
-            <p className="text-sm text-gray-800 mt-2 group-hover:text-blue-600 transition">
-              {item.text}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
 
   return (
-    <section
-      className="relative py-16 px-6 md:px-12"
-      style={{
-        backgroundImage: "url('https://www.mygov.in/sites/all/themes/mygov/images/paralex-bg.png')", // 👈 apna background image path yaha do
-        backgroundSize: "contain",
-        backgroundPosition: "center", 
-        
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-white/40"></div>
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          {/* Press Releases Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold text-[#2E5984]">Press Releases</h2>
+              <button className="text-[#D2737D] font-semibold hover:text-[#2E5984] transition-colors duration-300">
+                View All
+              </button>
+            </div>
 
-      {/* Content */}
-      <div className="relative max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-9">
-        <Card title="Press Releases" color="bg-red-600" items={pressReleases} />
-        <Card
-          title="Government Documents"
-          color="bg-indigo-600"
-          items={documents}
-        />
-        <Card title="Tender" color="bg-purple-700" items={tenders} />
+            <div className="space-y-6">
+              {pressReleases.map((release, index) => (
+                <motion.div
+                  key={index}
+                  className="group cursor-pointer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-gray-50 hover:bg-[#F4F3EE] rounded-lg p-6 transition-all duration-300 border-l-4 border-[#D2737D] group-hover:border-[#2E5984]">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-[#D2737D] rounded-lg flex items-center justify-center group-hover:bg-[#2E5984] transition-colors duration-300">
+                          <FileText className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center text-sm text-gray-500 mb-2">
+                          <Calendar className="w-4 h-4 mr-1" />
+                          {release.date}
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-800 group-hover:text-[#2E5984] transition-colors duration-300">
+                          {release.title}
+                        </h3>
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-[#D2737D] group-hover:translate-x-1 transition-all duration-300" />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Popular News/Quizzes Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold text-[#2E5984]">Most Popular News From Jaipur!</h2>
+              <button className="text-[#D2737D] font-semibold hover:text-[#2E5984] transition-colors duration-300">
+                View All
+              </button>
+            </div>
+            
+            <p className="text-gray-600 mb-8">You may have to look out for these news.</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {quizzes.map((quiz, index) => (
+                <motion.div
+                  key={index}
+                  className="group cursor-pointer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group-hover:border-[#D2737D]/20">
+                    {/* Quiz Image Placeholder */}
+                    <div className="h-32 bg-gradient-to-r from-[#D2737D] to-[#F4A261] relative overflow-hidden">
+                      <div className="absolute inset-0 bg-black/20"></div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <h4 className="text-white font-bold text-sm text-center px-4">
+                          {quiz.title}
+                        </h4>
+                      </div>
+                      {quiz.prize && (
+                        <div className="absolute top-2 right-2 bg-[#F4A261] text-[#2E5984] px-2 py-1 rounded text-xs font-bold">
+                          🎁 Cash Prize
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="p-4">
+                      <p className="text-sm text-gray-600 mb-2">
+                        Last Date: {quiz.deadline}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[#2E5984] font-semibold text-sm">Active</span>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#D2737D] group-hover:translate-x-1 transition-all duration-300" />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default InfoSection;
+export default NewsSection;

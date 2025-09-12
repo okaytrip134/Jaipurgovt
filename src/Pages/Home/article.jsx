@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../Component/card";
+import Card from "../../Component/card1";
 
 const Article = () => {
   return (
@@ -14,13 +14,9 @@ const Article = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
             Insights of Jaipur’s
           </h2>
-
-          <a
-            href="#"
-            className="hidden sm:inline-block text-sm font-medium text-gray-600 hover:text-gray-900"
-          >
-            View all
-          </a>
+              <button className="text-[#D2737D] font-semibold hover:text-[#2E5984] transition-colors duration-300" onClick={() => window.location.href = '#'}>
+                View All
+              </button>
         </div>
 
         <div className="mt-2 h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full" />
@@ -110,12 +106,9 @@ const Article = () => {
 
       {/* Mobile “view all” link */}
       <div className="max-w-[1400px] mx-auto mt-8 sm:hidden">
-        <a
-          href="#"
-          className="inline-block text-sm font-medium text-gray-600 hover:text-gray-900"
-        >
-          View all
-        </a>
+              <button className="text-[#D2737D] font-semibold hover:text-[#2E5984] transition-colors duration-300" onClick={() => window.location.href = '#'}>
+                View All
+              </button>
       </div>
     </section>
   );
