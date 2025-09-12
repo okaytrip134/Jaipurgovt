@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="relative bg-contain bg-center text-white py-8 bg-[#FFAC00]" style={{ backgroundImage: "url('')" }}>
+    <footer className="relative bg-contain bg-center text-white py-8" style={{background: "var(--gradient-primary)"}}>
       {/* Black overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 

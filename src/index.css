@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+:root {
+  --gradient-primary: linear-gradient(to bottom right, #2E5984, #D2737D);
+}
 
 
 body {
