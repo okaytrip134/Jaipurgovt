@@ -85,5 +85,117 @@
   "cta.join_whatsapp_title": "Join on WhatsApp",
   "cta.join_prefix": "JOIN",
   "cta.city_name": "Jaipur",
-  "cta.community": "Community"
+  "cta.community": "Community",
+   "get_involved_title": "GET INVOLVED",
+  "get_involved_subtitle": "Participate in nation-building activities",
+  
+  "tabs": {
+    "do": "Do",
+    "blog": "Blog",
+    "poll": "Poll",
+    "campaign": "Campaign",
+    "podcast": "Podcast"
+  },
+
+  "content": {
+    "do": {
+      "title": "Events happened in past",
+      "subtitle": "Find a variety of online & on ground skill-building tasks, activities & contests"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Get an insight on the citizen’s success stories, contest’s winner announcements, positive news."
+    },
+    "poll": {
+      "title": "Polls/Surveys",
+      "subtitle": "Share your opinion to help shape better policy."
+    },
+    "campaign": {
+      "title": "Campaigns",
+      "subtitle": "Participate and spread the word."
+    },
+    "podcast": {
+      "title": "Podcast",
+      "subtitle": "Listen to stories and updates."
+    }
+  },
+  "article": {
+    "deep_insights": "Deep Insights",
+    "insights_jaipur": "Insights of Jaipur’s",
+    "view_all": "View All",
+    "tourism": "Tourism",
+    "jaipur": "Jaipur",
+    "discover_hidden_places": "Discover the Hidden Jaipur Tourism Places experience",
+    "read_more": "Read More",
+    "hand_block_print_title": "Jaipur hand block print: a hands-on experience",
+    "hand_block_print_desc": "Unveiling the enigmatic world of giant pandas and conservation challenges",
+    "crafted_in_jaipur_title": "Crafted in Jaipur: The Artisans Behind Pots, Clayware & More",
+    "crafted_in_jaipur_desc": "Fauna & Flora has been using the collective knowledge and experience to protect nature."
+  },
+   "newsSection": {
+    "pressReleasesTitle": "Press Releases",
+    "viewAll": "View All",
+    "mostPopularNews": "Most Popular News From Jaipur!",
+    "lookOutForThese": "You may have to look out for these news.",
+    "quizPrize": "🎁 Cash Prize",
+    "activeStatus": "Active"
+  },
+   "footer": {
+    "government_of_jaipur": "Government of Jaipur",
+    "district_administration_portal": "District Administration Portal",
+    "portal_description": "This portal serves as the official gateway to information, services, and resources of the Jaipur District Administration. Citizens, businesses, and visitors can explore important updates, access documents, and connect with government departments.",
+    "about_us": "About Us",
+    "local_produce": "Local Produce",
+    "culinary_delights": "Culinary Delights",
+    "administrative_hierarchy": "Administrative Hierarchy",
+    "organization_chart": "Organization Chart",
+    "about_district": "About District",
+    "location_area": "Location & Area",
+    "geographical_features": "Geographical Features",
+    "history": "History",
+    "contact_us": "Contact Us",
+    "district_administration": "District Administration",
+    "district_officers": "District Level Officers",
+    "block_officers": "Block Level Officers",
+    "janaadhar_helpdesk": "Janaadhar Helpdesk",
+    "helpline": "Helpline",
+    "district_war_room": "District War Room",
+    "rti": "Right To Information",
+    "business": "Business",
+    "business_opportunity": "Business Opportunity",
+    "economy": "Economy",
+    "infrastructure": "Infrastructure",
+    "special_economic_zones": "Special Economic Zones",
+    "supporting_institutions": "Supporting Institutions",
+    "tenders": "Tenders",
+    "media_gallery": "Media Gallery",
+    "zila_darshan_pustika": "Zila Darshan Pustika",
+    "poster": "Poster",
+    "video_awareness_material": "Video-Awareness Material",
+    "audio_jingles": "Audio Jingles",
+    "advertisement": "Advertisement",
+    "district_photo_gallery": "District Photo Gallery",
+    "awards": "Awards",
+    "documents": "Documents",
+    "expenditure_statement": "Expenditure Statement",
+    "documents_all": "Documents (All)",
+    "election_orders_training": "Election Orders & Training",
+    "rti_related": "RTI Related",
+    "recruitment_related": "Recruitment Related",
+    "orders": "Orders",
+    "circular": "Circular",
+    "citizen_corner": "Citizen Corner",
+    "e_pledge": "E-Pledge",
+    "nfsa_application_form": "NFSA Application Form",
+    "download_admit_cards": "Download Admit Cards",
+    "election_department": "Election Department",
+    "smart_city": "Smart City",
+    "farmer_registry_camp": "Farmer Registry Camp",
+    "emergency": "Emergency",
+    "district_office": "District Collectorate, Jaipur",
+    "copy_rights": "© 2025 Government of Jaipur. All Rights Reserved.",
+    "terms_conditions": "Terms & Conditions",
+    "privacy_policy": "Privacy Policy",
+    "disclaimer": "Disclaimer"
+  }
 }

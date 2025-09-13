@@ -1,13 +1,10 @@
-// src/pages/GetInvolved.jsx
 import React, { useState, useMemo, useCallback, useEffect } from "react";
+import { useTranslation } from "react-i18next"; 
 import useEmblaCarousel from "embla-carousel-react";
 import data from "../../data/involvedPosts.json";
-
-// FIX THE PATH/CASE: make sure these exist exactly like this
 import Card from "../../Component/card";
 import ResponsiveCardsCarousel from "../../Component/ResponsiveCardsCarousel";
 
-/** Colorable icon via CSS mask. */
 function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
   if (!src) return null;
   const style = {
@@ -28,7 +25,6 @@ function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
   );
 }
 
-/** Mobile Tabs Carousel using Embla */
 function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inactiveColor }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -43,7 +39,6 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
 
   useEffect(() => {
     if (!emblaApi) return;
-    // Keep the active tab in view when it changes
     const idx = Math.max(0, tabs.findIndex(t => t.key === activeTab));
     emblaApi.scrollTo(idx, true);
   }, [activeTab, emblaApi, tabs]);
@@ -101,10 +96,10 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
 }
 
 export default function GetInvolved() {
-  const tabs = data.tabs || []; // [{key,label,icon}]
+  const { t } = useTranslation(); 
+  const tabs = data.tabs || []; 
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.key || "do");
 
-  // itemsByTab: { do: [..], blog: [..] ... }
   const itemsByTab = useMemo(() => {
     const map = {};
     for (const item of data.items || []) {
@@ -122,26 +117,24 @@ export default function GetInvolved() {
   // Content meta (title/subtitle) per tab
   const contentMeta = {
     do: {
-      title: "Events happened in past",
-      subtitle:
-        "Find a variety of online & on ground skill-building tasks, activities & contests"
+      title: t("content.do.title"),
+      subtitle: t("content.do.subtitle")
     },
     blog: {
-      title: "Blog",
-      subtitle:
-        "Get an insight on the citizen’s success stories, contest’s winner announcements, positive news."
+      title: t("content.blog.title"),
+      subtitle: t("content.blog.subtitle")
     },
     poll: {
-      title: "Polls/Surveys",
-      subtitle: "Share your opinion to help shape better policy."
+      title: t("content.poll.title"),
+      subtitle: t("content.poll.subtitle")
     },
     campaign: {
-      title: "Campaigns",
-      subtitle: "Participate and spread the word."
+      title: t("content.campaign.title"),
+      subtitle: t("content.campaign.subtitle")
     },
     podcast: {
-      title: "Podcast",
-      subtitle: "Listen to stories and updates."
+      title: t("content.podcast.title"),
+      subtitle: t("content.podcast.subtitle")
     }
   };
 
@@ -164,13 +157,16 @@ export default function GetInvolved() {
   return (
     <section className="py-10 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-sky-600">GET INVOLVED</h2>
-        <p className="text-gray-600">Participate in nation-building activities</p>
+        <h2 className="text-3xl font-bold text-sky-600">{t("get_involved_title")}</h2>
+        <p className="text-gray-600">{t("get_involved_subtitle")}</p>
       </div>
 
       {/* Tabs: Mobile carousel */}
       <MobileTabsCarousel
-        tabs={tabs}
+        tabs={tabs.map(tab => ({
+          ...tab,
+          label: t(`tabs.${tab.key}`)  // Translate tab labels dynamically
+        }))}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         activeColor={activeColor}

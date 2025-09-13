@@ -1,8 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, FileText, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";  // Import useTranslation hook
 
 const NewsSection = () => {
+  const { t } = useTranslation();  // Initialize translation hook
+
   const pressReleases = [
     {
       date: "02 Sep, 2025",
@@ -62,9 +66,9 @@ const NewsSection = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-[#2E5984]">Press Releases</h2>
+              <h2 className="text-3xl font-bold text-[#2E5984]">{t('newsSection.pressReleasesTitle')}</h2>
               <button className="text-[#D2737D] font-semibold hover:text-[#2E5984] transition-colors duration-300">
-                View All
+                {t('newsSection.viewAll')}
               </button>
             </div>
 
@@ -110,13 +114,13 @@ const NewsSection = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-[#2E5984]">Most Popular News From Jaipur!</h2>
+              <h2 className="text-3xl font-bold text-[#2E5984]">{t('newsSection.mostPopularNews')}</h2>
               <button className="text-[#D2737D] font-semibold hover:text-[#2E5984] transition-colors duration-300">
-                View All
+                {t('newsSection.viewAll')}
               </button>
             </div>
             
-            <p className="text-gray-600 mb-8">You may have to look out for these news.</p>
+            <p className="text-gray-600 mb-8">{t('newsSection.lookOutForThese')}</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {quizzes.map((quiz, index) => (
@@ -139,7 +143,7 @@ const NewsSection = () => {
                       </div>
                       {quiz.prize && (
                         <div className="absolute top-2 right-2 bg-[#F4A261] text-[#2E5984] px-2 py-1 rounded text-xs font-bold">
-                          🎁 Cash Prize
+                          {t('newsSection.quizPrize')}
                         </div>
                       )}
                     </div>
@@ -149,7 +153,7 @@ const NewsSection = () => {
                         Last Date: {quiz.deadline}
                       </p>
                       <div className="flex items-center justify-between">
-                        <span className="text-[#2E5984] font-semibold text-sm">Active</span>
+                        <span className="text-[#2E5984] font-semibold text-sm">{t('newsSection.activeStatus')}</span>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#D2737D] group-hover:translate-x-1 transition-all duration-300" />
                       </div>
                     </div>
