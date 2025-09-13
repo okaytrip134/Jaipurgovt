@@ -69,5 +69,21 @@
   "download_forms": "Download Forms",
   "services": "Services",
   "important_websites_portals": "Important Websites / Portals",
-  "search_placeholder": "Search"
+  "search_placeholder": "Search",
+  "hero.statistics_title": "Statistics:",
+  "hero.slide_aria": "Go to slide {{n}}",
+
+  "stats.suffix.lakh": "+ Lakh",
+
+  "stats.labels.jaipur_tourism": "Jaipur Tourism",
+  "stats.labels.submissions_in_tasks": "SUBMISSIONS IN TASKS",
+  "stats.labels.comments_in_discussions": "COMMENTS IN DISCUSSIONS",
+  "stats.labels.votes_in_polls": "VOTES IN POLLS",
+  "stats.labels.participation_in_quiz": "PARTICIPATION IN QUIZ",
+  "stats.labels.pledges_taken": "PLEDGES TAKEN",
+
+  "cta.join_whatsapp_title": "Join on WhatsApp",
+  "cta.join_prefix": "JOIN",
+  "cta.city_name": "Jaipur",
+  "cta.community": "Community"
 }

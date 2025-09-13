@@ -1,8 +1,13 @@
-import React, { useState, useMemo } from "react";
+// src/pages/GetInvolved.jsx
+import React, { useState, useMemo, useCallback, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import data from "../../data/involvedPosts.json";
-import Card from "../../Component/card"; // ⬅️ import your reusable card component
 
-/** Colorable icon via CSS mask. Keep your exact look intact. */
+// FIX THE PATH/CASE: make sure these exist exactly like this
+import Card from "../../Component/card";
+import ResponsiveCardsCarousel from "../../Component/ResponsiveCardsCarousel";
+
+/** Colorable icon via CSS mask. */
 function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
   if (!src) return null;
   const style = {
@@ -23,14 +28,86 @@ function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
   );
 }
 
+/** Mobile Tabs Carousel using Embla */
+function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inactiveColor }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    align: "start",
+    dragFree: true,
+    skipSnaps: false,
+    inViewThreshold: 0.6
+  });
+
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    // Keep the active tab in view when it changes
+    const idx = Math.max(0, tabs.findIndex(t => t.key === activeTab));
+    emblaApi.scrollTo(idx, true);
+  }, [activeTab, emblaApi, tabs]);
+
+  return (
+    <div className="relative md:hidden">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex gap-4 pl-2 pr-2">
+          {tabs.map((tab) => {
+            const active = activeTab === tab.key;
+            return (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`min-w-[160px] flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
+                  active
+                    ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
+                    : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
+                }`}
+                role="tab"
+                aria-selected={active}
+              >
+                <IconMasked
+                  src={tab.icon}
+                  alt={tab.label}
+                  size={28}
+                  color={active ? activeColor : inactiveColor}
+                />
+                <p className="mt-2 text-sm font-semibold text-center">{tab.label}</p>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Arrows */}
+      <button
+        type="button"
+        aria-label="Previous tabs"
+        onClick={scrollPrev}
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow rounded-full p-2 ml-1"
+      >
+        ◀
+      </button>
+      <button
+        type="button"
+        aria-label="Next tabs"
+        onClick={scrollNext}
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow rounded-full p-2 mr-1"
+      >
+        ▶
+      </button>
+    </div>
+  );
+}
+
 export default function GetInvolved() {
-  const tabs = data.tabs; // [{key,label,icon}]
+  const tabs = data.tabs || []; // [{key,label,icon}]
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.key || "do");
 
   // itemsByTab: { do: [..], blog: [..] ... }
   const itemsByTab = useMemo(() => {
     const map = {};
-    for (const item of data.items) {
+    for (const item of data.items || []) {
       const k = item.categoryKey;
       if (!map[k]) map[k] = [];
       map[k].push(item);
@@ -68,6 +145,22 @@ export default function GetInvolved() {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const visibleItems = itemsByTab[activeTab] || [];
+
+  // Map items to Card props for the mobile carousel
+  const itemsForCarousel = useMemo(
+    () =>
+      visibleItems.map((item) => ({
+        image: item.image,
+        title: item.title,
+        description: item.description,
+        tag: item.category,
+        slug: item.slug
+      })),
+    [visibleItems]
+  );
+
   return (
     <section className="py-10 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-10">
@@ -75,8 +168,17 @@ export default function GetInvolved() {
         <p className="text-gray-600">Participate in nation-building activities</p>
       </div>
 
-      {/* Tabs */}
-      <div className="flex flex-wrap justify-center gap-12 mb-12" role="tablist">
+      {/* Tabs: Mobile carousel */}
+      <MobileTabsCarousel
+        tabs={tabs}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        activeColor={activeColor}
+        inactiveColor={inactiveColor}
+      />
+
+      {/* Tabs: Desktop static grid */}
+      <div className="hidden md:flex flex-wrap justify-center gap-12 mb-12" role="tablist">
         {tabs.map((tab) => {
           const active = activeTab === tab.key;
           return (
@@ -111,9 +213,18 @@ export default function GetInvolved() {
         <p className="text-gray-500">{contentMeta[activeTab]?.subtitle}</p>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-        {(itemsByTab[activeTab] || []).map((item) => (
+      {/* Cards: Mobile carousel */}
+      <div className="md:hidden">
+        {itemsForCarousel.length ? (
+          <ResponsiveCardsCarousel items={itemsForCarousel} interval={3000} />
+        ) : (
+          <div className="text-center text-sm text-gray-500">No items yet.</div>
+        )}
+      </div>
+
+      {/* Cards: Desktop grid */}
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        {visibleItems.map((item) => (
           <Card
             key={item.id}
             image={item.image}
@@ -124,7 +235,7 @@ export default function GetInvolved() {
           />
         ))}
 
-        {!itemsByTab[activeTab]?.length && (
+        {!visibleItems.length && (
           <div className="col-span-full text-center text-sm text-gray-500">
             No items yet.
           </div>

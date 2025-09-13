@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const slides = [
   { id: 1, image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
@@ -6,31 +7,33 @@ const slides = [
   { id: 3, image: "https://images.unsplash.com/photo-1712166424478-eb9b7103e460?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
 ];
 
+// stats ko translation-keys ke saath define karo
 const stats = [
-  { value: "5,92,97,676", label: "Jaipur Tourism" },
-  { value: "17.89", suffix: " + Lakh", label: "SUBMISSIONS IN TASKS" },
-  { value: "55.89", suffix: " + Lakh", label: "COMMENTS IN DISCUSSIONS" },
-  { value: "38.76", suffix: " + Lakh", label: "VOTES IN POLLS" },
-  { value: "303.77", suffix: " + Lakh", label: "PARTICIPATION IN QUIZ" },
-  { value: "250.04", suffix: " + Lakh", label: "PLEDGES TAKEN" },
+  { value: "5,92,97,676", labelKey: "stats.labels.jaipur_tourism" },
+  { value: "17.89", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.submissions_in_tasks" },
+  { value: "55.89", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.comments_in_discussions" },
+  { value: "38.76", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.votes_in_polls" },
+  { value: "303.77", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.participation_in_quiz" },
+  { value: "250.04", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.pledges_taken" },
 ];
 
-// 👇 Update this path to where you placed the icon
-const WHATSAPP_ICON = "/icons/whatsapp.png"; // e.g. public/icons/whatsapp.png
+// agar icon public/icons/whatsapp.png me rakha hai to yahi path sahi hai
+const WHATSAPP_ICON = "/icons/whatsapp.png";
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const id = setInterval(() => {
-      setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
+      setCurrent(p => (p === slides.length - 1 ? 0 : p + 1));
     }, 5000);
     return () => clearInterval(id);
   }, []);
 
   return (
     <>
-      {/* HERO (reduced height) */}
+      {/* HERO */}
       <section className="relative overflow-hidden h-[220px] sm:h-[300px] md:h-[380px] lg:h-[440px]">
         <div className="absolute inset-0">
           {slides.map((s, i) => (
@@ -49,7 +52,7 @@ export default function HeroSlider() {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              aria-label={`Go to slide ${i + 1}`}
+              aria-label={t("hero.slide_aria", { n: i + 1 })}
               className={`h-2 w-2 rounded-full transition-all ${i === current ? "bg-white w-6" : "bg-white/60"}`}
             />
           ))}
@@ -61,37 +64,41 @@ export default function HeroSlider() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="flex items-center gap-6 py-5">
             <div className="relative shrink-0">
-              <div className="text-4xl sm:text-3xl font-semibold text-gray-800">Statistics:</div>
-              {/* <svg className="absolute -bottom-4 left-3 w-20 h-8 text-gray-700/60" viewBox="0 0 120 40" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round">
-                <path d="M5 20c25 25 55 0 85 0" />
-                <path d="M90 20l-8-8M90 20l-8 8" />
-              </svg> */}
+              <div className="text-4xl sm:text-3xl font-semibold text-gray-800">
+                {t("hero.statistics_title")}
+              </div>
             </div>
 
             <div className="flex-1 overflow-hidden flex items-center">
               <div className="min-w-max mx-auto flex items-end gap-6 pr-3">
-                {stats.map((st) => (
-                  <div key={st.label} className="flex flex-col">
+                {stats.map(st => (
+                  <div key={st.labelKey} className="flex flex-col">
                     <div className="text-[20px] sm:text-[20px] font-extrabold text-gray-800 leading-none">
                       {st.value}
-                      {st.suffix ? <span className="ml-1 text-gray-600 font-semibold text-[14px]">{st.suffix}</span> : null}
+                      {st.suffixKey ? (
+                        <span className="ml-1 text-gray-600 font-semibold text-[14px]">
+                          {t(st.suffixKey)}
+                        </span>
+                      ) : null}
                     </div>
-                    <div className="mt-1 text-[11px] sm:text-[8px] uppercase tracking-wide text-gray-500">{st.label}</div>
+                    <div className="mt-1 text-[11px] sm:text-[8px] uppercase tracking-wide text-gray-500">
+                      {t(st.labelKey)}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* WhatsApp pill using your downloaded icon */}
+            {/* WhatsApp pill */}
             <a
               href="#"
               className="hidden md:flex items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-3 shadow-sm hover:bg-emerald-100 transition"
-              title="Join on WhatsApp"
+              title={t("cta.join_whatsapp_title")}
             >
               <span className="text-[12px] text-emerald-700 font-semibold">
-                JOIN <span className="text-[#1d9b50] ms-2 me-1">Jaipur</span>
-                <span className="text-[#1d9b50]">Comunnity
-                </span>
+                {t("cta.join_prefix")}{" "}
+                <span className="text-[#1d9b50] ms-2 me-1">{t("cta.city_name")}</span>
+                <span className="text-[#1d9b50]">{t("cta.community")}</span>
               </span>
               <span className="flex items-center gap-2">
                 <img

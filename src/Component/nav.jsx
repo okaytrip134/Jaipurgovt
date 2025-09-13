@@ -8,7 +8,6 @@ import Topbar from "./topbar";
 function Navbar() {
   const { t, i18n } = useTranslation();
 
-  // Change language function
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
@@ -20,7 +19,7 @@ function Navbar() {
       <nav className="w-full border-b sticky top-0 z-30 isolate">
         <div className="max-w-full mx-auto flex items-center justify-between px-0 py-3 navbar-bg">
           {/* Logo */}
-          <a href="/" className="flex items-center pl-4">
+          <a href="/" className="flex items-center pl-4" aria-label={t("home")}>
             <img
               src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
               alt="Gov. of Jaipur"
@@ -77,92 +76,97 @@ function Navbar() {
               </ul>
             </li>
 
-{/* Business */}
-        <li className="relative group cursor-pointer">
-          <span className="flex items-center gap-1 hover:text-blue-600">
-            {t("business")} <ChevronDown size={16} />
-          </span>
-          <ul className="dropdown-menu z-[9999]">
-            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("business_opportunity")}</a></li>
-            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("economy")}</a></li>
-            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("infrastructure")}</a></li>
-            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("special_economic_zones")}</a></li>
-            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("supporting_institutions")}</a></li>
-            <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("tenders")}</a></li>
-          </ul>
-        </li>
+            {/* Business */}
+            <li className="relative group cursor-pointer">
+              <span className="flex items-center gap-1 hover:text-blue-600">
+                {t("business")} <ChevronDown size={16} />
+              </span>
+              <ul className="dropdown-menu z-[9999]">
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("business_opportunity")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("economy")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("infrastructure")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("special_economic_zones")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("supporting_institutions")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("tenders")}</a></li>
+              </ul>
+            </li>
+
             {/* Media Gallery */}
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
-                Media Gallery <ChevronDown size={16} />
+                {t("media_gallery")} <ChevronDown size={16} />
               </span>
               <ul className="dropdown-menu z-[9999]">
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Zila Darshan Pustika</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Poster</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Video-Awareness Material</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Audio Jingles</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Advertisement</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">District Photo Gallery</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Awards</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("zila_darshan_pustika")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("poster")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("video_awareness_material")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("audio_jingles")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("advertisement")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("district_photo_gallery")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("awards")}</a></li>
               </ul>
             </li>
 
             {/* Documents */}
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
-                Documents <ChevronDown size={16} />
+                {t("documents")} <ChevronDown size={16} />
               </span>
               <ul className="dropdown-menu z-[9999]">
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Expenditure Statement</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Documents (All)</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Election Orders & Training</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">RTI Related</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Recruitment Related</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Orders</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Circular</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Act & Rules</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Annual Progress Report</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Notification</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Policy</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Guidelines</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Employees Related</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Reports</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Covid-19 Orders</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Roster Register</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("expenditure_statement")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("documents_all")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("election_orders_training")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("rti_related")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("recruitment_related")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("orders")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("circular")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("act_rules")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("annual_progress_report")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("notification")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("policy")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("guidelines")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("employees_related")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("reports")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("covid_19_orders")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("roster_register")}</a></li>
               </ul>
             </li>
 
             {/* Citizen Corner */}
             <li className="relative group cursor-pointer">
               <span className="flex items-center gap-1 hover:text-blue-600">
-                Citizen Corner <ChevronDown size={16} />
+                {t("citizen_corner")} <ChevronDown size={16} />
               </span>
               <ul className="dropdown-menu z-[9999]">
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">E-Pledge</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">NFSA Application Form</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Download Admit Cards</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Election Department</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Smart City</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Farmer Registry Camp</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Download Forms</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Services</a></li>
-                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">Important Websites / Portals</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("e_pledge")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("nfsa_application_form")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("download_admit_cards")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("election_department")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("smart_city")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("farmer_registry_camp")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("download_forms")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("services")}</a></li>
+                <li><a href="/" className="block px-4 py-2 hover:bg-gray-100">{t("important_websites_portals")}</a></li>
               </ul>
             </li>
-
           </ul>
 
-          {/* CM Profile */}
-          <div className="hidden xl:flex items-center text-right pr-4">
+          {/* Right cluster: CM + Language Switcher */}
+          <div className="hidden xl:flex items-center gap-4 text-right pr-4">
             <img
               src="https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
-              alt="Shri BhajanLal Sharma"
+              alt={t("cm_name")}
               className="h-18 w-18 rounded-full object-cover"
             />
             <div>
               <p className="m-0 font-medium text-sm">{t("cm_name")}</p>
               <small className="text-gray-800">{t("cm_title")}</small>
             </div>
+
+            {/* Language Switcher */}
+            <label htmlFor="lang-switch" className="sr-only">
+              {t("lang")}
+            </label>
           </div>
         </div>
       </nav>

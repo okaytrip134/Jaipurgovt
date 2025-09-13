@@ -73,18 +73,18 @@ const Topbar = () => {
             </div>
 
             {/* Font Resize */}
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <button className="cursor-pointer hover:text-blue-600">A+</button>
               <button className="cursor-pointer hover:text-blue-600">A-</button>
               <button className="cursor-pointer hover:text-blue-600">A</button>
-            </div>
+            </div> */}
 
             {/* Theme Buttons */}
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               <button className="w-4 h-4 bg-gray-800 rounded-full"></button>
               <button className="w-4 h-4 bg-blue-500 rounded-full"></button>
               <button className="w-4 h-4 bg-yellow-500 rounded-full"></button>
-            </div>
+            </div> */}
 
             {/* Search */}
             <form className="hidden md:flex items-center border rounded-full px-1 py-1">

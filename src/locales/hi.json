@@ -69,5 +69,21 @@
   "download_forms": "फॉर्म डाउनलोड करें",
   "services": "सेवाएं",
   "important_websites_portals": "महत्वपूर्ण वेबसाइट्स / पोर्टल",
-  "search_placeholder": "खोजें"
+  "search_placeholder": "खोजें",
+  "hero.statistics_title": "आंकड़े:",
+  "hero.slide_aria": "स्लाइड {{n}} पर जाएं",
+
+  "stats.suffix.lakh": "+ लाख",
+
+  "stats.labels.jaipur_tourism": "जयपुर पर्यटन",
+  "stats.labels.submissions_in_tasks": "टास्क में जमा",
+  "stats.labels.comments_in_discussions": "चर्चाओं में टिप्पणियां",
+  "stats.labels.votes_in_polls": "मतदान में वोट",
+  "stats.labels.participation_in_quiz": "क्विज़ में भागीदारी",
+  "stats.labels.pledges_taken": "लिए गए संकल्प",
+
+  "cta.join_whatsapp_title": "व्हाट्सऐप पर जुड़ें",
+  "cta.join_prefix": "जॉइन करें",
+  "cta.city_name": "जयपुर",
+  "cta.community": "समुदाय"
 }
