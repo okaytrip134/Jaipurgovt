@@ -1,20 +1,40 @@
 {
   "tabs": [
-    { "key": "do", "label": "Event In Jaipur", "icon": "/Festival.svg" },
-    { "key": "poll", "label": "POLL/SURVEY", "icon": "/questionnaire.svg" },
-    { "key": "blog", "label": "BLOG", "icon": "/blog.svg" },
-    { "key": "campaign", "label": "CAMPAIGN", "icon": "/Places.svg" },
-    { "key": "podcast", "label": "PODCAST", "icon": "/podcast.svg" }
+    {
+      "key": "do",
+      "label": "Event In Jaipur",
+      "icon": "/Festival.svg"
+    },
+    {
+      "key": "Places TO Visit",
+      "label": "Places TO Visit",
+      "icon": "/Places.svg"
+    },
+    {
+      "key": "CM Desk",
+      "label": "CM Desk",
+      "icon": "/Desk.svg"
+    },
+    {
+      "key": "blog",
+      "label": "BLOG",
+      "icon": "/blog.svg"
+    },
+    {
+      "key": "poll",
+      "label": "POLL/SURVEY",
+      "icon": "/questionnaire.svg"
+    }
   ],
   "items": [
-  {
+    {
       "id": 1,
       "slug": "jaipur-metro-phase-2",
       "title": "CM Approves Jaipur Metro Phase-II DPR",
       "image": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-10/05/thumb/featurecrop/1200X900/1728139364-6128.jpg",
       "categoryKey": "do",
       "excerpt": "Bhajanlal Sharma clears DPR for 42.8 km Metro Phase-II from Todi Mode to Prahladpura.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Metro Expansion in Jaipur</h2><p class='mb-4'>Chief Minister Bhajanlal Sharma approved the Detailed Project Report (DPR) for Jaipur Metro Phase-II. The project spans 42.8 km from Todi Mode to Prahladpura, with 36 stations including elevated and underground ones. It will significantly improve Jaipur’s urban connectivity.</p>"
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Metro Expansion in Jaipur</h2><p class='mb-4'>Chief Minister Bhajanlal Sharma has approved the Detailed Project Report (DPR) for <strong>Jaipur Metro Phase-II</strong>, a major step forward in strengthening public transport in the city. The proposed phase will span <strong>42.8 kilometers</strong>, running from <strong>Todi Mode to Prahladpura</strong>, and will include a total of <strong>36 stations</strong>, comprising both <strong>elevated and underground</strong> sections.</p><p class='mb-4'>This ambitious metro expansion aims to significantly enhance <strong>urban connectivity</strong>, reduce <strong>traffic congestion</strong>, and provide <strong>eco-friendly</strong> commuting options to Jaipur residents. Once completed, it will connect key residential and commercial areas, improving daily commute efficiency and accessibility.</p><p class='mb-4'>The project reflects the government’s commitment to sustainable infrastructure and modern urban planning. With Jaipur’s population and vehicular traffic steadily increasing, Phase-II of the metro will play a crucial role in shaping the future of urban mobility in Rajasthan’s capital.</p><p class='mb-4'>The DPR approval marks a major milestone, paving the way for faster execution and improved transit solutions.</p>"
     },
     {
       "id": 2,
@@ -23,27 +43,26 @@
       "image": "https://static.toiimg.com/thumb/msid-123739266,width-1280,height-720,resizemode-75/123739266.jpg",
       "categoryKey": "do",
       "excerpt": "CM launched new luxury & AC buses from Jaipur, including Kainchi Dham service.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Public Transport Boost</h2><p class='mb-4'>CM Bhajanlal Sharma flagged off 162 RSRTC buses from Jaipur, including luxury and AC coaches. These services include a special Jaipur–Kainchi Dham route, enhancing comfort and connectivity for citizens and pilgrims.</p>"
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Public Transport Boost</h2><p class='mb-4'>Rajasthan Chief Minister Bhajanlal Sharma, along with Deputy CM Prem Chand Bairwa, on Saturday flagged off 162 new roadways buses in Jaipur to improve commute and connectivity.</p><p class='mb-4'>Speaking to the media, Deputy Chief Minister Bairwa thanked Chief Minister Bhajanlal Sharma for giving Rajasthan Roadways a wonderful gift and praised the department's progress under his leadership.</p><p class='mb-4'>\"I would like to extend my congratulations and best wishes to all the travellers of Rajasthan. Our Chief Minister, Bhajanlal Sharma, has given a wonderful gift to the Rajasthan Roadways, driven by his vision that the people of Rajasthan should receive good facilities--and that too with safety,\" Bairwa said.</p><p class='mb-4'>Bairwa said that he flagged off 162 buses along with CM Bhajanlal Sharma. He said that the government provided free bus travel to women during Raksha Bandhan and also five days of free travel to students preparing for government and competitive examinations.</p><p class='mb-4'>\"In this spirit, today 162 buses were flagged off, and I am truly grateful to him for this. In just about one and a half years, he has achieved a lot in the Rajasthan Roadways. For our women and sisters, he has announced free travel for two days on the occasion of Raksha Bandhan. He has also introduced a scheme to provide five days of free travel to students who are preparing for exams and competitive tests,\" he said.</p>"
     },
     {
       "id": 3,
+      "slug": "spice-producers-panel",
+      "title": "Rajasthan government took a big decision for cow service, the grant amount for cow shelters was increased by 15 percent",
+      "image": "https://www.newsonair.gov.in/wp-content/uploads/2025/09/Bhajanlal-sharma.jpg",
+      "categoryKey": "do",
+      "excerpt": "Rajasthan CM outlines govt’s vision to transform state into India’s largest dairy hub at Gau Mahakumbh.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>The grant amount for cow shelters was increased by 15 percent</h2><p class='mb-4'>Taking a big step for the protection and promotion of cows, the Rajasthan government has increased the grant amount given for cow shelters and Nandishalas by 15 percent. Now an assistance of Rs 50 per day will be given for each cow. Chief Minister Bhajanlal Sharma said that cow service is the priority of the government and many important decisions have been taken in the interest of cattle owners and cows in the recently presented budget. Addressing the gratitude meeting organized at the Chief Minister's residence, Chief Minister Sharma said that under the Gopal Credit Card Scheme, interest-free loans will now be provided to 2.5 lakh cowherd families. To make this scheme more simple, stamp duty has been waived on all necessary documents.<br/>Rajasthan Chief Minister Bhajan Lal Sharma has outlined the government’s vision to transform the state into not just an agricultural hub but also India’s largest dairy hub. Speaking at the Gau Mahakumbh, a global summit on cows, organised by the Shri Devraha Baba Gau Seva Parivar in Jaipur yesterday, the Chief Minister highlighted the significant steps being taken to achieve this goal.<br/>A provision of 500 crore rupees has been made under the Chief Minister Milk Producer Incentive Scheme, with 468 crore rupees already transferred through Direct Benefit Transfer (DBT). To support milk producers, a subsidy of 5 rupees per litre has been introduced, while ensuring an average price of 864 rupees per kg of fat. The Chief Minister also emphasised that farmers and animal keepers are the backbone of food and nutrition production. As part of efforts to empower them, the government has increased the ‘Kisan Samman Nidhi’ from 6,000 rupees to 9,000 rupees.<br/>In addition, loan facilities are being extended through the Gopal Credit Card, and more than 33,000 milk producers have been provided with 3 lakh rupees insurance coverage. The Chief Minister stated that a grant of 2,791 crore rupees has been allocated under cow protection and promotion schemes. Every registered Gaushala receives assistance of 50 rupees per cow per day and 25 rupees for small calves. Under the Nandishala Sahyogita Yojana, over 62 crore rupees have been allocated for Panchayat-level infrastructure development..</p>"
+    },
+    {
+      "id": 4,
       "slug": "led-streetlights-drive",
       "title": "Jaipur Gets 2 Lakh LED Streetlights",
       "image": "https://static.toiimg.com/thumb/msid-123684464,width-1280,height-720,resizemode-75/123684464.jpg",
       "categoryKey": "do",
-      "excerpt": "CM launches campaign to install 200,000 LED streetlights in Jaipur under City Chalo drive.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Chalo Campaign</h2><p class='mb-4'>Ahead of the festive season, the Rajasthan government under CM Bhajanlal Sharma announced the installation of 2 lakh LED streetlights across Jaipur. A new helpline (181) was also launched for citizen feedback on civic services.</p>"
+      "excerpt": "CM launches Places TO Visit to install 200,000 LED streetlights in Jaipur under City Chalo drive.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Chalo Places TO Visit</h2><p class='mb-4'>Ahead of the festive season, the Rajasthan government under CM Bhajanlal Sharma announced the installation of 2 lakh LED streetlights across Jaipur. A new helpline (181) was also launched for citizen feedback on civic services.</p>"
     },
-    {
-      "id": 4,
-      "slug": "spice-producers-panel",
-      "title": "CM Announces Panel for Spice Producers",
-      "image": "https://static.toiimg.com/thumb/msid-123773078,width-1280,height-720,resizemode-75/123773078.jpg",
-      "categoryKey": "do",
-      "excerpt": "A special committee to give Jaipur spice producers a global platform.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Empowering Spice Industry</h2><p class='mb-4'>CM Bhajanlal Sharma announced a new panel to support Rajasthan spice producers with GI tags and export guidance. The state will also host a Global Rajasthan Agritech Meet to provide international exposure to Jaipur’s agri-business sector.</p>"
-    },
-
     {
       "id": 5,
       "slug": "unani-comic-winners",
@@ -79,7 +98,74 @@
       "categoryKey": "blog",
       "excerpt": "DBF 2025 quiz winners.",
       "contentHtml": "<h2 class='text-2xl font-bold mb-2'>DBF Quiz Winners</h2><p>Here’s the final list of winners and prizes.</p>"
+    },
+    {
+      "id": 9,
+      "categoryKey": "CM Desk",
+      "image": "https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/DepartmentMaster/409/2024/Jun/30409/40947bd8a67-702a-4df3-b1cb-886f97aa2606.jpeg",
+      "designation": "Chief Minister of Rajasthan",
+      "details": {
+        "Name": "Shri Bhajanlal Sharma",
+        "Date of Birth": "15-Dec-1966",
+        "Home Town": "Bharatpur",
+        "Educational Qualification": "M.A.(Political Science)",
+        "Father's Name": "Shri Kishan Swaroop Sharma",
+        "Mother's Name": "Smt. Gomti Devi",
+        "Marital Status": "Married",
+        "Spouse Name": "Smt. Geeta Sharma",
+        "Number of Children": "2 sons",
+        "Assembly Constituency": "Sanganer",
+        "Member Category": "General",
+        "Official Website": "https://cmo.rajasthan.gov.in/"
+      },
+      "deputyChiefMinisters": [
+        {
+          "image": "https://assembly.rajasthan.gov.in/HamareVidhayak/MLAPic/1583.jpg",
+          "name": "Shri Diya Kumari",
+          "designation": "Deputy Chief Minister"
+        },
+        {
+          "image": "https://assembly.rajasthan.gov.in/HamareVidhayak/MLAPic/1595.jpg",
+          "name": "Shri Prem Chand Bairwa",
+          "designation": "Deputy Chief Minister"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "amber-fort-jaipur",
+      "title": "Amber Fort",
+      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/amer-fort-jaipur.jpg",
+      "categoryKey": "Places TO Visit",
+      "excerpt": "A majestic fort-palace complex overlooking Maota Lake, blending Rajput and Mughal styles.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Amber Fort</h2><p class='mb-4'>Built in 1592 by Raja Man Singh, Amber Fort is one of Jaipur’s most famous attractions. Made of red sandstone and marble, the fort includes stunning courtyards, palaces, halls, and gardens. The Sheesh Mahal (Mirror Palace) is a highlight with intricate mirror work. The fort sits on a hilltop, offering panoramic views of Maota Lake and the surrounding hills.</p>"
+    },
+    {
+      "id": 11,
+      "slug": "hawa-mahal-jaipur",
+      "title": "Hawa Mahal",
+      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/hawa-mahal-jaipur.jpg",
+      "categoryKey": "Places TO Visit",
+      "excerpt": "The Palace of Winds, with 953 intricately designed windows allowing cool breeze to flow through.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Hawa Mahal</h2><p class='mb-4'>Constructed in 1799 by Maharaja Sawai Pratap Singh, Hawa Mahal is an iconic five-story palace designed with 953 jharokhas (small windows). The palace allowed royal women to observe street festivals without being seen. Its honeycomb-like structure is a prime example of Rajput architecture, and it is especially beautiful at sunrise.</p>"
+    },
+    {
+      "id": 12,
+      "slug": "jal-mahal-jaipur",
+      "title": "Jal Mahal",
+      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/jal-mahal.jpg",
+      "categoryKey": "Places TO Visit",
+      "excerpt": "A beautiful Water Palace located in the middle of Man Sagar Lake, offering serene views.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Jal Mahal</h2><p class='mb-4'>Jal Mahal, meaning 'Water Palace', is a 5-story palace with 4 floors submerged under Man Sagar Lake. It was built in the 18th century by Maharaja Madho Singh. The palace combines Rajput and Mughal styles and offers enchanting views at sunrise and sunset. Visitors enjoy the peaceful atmosphere and picturesque surroundings.</p>"
+    },
+    {
+      "id": 13,
+      "slug": "city-palace-jaipur",
+      "title": "City Palace",
+      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/10047.jpg",
+      "categoryKey": "Places TO Visit",
+      "excerpt": "Royal residence with museums, courtyards, and ornate gates showcasing Jaipur’s heritage.",
+      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Palace</h2><p class='mb-4'>City Palace was built by Maharaja Sawai Jai Singh II in the 18th century. It is a grand complex of courtyards, gardens, and buildings blending Rajput, Mughal, and European styles. Key highlights include Mubarak Mahal, Chandra Mahal, and Pritam Niwas Chowk. Today, parts of the palace serve as museums displaying royal costumes, weapons, and artifacts.</p>"
     }
-
   ]
 }
