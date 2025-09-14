@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback, useEffect } from "react";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import useEmblaCarousel from "embla-carousel-react";
 import data from "../../data/involvedPosts.json";
 import Card from "../../Component/card";
@@ -53,11 +53,10 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`min-w-[160px] flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
-                  active
+                className={`min-w-[160px] flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
                     ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
                     : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
-                }`}
+                  }`}
                 role="tab"
                 aria-selected={active}
               >
@@ -96,8 +95,8 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
 }
 
 export default function GetInvolved() {
-  const { t } = useTranslation(); 
-  const tabs = data.tabs || []; 
+  const { t } = useTranslation();
+  const tabs = data.tabs || [];
   const [activeTab, setActiveTab] = useState(tabs?.[0]?.key || "do");
 
   const itemsByTab = useMemo(() => {
@@ -181,11 +180,10 @@ export default function GetInvolved() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
-                active
+              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
                   ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
                   : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
-              }`}
+                }`}
               role="tab"
               aria-selected={active}
             >
@@ -219,24 +217,109 @@ export default function GetInvolved() {
       </div>
 
       {/* Cards: Desktop grid */}
-      <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-        {visibleItems.map((item) => (
-          <Card
-            key={item.id}
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            tag={item.category}
-            slug={item.slug}
-          />
-        ))}
+      {/* Content by tab */}
+      {activeTab === "CM Desk" ? (
+        <div className="space-y-6">
 
-        {!visibleItems.length && (
-          <div className="col-span-full text-center text-sm text-gray-500">
-            No items yet.
+          {visibleItems.map((item) => (
+            <div key={item.id}>
+              {/* CM Desk Table */}
+              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
+                <tbody>
+                  <tr>
+                    <td className="border p-2 w-1/3 align-top">
+                      <img
+                        src={item.image}
+                        alt="CM"
+                        className="w-48 h-auto rounded-lg shadow"
+                      />
+                    </td>
+                    <td className="border p-2 align-top">
+                      {/* Show Designation Above */}
+                      <h3 className="text-xl font-bold mb-3 text-blue-700">
+                        {item.designation}
+                      </h3>
+                      <table className="w-full">
+                        <tbody>
+                          {Object.entries(item.details).map(([key, value]) => (
+                            <tr key={key}>
+                              <td className="font-semibold border px-2 py-1 w-1/3">{key}</td>
+                              <td className="border px-2 py-1">{value}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              {/* Deputy Chief Minister Table */}
+              <h3 className="text-lg font-semibold mt-6 mb-2">
+                Deputy Chief Ministers
+              </h3>
+              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border px-2 py-2 w-1/3">Image</th>
+                    <th className="border px-2 py-2 w-1/3">Name</th>
+                    <th className="border px-2 py-2 w-1/3">Designation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {item.deputyChiefMinisters.map((dep, i) => (
+                    <tr key={i}>
+                      <td className="border p-2 text-center">
+                        <img
+                          src={dep.image}
+                          alt={dep.name}
+                          className="w-35 h-40 object-cover rounded-full mx-auto"
+                        />
+                      </td>
+                      <td className="border px-2 py-2 text-center">{dep.name}</td>
+                      <td className="border px-2 py-2 text-center">
+                        {dep.designation}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <>
+          {/* Cards: Mobile carousel */}
+          <div className="md:hidden">
+            {itemsForCarousel.length ? (
+              <ResponsiveCardsCarousel items={itemsForCarousel} interval={3000} />
+            ) : (
+              <div className="text-center text-sm text-gray-500">No items yet.</div>
+            )}
           </div>
-        )}
-      </div>
+
+          {/* Cards: Desktop grid */}
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            {visibleItems.map((item) => (
+              <Card
+                key={item.id}
+                image={item.image}
+                title={item.title}
+                description={item.description}
+                tag={item.category}
+                slug={item.slug}
+              />
+            ))}
+            {!visibleItems.length && (
+              <div className="col-span-full text-center text-sm text-gray-500">
+                No items yet.
+              </div>
+            )}
+          </div>
+        </>
+      )}
+
     </section>
   );
 }

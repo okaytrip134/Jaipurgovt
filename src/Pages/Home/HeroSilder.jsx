@@ -3,8 +3,10 @@ import { useTranslation } from "react-i18next";
 
 const slides = [
   { id: 1, image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
-  { id: 2, image: "https://images.unsplash.com/photo-1682830819991-3e100a80aa2e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
-  { id: 3, image: "https://images.unsplash.com/photo-1712166424478-eb9b7103e460?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
+  { id: 2, image: "https://storage.firstindia.co.in/public/news/September2025/175721882785.webp" },
+  { id: 3, image: "https://live.staticflickr.com/8076/8424029020_902fca70b8_b.jpg" },
+  { id: 4, image: "https://images.unsplash.com/photo-1682830819991-3e100a80aa2e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
+  { id: 5, image: "https://images.unsplash.com/photo-1712166424478-eb9b7103e460?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
 ];
 
 // stats ko translation-keys ke saath define karo
@@ -13,7 +15,6 @@ const stats = [
   { value: "17.89", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.submissions_in_tasks" },
   { value: "55.89", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.comments_in_discussions" },
   { value: "38.76", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.votes_in_polls" },
-  { value: "303.77", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.participation_in_quiz" },
   { value: "250.04", suffixKey: "stats.suffix.lakh", labelKey: "stats.labels.pledges_taken" },
 ];
 
@@ -34,30 +35,40 @@ export default function HeroSlider() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden h-[220px] sm:h-[300px] md:h-[380px] lg:h-[440px]">
-        <div className="absolute inset-0">
-          {slides.map((s, i) => (
-            <div
-              key={s.id}
-              className={`absolute inset-0 bg-center bg-cover transition-opacity duration-[1000ms] ${i === current ? "opacity-100" : "opacity-0"}`}
-              style={{ backgroundImage: `url(${s.image})` }}
-            >
-              <div className="absolute inset-0 bg-black/25" />
-            </div>
-          ))}
-        </div>
+<section className="relative overflow-hidden h-[220px] sm:h-[300px] md:h-[380px] lg:h-[440px]">
+  <div className="absolute inset-0">
+    {slides.map((s, i) => (
+      <div
+        key={s.id}
+        className={`absolute inset-0 transition-opacity duration-[1000ms] ${
+          i === current ? "opacity-100" : "opacity-0"
+        }`}
+        style={{
+          backgroundImage: `url(${s.image})`,
+          backgroundSize: "100% 100%", // stretch to fill
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/25" />
+      </div>
+    ))}
+  </div>
 
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              aria-label={t("hero.slide_aria", { n: i + 1 })}
-              className={`h-2 w-2 rounded-full transition-all ${i === current ? "bg-white w-6" : "bg-white/60"}`}
-            />
-          ))}
-        </div>
-      </section>
+  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+    {slides.map((_, i) => (
+      <button
+        key={i}
+        onClick={() => setCurrent(i)}
+        aria-label={t("hero.slide_aria", { n: i + 1 })}
+        className={`h-2 w-2 rounded-full transition-all ${
+          i === current ? "bg-white w-6" : "bg-white/60"
+        }`}
+      />
+    ))}
+  </div>
+</section>
+
 
       {/* STATISTICS STRIP */}
       <div className="w-full bg-white border border-gray-200 shadow-sm z-50">
