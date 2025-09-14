@@ -1,25 +1,28 @@
 import React from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // ✅ i18n hook
+
 import data from "../../data/involvedPosts.json";
 
 export default function InvolvedDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const post = data.items.find((x) => x.slug === slug);
 
   if (!post) {
     return (
       <div className="px-6 py-16">
-        <h1 className="text-2xl font-bold mb-4">Not found</h1>
+        <h1 className="text-2xl font-bold mb-4">{t("involvedPosts.notFoundTitle", "Not found")}</h1>
         <p className="mb-6">
-          We couldn't find that item. It might have been moved or removed.
+          {t("involvedPosts.notFoundMessage", "We couldn't find that item. It might have been moved or removed.")}
         </p>
         <button
           onClick={() => navigate(-1)}
           className="px-4 py-2 rounded bg-gray-900 text-white"
         >
-          Go back
+          {t("involvedPosts.goBack", "Go back")}
         </button>
       </div>
     );
@@ -29,20 +32,24 @@ export default function InvolvedDetail() {
     <div className="w-full px-6 py-10 text-left">
       <div className="mb-4">
         <Link to="/" className="text-sm text-[#C46340] hover:underline">
-          ← Back to Get Involved
+          ← {t("involvedPosts.backToList", "Back to Get Involved")}
         </Link>
       </div>
 
-      <h1 className="text-3xl font-bold mb-4 text-gray-900">{post.title}</h1>
+      {/* ✅ Title with translation */}
+      <h1 className="text-3xl font-bold mb-4 text-gray-900">
+        {t(`involvedPosts.items.${post.id}.title`, post.title)}
+      </h1>
 
       <div className="w-full aspect-[16/5] bg-gray-100 rounded-xl overflow-hidden mb-6">
         <img
           src={post.image}
-          alt={post.title}
+          alt={t(`involvedPosts.items.${post.id}.title`, post.title)}
           className="w-full h-full object-cover"
         />
       </div>
 
+      {/* ✅ Content with translation */}
       <div
         className="
           text-gray-800 leading-relaxed text-left
@@ -60,7 +67,9 @@ export default function InvolvedDetail() {
           [&>td]:border [&>td]:border-gray-300 [&>td]:px-3 [&>td]:py-2 [&>td]:align-top
           [&>img]:rounded-xl [&>img]:shadow-sm [&>img]:my-6
         "
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        dangerouslySetInnerHTML={{
+          __html: t(`involvedPosts.items.${post.id}.contentHtml`, post.contentHtml),
+        }}
       />
     </div>
   );

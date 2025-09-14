@@ -109,11 +109,9 @@ export default function GetInvolved() {
     return map;
   }, []);
 
-  // Colors (same as your design)
-  const activeColor = "#C46340"; // orange
-  const inactiveColor = "#6B7280"; // gray-500
+  const activeColor = "#C46340";
+  const inactiveColor = "#6B7280";
 
-  // Content meta (title/subtitle) per tab
   const contentMeta = {
     do: {
       title: t("content.do.title"),
@@ -140,7 +138,6 @@ export default function GetInvolved() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const visibleItems = itemsByTab[activeTab] || [];
 
-  // Map items to Card props for the mobile carousel
   const itemsForCarousel = useMemo(
     () =>
       visibleItems.map((item) => ({
@@ -164,7 +161,7 @@ export default function GetInvolved() {
       <MobileTabsCarousel
         tabs={tabs.map(tab => ({
           ...tab,
-          label: t(`tabs.${tab.key}`)  // Translate tab labels dynamically
+          label: t(`tabs.${tab.key}`)
         }))}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -217,108 +214,96 @@ export default function GetInvolved() {
       </div>
 
       {/* Cards: Desktop grid */}
-      {/* Content by tab */}
-      {activeTab === "CM Desk" ? (
-        <div className="space-y-6">
+{activeTab === "CM Desk" ? (
+  <div className="space-y-6">
+    {visibleItems.map((item) => (
+      <div key={item.id}>
+        <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
+          <tbody>
+            <tr>
+              <td className="border p-2 w-1/3 align-top">
+                <img
+                  src={item.image}
+                  alt="CM"
+                  className="w-48 h-auto rounded-lg shadow"
+                />
+              </td>
+              <td className="border p-2 align-top">
+                <h3 className="text-xl font-bold mb-3 text-blue-700">
+                  {t("involvedPosts.cmdesk.designation")}
+                </h3>
+                <table className="w-full">
+                  <tbody>
+                    {Object.entries(item.details).map(([key]) => (
+                      <tr key={key}>
+                        <td className="font-semibold border px-2 py-1 w-1/3">
+                          {t(`involvedPosts.cmdesk.details.${key}`)}
+                        </td>
+                        <td className="border px-2 py-1">
+                          {t(`involvedPosts.cmdesk.details.${key}`)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-          {visibleItems.map((item) => (
-            <div key={item.id}>
-              {/* CM Desk Table */}
-              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
-                <tbody>
-                  <tr>
-                    <td className="border p-2 w-1/3 align-top">
-                      <img
-                        src={item.image}
-                        alt="CM"
-                        className="w-48 h-auto rounded-lg shadow"
-                      />
-                    </td>
-                    <td className="border p-2 align-top">
-                      {/* Show Designation Above */}
-                      <h3 className="text-xl font-bold mb-3 text-blue-700">
-                        {item.designation}
-                      </h3>
-                      <table className="w-full">
-                        <tbody>
-                          {Object.entries(item.details).map(([key, value]) => (
-                            <tr key={key}>
-                              <td className="font-semibold border px-2 py-1 w-1/3">{key}</td>
-                              <td className="border px-2 py-1">{value}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-
-              {/* Deputy Chief Minister Table */}
-              <h3 className="text-lg font-semibold mt-6 mb-2">
-                Deputy Chief Ministers
-              </h3>
-              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="border px-2 py-2 w-1/3">Image</th>
-                    <th className="border px-2 py-2 w-1/3">Name</th>
-                    <th className="border px-2 py-2 w-1/3">Designation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {item.deputyChiefMinisters.map((dep, i) => (
-                    <tr key={i}>
-                      <td className="border p-2 text-center">
-                        <img
-                          src={dep.image}
-                          alt={dep.name}
-                          className="w-35 h-40 object-cover rounded-full mx-auto"
-                        />
-                      </td>
-                      <td className="border px-2 py-2 text-center">{dep.name}</td>
-                      <td className="border px-2 py-2 text-center">
-                        {dep.designation}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <>
-          {/* Cards: Mobile carousel */}
-          <div className="md:hidden">
-            {itemsForCarousel.length ? (
-              <ResponsiveCardsCarousel items={itemsForCarousel} interval={3000} />
-            ) : (
-              <div className="text-center text-sm text-gray-500">No items yet.</div>
-            )}
-          </div>
-
-          {/* Cards: Desktop grid */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-            {visibleItems.map((item) => (
-              <Card
-                key={item.id}
-                image={item.image}
-                title={item.title}
-                description={item.description}
-                tag={item.category}
-                slug={item.slug}
-              />
+        <h3 className="text-lg font-semibold mt-6 mb-2">
+          {t("involvedPosts.cmdesk.deputyChiefMinistersTitle", "Deputy Chief Ministers")}
+        </h3>
+        <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
+          <thead className="bg-gray-100">
+            <tr>
+              <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.image", "Image")}</th>
+              <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.name", "Name")}</th>
+              <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.designation", "Designation")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {item.deputyChiefMinisters.map((dep, i) => (
+              <tr key={i}>
+                <td className="border p-2 text-center">
+                  <img
+                    src={dep.image}
+                    alt={dep.name}
+                    className="w-35 h-40 object-cover rounded-full mx-auto"
+                  />
+                </td>
+                <td className="border px-2 py-2 text-center">
+                  {t(`involvedPosts.cmdesk.deputyChiefMinisters.${i}.name`)}
+                </td>
+                <td className="border px-2 py-2 text-center">
+                  {t(`involvedPosts.cmdesk.deputyChiefMinisters.${i}.designation`)}
+                </td>
+              </tr>
             ))}
-            {!visibleItems.length && (
-              <div className="col-span-full text-center text-sm text-gray-500">
-                No items yet.
-              </div>
-            )}
-          </div>
-        </>
-      )}
+          </tbody>
+        </table>
+      </div>
+    ))}
+  </div>
+) : (
+  <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+    {visibleItems.map((item) => (
+      <Card
+        key={item.id}
+        image={item.image}
+        title={t(`involvedPosts.items.${item.id}.title`)}
+        description={t(`involvedPosts.items.${item.id}.excerpt`)}
+        tag={item.category}
+        slug={item.slug}
+      />
+    ))}
+    {!visibleItems.length && (
+      <div className="col-span-full text-center text-sm text-gray-500">
+        {t("involvedPosts.noItems", "No items yet.")}
+      </div>
+    )}
+  </div>
+)}
 
     </section>
   );

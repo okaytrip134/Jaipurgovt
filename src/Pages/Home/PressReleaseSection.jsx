@@ -7,57 +7,17 @@ import { useTranslation } from "react-i18next";  // Import useTranslation hook
 const NewsSection = () => {
   const { t } = useTranslation();  // Initialize translation hook
 
-  const pressReleases = [
-    {
-      date: "02 Sep, 2025",
-      title: "PM inaugurates the 'Digital Bharat' campaign to boost AI adoption in governance."
-    },
-    {
-      date: "28 Aug, 2025", 
-      title: "Union Cabinet approves new Startup Support Scheme for emerging entrepreneurs."
-    },
-    {
-      date: "21 Aug, 2025",
-      title: "India signs MoU with Japan on renewable energy cooperation."
-    },
-    {
-      date: "15 Aug, 2025",
-      title: "Independence Day 2025: Government launches National Innovation Mission."
-    }
-  ];
+  const pressReleases = t("newsSection.pressReleaseItems", { returnObjects: true });
 
-  const quizzes = [
-    {
-      title: "National Space Day Quiz 2025 (Telugu)",
-      image: "/quiz-telugu.jpg",
-      deadline: "20/09/2025 18:15 (IST)",
-      prize: true
-    },
-    {
-      title: "National Space Day Quiz 2025 (Tamil)",
-      image: "/quiz-tamil.jpg", 
-      deadline: "20/09/2025 18:15 (IST)",
-      prize: true
-    },
-    {
-      title: "National Space Day Quiz 2025 (Punjabi)",
-      image: "/quiz-punjabi.jpg",
-      deadline: "20/09/2025 18:15 (IST)", 
-      prize: true
-    },
-    {
-      title: "National Space Day Quiz 2025 (Hindi)",
-      image: "/quiz-hindi.jpg",
-      deadline: "20/09/2025 18:15 (IST)",
-      prize: true
-    }
-  ];
+
+const quizzes = t("newsSection.quizzes", { returnObjects: true });
+
 
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+
           {/* Press Releases Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -119,7 +79,7 @@ const NewsSection = () => {
                 {t('newsSection.viewAll')}
               </button>
             </div>
-            
+
             <p className="text-gray-600 mb-8">{t('newsSection.lookOutForThese')}</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
