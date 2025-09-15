@@ -15,28 +15,28 @@ const MediaSection = () => {
   const videos = [
     {
       id: 1,
-      title: "From Villages to Japan",
+      title: "श्री देवराहा बाबा गौसेवा परिवार के तत्वाधान में आयोजित प्रथम गौ-महाकुंभ, जयपुर",
       url: "https://www.youtube.com/watch?v=byI4u0HJlpw",
       thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=byI4u0HJlpw"),
       channel: "Jaipur Rajasthan India",
     },
     {
       id: 2,
-      title: "INSIDE India’s $500 Billion Tech Mission",
+      title: "नारी संग, नये रंग - आत्मनिर्भरता की राह | Episode 4",
       url: "https://www.youtube.com/watch?v=5v0QHpc91sg",
       thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=5v0QHpc91sg"),
       channel: "Jaipur Rajasthan India",
     },
     {
       id: 3,
-      title: "How India Invests",
+      title: "शिक्षक दिवस के पावन अवसर पर सभी शिक्षकों व गुरुजनों को आदरपूर्वक नमन!",
       url: "https://www.youtube.com/watch?v=e9ZXNU1lPio",
       thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=e9ZXNU1lPio"),
       channel: "Jaipur Rajasthan India",
     },
     {
       id: 4,
-      title: "National Research Foundation",
+      title: "विश्व पर्यावरण दिवस की हार्दिक शुभकामनाएँ!",
       url: "https://www.youtube.com/watch?v=c6AYk4U6xaY",
       thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=c6AYk4U6xaY"),
       channel: "Jaipur Rajasthan India",
