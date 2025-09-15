@@ -48,7 +48,7 @@ const importantLinks = [
 export default function ImportantLinks() {
   return (
     <div
-      className="w-full py-10"
+      className="w-full py-14"
       style={{
         backgroundImage: `url(${backimg})`,
         backgroundRepeat: "repeat",
@@ -59,20 +59,27 @@ export default function ImportantLinks() {
       }}
     >
       {/* Section Title */}
-      <h2 className="text-3xl font-bold text-center mb-10 text-white">
-        __________Important Links__________
-      </h2>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white relative inline-block">
+          Important Links
+          {/* Underline accent */}
+          <span className="block w-40 h-1  mx-auto mt-3 rounded-full" style={{background: "var(--gradient-primary)"}}></span>
+        </h2>
+        <p className="text-gray-900 mt-3 text-sm md:text-base">
+          Quick access to government services and resources
+        </p>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4">
         {/* Links Grid */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9">
           {importantLinks.map((link, idx) => (
             <a
               key={idx}
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col items-center justify-center text-center w-45  h-44 p-3 rounded-lg shadow-sm hover:shadow-lg transition-transform hover:scale-105 bg-cover bg-center"
+              className="flex flex-col items-center justify-center text-center h-44 p-4 rounded-xl shadow-sm hover:shadow-lg transition-transform hover:scale-105 bg-cover bg-center"
               style={{
                 backgroundImage: `url(${im})`,
               }}
@@ -80,9 +87,9 @@ export default function ImportantLinks() {
               <img
                 src={link.img}
                 alt={link.title}
-                className="w-20 h-20 mx-auto mb-2"
+                className="w-16 h-16 mx-auto mb-3"
               />
-              <span className="text-lg font-medium text-gray-800 hover:text-blue-600 break-words whitespace-normal leading-tight">
+              <span className="text-base font-medium text-gray-800 hover:text-blue-600 break-words whitespace-normal leading-tight">
                 {link.title}
               </span>
             </a>
@@ -92,6 +99,7 @@ export default function ImportantLinks() {
     </div>
   );
 }
+
 
 
 

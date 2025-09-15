@@ -19,7 +19,7 @@ const Home = () => {
           <Article />
           <PressReleasesSection />
           <MediaSection />
-          <QuizSection />
+          {/* <QuizSection /> */}
           <Involved />
         </div>
       </div>

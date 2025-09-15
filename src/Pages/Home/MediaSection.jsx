@@ -1,41 +1,52 @@
 import React, { useState } from "react";
 
+// ✅ Helper function must be defined
+const getYouTubeThumbnail = (url) => {
+  try {
+    const videoId = new URL(url).searchParams.get("v");
+    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  } catch (error) {
+    console.error("Invalid YouTube URL:", url);
+    return "";
+  }
+};
+
 const MediaSection = () => {
   const videos = [
     {
       id: 1,
-      title: "From Villages to Japan | How Skill India Transformed Millions of Lives in Just 10 Years!",
-      url: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/Video/fromvillagestojapan.mp4",
-      thumbnail: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/thumbnail/fromvillagestojapan.jpg",
-      channel: "Jaipur rajsthan India",
+      title: "From Villages to Japan",
+      url: "https://www.youtube.com/watch?v=byI4u0HJlpw",
+      thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=byI4u0HJlpw"),
+      channel: "Jaipur Rajasthan India",
     },
     {
       id: 2,
       title: "INSIDE India’s $500 Billion Tech Mission",
-      url: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/Video/billiontechmission.mp4",
-      thumbnail: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/thumbnail/billiontechmission.jpg",
-      channel: "Jaipur rajsthan India",
+      url: "https://www.youtube.com/watch?v=5v0QHpc91sg",
+      thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=5v0QHpc91sg"),
+      channel: "Jaipur Rajasthan India",
     },
     {
       id: 3,
-      title: "How India Invests: Radhika Gupta on India's Financial Future",
-      url: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/Video/howindiainvestsmiddleclass.mp4",
-      thumbnail: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/thumbnail/howindiainvestsmiddleclass.jpg",
-      channel: "Jaipur rajsthan India",
+      title: "How India Invests",
+      url: "https://www.youtube.com/watch?v=e9ZXNU1lPio",
+      thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=e9ZXNU1lPio"),
+      channel: "Jaipur Rajasthan India",
     },
     {
       id: 4,
-      title: "How the National Research Foundation Will Transform India's Research Landscape",
-      url: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/Video/howthenationalresearchlandscape.mp4",
-      thumbnail: "https://playhls.media.nic.in/igot_vod/MyGov/JULY25/thumbnail/howthenationalresearchlandscape.jpg",
-      channel: "Jaipur rajsthan India",
+      title: "National Research Foundation",
+      url: "https://www.youtube.com/watch?v=c6AYk4U6xaY",
+      thumbnail: getYouTubeThumbnail("https://www.youtube.com/watch?v=c6AYk4U6xaY"),
+      channel: "Jaipur Rajasthan India",
     },
   ];
 
   const [currentVideo, setCurrentVideo] = useState(videos[0]);
 
   return (
-    <section className="bg-white/80 mix-blend-overlay inset-0 py-10 px-6 md:px-12">
+    <section className=" mix-blend-overlay inset-0 py-20 px-6 md:px-12">
       <div className="max-w-[1400px] mx-auto">
         <h2 className="text-2xl font-bold text-sky-700 underline">Jaipur News Media</h2>
 
@@ -43,12 +54,15 @@ const MediaSection = () => {
           {/* Main video player */}
           <div className="md:col-span-2">
             <div className="w-full rounded-lg overflow-hidden shadow-md">
-              <video
-                key={currentVideo.url} // force reload when url changes
-                src={currentVideo.url}
-                controls
-                className="w-full h-[400px] bg-black"
-              />
+              {/* ❌ YouTube URLs don't play in <video>, need iframe */}
+              <iframe
+                key={currentVideo.url}
+                src={currentVideo.url.replace("watch?v=", "embed/")}
+                className="w-full  md:h-[400px] lg:h-[500px]"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
             <h3 className="text-lg font-semibold mt-4">{currentVideo.title}</h3>
@@ -77,11 +91,11 @@ const MediaSection = () => {
                     <img
                       src={v.thumbnail}
                       alt={v.title}
-                      className="w-40 h-24 object-cover rounded-md"
+                      className="w-50 h-32 object-cover rounded-md"
                     />
                     <div>
                       <p className="text-sm font-medium">{v.title}</p>
-                      <p className="text-xs text-gray-500">{v.channel}</p>
+                      <p className="text-sm text-gray-500">{v.channel}</p>
                     </div>
                   </div>
                 ))}
