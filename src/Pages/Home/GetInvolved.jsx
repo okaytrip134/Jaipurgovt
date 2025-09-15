@@ -13,7 +13,7 @@ function IconMasked({ src, alt = "", size = 32, color = "#6B7280" }) {
     backgroundColor: color,
     WebkitMask: `url(${src}) no-repeat center / contain`,
     mask: `url(${src}) no-repeat center / contain`,
-    display: "inline-block"
+    display: "inline-block",
   };
   return (
     <span
@@ -31,7 +31,7 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
     align: "start",
     dragFree: true,
     skipSnaps: false,
-    inViewThreshold: 0.6
+    inViewThreshold: 0.6,
   });
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
@@ -39,7 +39,7 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
 
   useEffect(() => {
     if (!emblaApi) return;
-    const idx = Math.max(0, tabs.findIndex(t => t.key === activeTab));
+    const idx = Math.max(0, tabs.findIndex((t) => t.key === activeTab));
     emblaApi.scrollTo(idx, true);
   }, [activeTab, emblaApi, tabs]);
 
@@ -53,10 +53,11 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`min-w-[160px] flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
+                className={`w-1/2 flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
+                  active
                     ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
                     : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
-                  }`}
+                }`}
                 role="tab"
                 aria-selected={active}
               >
@@ -115,27 +116,26 @@ export default function GetInvolved() {
   const contentMeta = {
     do: {
       title: t("content.do.title"),
-      subtitle: t("content.do.subtitle")
+      subtitle: t("content.do.subtitle"),
     },
     blog: {
       title: t("content.blog.title"),
-      subtitle: t("content.blog.subtitle")
+      subtitle: t("content.blog.subtitle"),
     },
     poll: {
       title: t("content.poll.title"),
-      subtitle: t("content.poll.subtitle")
+      subtitle: t("content.poll.subtitle"),
     },
     campaign: {
       title: t("content.campaign.title"),
-      subtitle: t("content.campaign.subtitle")
+      subtitle: t("content.campaign.subtitle"),
     },
     podcast: {
       title: t("content.podcast.title"),
-      subtitle: t("content.podcast.subtitle")
-    }
+      subtitle: t("content.podcast.subtitle"),
+    },
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const visibleItems = itemsByTab[activeTab] || [];
 
   const itemsForCarousel = useMemo(
@@ -145,7 +145,7 @@ export default function GetInvolved() {
         title: item.title,
         description: item.description,
         tag: item.category,
-        slug: item.slug
+        slug: item.slug,
       })),
     [visibleItems]
   );
@@ -157,11 +157,11 @@ export default function GetInvolved() {
         <p className="text-gray-600">{t("get_involved_subtitle")}</p>
       </div>
 
-      {/* Tabs: Mobile carousel */}
+      {/* Tabs: Mobile carousel (2 per view) */}
       <MobileTabsCarousel
-        tabs={tabs.map(tab => ({
+        tabs={tabs.map((tab) => ({
           ...tab,
-          label: t(`tabs.${tab.key}`)
+          label: t(`${tab.label}`),
         }))}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -177,10 +177,11 @@ export default function GetInvolved() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
+              className={`bg-gray-50 relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
+                active
                   ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
-                  : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
-                }`}
+                  : "bg-gray-50 text-gray-500 shadow-lg hover:shadow-md focus:ring-gray-300"
+              }`}
               role="tab"
               aria-selected={active}
             >
@@ -214,97 +215,104 @@ export default function GetInvolved() {
       </div>
 
       {/* Cards: Desktop grid */}
-{activeTab === "CM Desk" ? (
-  <div className="space-y-6">
-    {visibleItems.map((item) => (
-      <div key={item.id}>
-        <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
-          <tbody>
-            <tr>
-              <td className="border p-2 w-1/3 align-top">
-                <img
-                  src={item.image}
-                  alt="CM"
-                  className="w-48 h-auto rounded-lg shadow"
-                />
-              </td>
-              <td className="border p-2 align-top">
-                <h3 className="text-xl font-bold mb-3 text-blue-700">
-                  {t("involvedPosts.cmdesk.designation")}
-                </h3>
-                <table className="w-full">
-                  <tbody>
-                    {Object.entries(item.details).map(([key]) => (
-                      <tr key={key}>
-                        <td className="font-semibold border px-2 py-1 w-1/3">
-                          {t(`involvedPosts.cmdesk.details.${key}`)}
-                        </td>
-                        <td className="border px-2 py-1">
-                          {t(`involvedPosts.cmdesk.details.${key}`)}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      {activeTab === "CM Desk" ? (
+        <div className="space-y-6">
+          {visibleItems.map((item) => (
+            <div key={item.id}>
+              {/* CM Desk Table */}
+              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
+                <tbody>
+                  <tr>
+                    <td className="border p-2 w-1/3 align-top">
+                      <img
+                        src={item.image}
+                        alt="CM"
+                        className="w-48 h-auto rounded-lg shadow"
+                      />
+                    </td>
+                    <td className="border p-2 align-top">
+                      <h3 className="text-xl font-bold mb-3 text-blue-700">
+                        {t("involvedPosts.cmdesk.designation")}
+                      </h3>
+                      <table className="w-full">
+                        <tbody>
+                          {Object.entries(item.details).map(([key]) => (
+                            <tr key={key}>
+                              <td className="font-semibold border px-2 py-1 w-1/3">
+                                {t(`involvedPosts.cmdesk.details.${key}`)}
+                              </td>
+                              <td className="border px-2 py-1">
+                                {t(`involvedPosts.cmdesk.details.${key}`)}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
 
-        <h3 className="text-lg font-semibold mt-6 mb-2">
-          {t("involvedPosts.cmdesk.deputyChiefMinistersTitle", "Deputy Chief Ministers")}
-        </h3>
-        <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.image", "Image")}</th>
-              <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.name", "Name")}</th>
-              <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.designation", "Designation")}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {item.deputyChiefMinisters.map((dep, i) => (
-              <tr key={i}>
-                <td className="border p-2 text-center">
-                  <img
-                    src={dep.image}
-                    alt={dep.name}
-                    className="w-35 h-40 object-cover rounded-full mx-auto"
-                  />
-                </td>
-                <td className="border px-2 py-2 text-center">
-                  {t(`involvedPosts.cmdesk.deputyChiefMinisters.${i}.name`)}
-                </td>
-                <td className="border px-2 py-2 text-center">
-                  {t(`involvedPosts.cmdesk.deputyChiefMinisters.${i}.designation`)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    ))}
-  </div>
-) : (
-  <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-    {visibleItems.map((item) => (
-      <Card
-        key={item.id}
-        image={item.image}
-        title={t(`involvedPosts.items.${item.id}.title`)}
-        description={t(`involvedPosts.items.${item.id}.excerpt`)}
-        tag={item.category}
-        slug={item.slug}
-      />
-    ))}
-    {!visibleItems.length && (
-      <div className="col-span-full text-center text-sm text-gray-500">
-        {t("involvedPosts.noItems", "No items yet.")}
-      </div>
-    )}
-  </div>
-)}
-
+              {/* Deputy CMs */}
+              <h3 className="text-lg font-semibold mt-6 mb-2">
+                {t("involvedPosts.cmdesk.deputyChiefMinistersTitle", "Deputy Chief Ministers")}
+              </h3>
+              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border px-2 py-2 w-1/3">
+                      {t("involvedPosts.cmdesk.tableHeaders.image", "Image")}
+                    </th>
+                    <th className="border px-2 py-2 w-1/3">
+                      {t("involvedPosts.cmdesk.tableHeaders.name", "Name")}
+                    </th>
+                    <th className="border px-2 py-2 w-1/3">
+                      {t("involvedPosts.cmdesk.tableHeaders.designation", "Designation")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {item.deputyChiefMinisters.map((dep, i) => (
+                    <tr key={i}>
+                      <td className="border p-2 text-center">
+                        <img
+                          src={dep.image}
+                          alt={dep.name}
+                          className="w-35 h-40 object-cover rounded-full mx-auto"
+                        />
+                      </td>
+                      <td className="border px-2 py-2 text-center">
+                        {t(`involvedPosts.cmdesk.deputyChiefMinisters.${i}.name`)}
+                      </td>
+                      <td className="border px-2 py-2 text-center">
+                        {t(`involvedPosts.cmdesk.deputyChiefMinisters.${i}.designation`)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          {visibleItems.map((item) => (
+            <Card
+              key={item.id}
+              image={item.image}
+              title={t(`involvedPosts.items.${item.id}.title`)}
+              description={t(`involvedPosts.items.${item.id}.excerpt`)}
+              tag={item.category}
+              slug={item.slug}
+            />
+          ))}
+          {!visibleItems.length && (
+            <div className="col-span-full text-center text-sm text-gray-500">
+              {t("involvedPosts.noItems", "No items yet.")}
+            </div>
+          )}
+        </div>
+      )}
     </section>
   );
 }
