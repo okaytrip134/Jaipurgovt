@@ -21,7 +21,7 @@ function Navbar() {
           {/* Logo */}
           <a href="/" className="flex items-center pl-4" aria-label={t("home")}>
             <img
-              src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
+              src="/cm/Emblem_of_India.svg.webp"
               alt="Gov. of Jaipur"
               className="h-16"
             />
@@ -154,7 +154,7 @@ function Navbar() {
           {/* Right cluster: CM + Language Switcher */}
           <div className="hidden xl:flex items-center gap-4 text-right pr-4">
             <img
-              src="https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
+              src="/cm/cm bhajan lal ji.webp"
               alt={t("cm_name")}
               className="h-18 w-18 rounded-full object-cover"
             />

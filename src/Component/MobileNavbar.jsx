@@ -38,7 +38,7 @@ export default function MobileNavbar() {
       <div className="w-full border-b navbar-bg sticky top-0 z-30 flex items-center justify-between px-4 py-3">
         <a href="/" className="flex items-center">
           <img
-            src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
+            src="/cm/Emblem_of_India.svg.webp"
             alt="Gov. of Jaipur"
             className="h-12"
           />
@@ -73,7 +73,7 @@ export default function MobileNavbar() {
         <div className="flex items-center justify-between px-4 py-3 border-b">
           <a href="/" className="flex items-center gap-2">
             <img
-              src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
+              src="/cm/Emblem_of_India.svg.webp"
               alt="Gov. of Jaipur"
               className="h-10"
             />

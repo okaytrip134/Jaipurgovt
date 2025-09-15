@@ -15,9 +15,9 @@ function Footer() {
         <div className="text-center mb-8">
           <div className="flex justify-center items-center mb-4">
             <img
-              src="https://indiapost.gov.in/images/home/ashok-thumb-logo.svg"
+              src="/cm/Emblem_of_India.svg.webp"
               alt="Gov. of Jaipur"
-              className="h-16 w-16 mr-4"
+              className="h-16 w-12 mr-7"
             />
             <div>
               <h3 className="text-2xl font-bold">{t('footer.government_of_jaipur')}</h3>

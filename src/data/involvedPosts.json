@@ -102,7 +102,7 @@
     {
       "id": 9,
       "categoryKey": "CM Desk",
-      "image": "https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/DepartmentMaster/409/2024/Jun/30409/40947bd8a67-702a-4df3-b1cb-886f97aa2606.jpeg",
+      "image": "/cm/cm bhajan lal ji.webp ",
       "designation": "Chief Minister of Rajasthan",
       "details": {
         "Name": "Shri Bhajanlal Sharma",
@@ -120,12 +120,12 @@
       },
       "deputyChiefMinisters": [
         {
-          "image": "https://assembly.rajasthan.gov.in/HamareVidhayak/MLAPic/1583.jpg",
+          "image": "/cm/diya-kumari.webp",
           "name": "Shri Diya Kumari",
           "designation": "Deputy Chief Minister"
         },
         {
-          "image": "https://assembly.rajasthan.gov.in/HamareVidhayak/MLAPic/1595.jpg",
+          "image": "/cm/bairwa.webp",
           "name": "Shri Prem Chand Bairwa",
           "designation": "Deputy Chief Minister"
         }
