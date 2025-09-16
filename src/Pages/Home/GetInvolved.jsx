@@ -239,7 +239,7 @@ export default function GetInvolved() {
                           {Object.entries(item.details).map(([key]) => (
                             <tr key={key}>
                               <td className="font-semibold border px-2 py-1 w-1/3">
-                                {t(`involvedPosts.cmdesk.details.${key}`)}
+                                {t(`${key}`)}
                               </td>
                               <td className="border px-2 py-1">
                                 {t(`involvedPosts.cmdesk.details.${key}`)}
