@@ -159,10 +159,10 @@ export default function GetInvolved() {
 
       {/* Tabs: Mobile carousel (2 per view) */}
       <MobileTabsCarousel
-        tabs={tabs.map((tab) => ({
-          ...tab,
-          label: t(`${tab.label}`),
-        }))}
+    tabs={tabs.map((tab) => ({
+  ...tab,
+  label: t(`tabs.${tab.key}`), // Use the key and the "tabs" namespace
+}))}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         activeColor={activeColor}
