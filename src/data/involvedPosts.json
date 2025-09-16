@@ -1,31 +1,27 @@
 {
-  "tabs": [
-    {
-      "key": "do",
-      "label": "Event In Jaipur",
-      "icon": "/Festival.svg"
-    },
-    {
-      "key": "Places TO Visit",
-      "label": "Places TO Visit",
-      "icon": "/Places.svg"
-    },
-    {
-      "key": "CM Desk",
-      "label": "CM Desk",
-      "icon": "/Desk.svg"
-    },
-    {
-      "key": "blog",
-      "label": "BLOG",
-      "icon": "/blog.svg"
-    },
-    {
-      "key": "poll",
-      "label": "POLL/SURVEY",
-      "icon": "/questionnaire.svg"
-    }
-  ],
+"tabs": [
+  {
+    "key": "do",
+    "icon": "/Festival.svg"
+  },
+  {
+    "key": "places",
+    "icon": "/Places.svg"
+  },
+  {
+    "key": "cmdesk",
+    "icon": "/Desk.svg"
+  },
+  {
+    "key": "blog",
+    "icon": "/blog.svg"
+  },
+  {
+    "key": "poll",
+    "icon": "/questionnaire.svg"
+  }
+],
+
   "items": [
     {
       "id": 1,

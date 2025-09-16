@@ -191,7 +191,7 @@ export default function GetInvolved() {
                 size={32}
                 color={active ? activeColor : inactiveColor}
               />
-              <p className="mt-2 text-sm font-semibold text-center">{tab.label}</p>
+              <p className="mt-2 text-sm font-semibold text-center">{t(`tabs.${tab.key}`)}</p>
             </button>
           );
         })}

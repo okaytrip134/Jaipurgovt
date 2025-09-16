@@ -86,11 +86,11 @@
   "get_involved_title": "Connect with Jaipur ",
   "get_involved_subtitle": "Participate in jaipur-building activities",
   "tabs": {
-    "do": "Do",
+    "do": "Event In Jaipur",
+    "places": "Places To Visit",
+    "cmdesk": "CM Desk",
     "blog": "Blog",
-    "poll": "Poll",
-    "campaign": "Campaign",
-    "podcast": "Podcast"
+    "poll": "Poll / Survey"
   },
   "content": {
     "do": {
