@@ -126,13 +126,13 @@ export default function GetInvolved() {
       title: t("content.poll.title"),
       subtitle: t("content.poll.subtitle"),
     },
-    campaign: {
-      title: t("content.campaign.title"),
-      subtitle: t("content.campaign.subtitle"),
+    cmdesk: {
+      title: t("content.cmdesk.title"),
+      subtitle: t("content.cmdesk.subtitle"),
     },
-    podcast: {
-      title: t("content.podcast.title"),
-      subtitle: t("content.podcast.subtitle"),
+    places: {
+      title: t("content.places.title"),
+      subtitle: t("content.places.subtitle"),
     },
   };
 
@@ -215,7 +215,7 @@ export default function GetInvolved() {
       </div>
 
       {/* Cards: Desktop grid */}
-      {activeTab === "CM Desk" ? (
+      {activeTab === "cmdesk" ? (
         <div className="space-y-6">
           {visibleItems.map((item) => (
             <div key={item.id}>

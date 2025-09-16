@@ -105,13 +105,13 @@
       "title": "Polls/Surveys",
       "subtitle": "Share your opinion to help shape better policy."
     },
-    "campaign": {
-      "title": "Campaigns",
-      "subtitle": "Participate and spread the word."
+    "cmdesk": {
+      "title": "Chief Minister (CM Desk)",
+      "subtitle": "Insights and initiatives from the Chief Minister."
     },
-    "podcast": {
-      "title": "Podcast",
-      "subtitle": "Listen to stories and updates."
+    "places": {
+      "title": "Places To Visit",
+      "subtitle": "Your guide to top destinations and attractions."
     }
   },
   "article": {
@@ -256,16 +256,16 @@
         "excerpt": "CM launched new luxury & AC buses from Jaipur, including Kainchi Dham service.",
         "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Public Transport Boost</h2><p class='mb-4'>Rajasthan Chief Minister Bhajanlal Sharma, along with Deputy CM Prem Chand Bairwa, on Saturday flagged off 162 new roadways buses in Jaipur to improve commute and connectivity.</p><p class='mb-4'>Speaking to the media, Deputy Chief Minister Bairwa thanked Chief Minister Bhajanlal Sharma for giving Rajasthan Roadways a wonderful gift and praised the department's progress under his leadership.</p><p class='mb-4'>\"I would like to extend my congratulations and best wishes to all the travellers of Rajasthan. Our Chief Minister, Bhajanlal Sharma, has given a wonderful gift to the Rajasthan Roadways, driven by his vision that the people of Rajasthan should receive good facilities--and that too with safety,\" Bairwa said.</p><p class='mb-4'>Bairwa said that he flagged off 162 buses along with CM Bhajanlal Sharma. He said that the government provided free bus travel to women during Raksha Bandhan and also five days of free travel to students preparing for government and competitive examinations.</p><p class='mb-4'>\"In this spirit, today 162 buses were flagged off, and I am truly grateful to him for this. In just about one and a half years, he has achieved a lot in the Rajasthan Roadways. For our women and sisters, he has announced free travel for two days on the occasion of Raksha Bandhan. He has also introduced a scheme to provide five days of free travel to students who are preparing for exams and competitive tests,\" he said.</p>"
       },
-      "3":     {
-      "title": "Rajasthan government took a big decision for cow service, the grant amount for cow shelters was increased by 15 percent",
-      "excerpt": "Rajasthan CM outlines govt’s vision to transform state into India’s largest dairy hub at Gau Mahakumbh.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>The grant amount for cow shelters was increased by 15 percent</h2><p class='mb-4'>Taking a big step for the protection and promotion of cows, the Rajasthan government has increased the grant amount given for cow shelters and Nandishalas by 15 percent. Now an assistance of Rs 50 per day will be given for each cow. Chief Minister Bhajanlal Sharma said that cow service is the priority of the government and many important decisions have been taken in the interest of cattle owners and cows in the recently presented budget. Addressing the gratitude meeting organized at the Chief Minister's residence, Chief Minister Sharma said that under the Gopal Credit Card Scheme, interest-free loans will now be provided to 2.5 lakh cowherd families. To make this scheme more simple, stamp duty has been waived on all necessary documents.<br/>Rajasthan Chief Minister Bhajan Lal Sharma has outlined the government’s vision to transform the state into not just an agricultural hub but also India’s largest dairy hub. Speaking at the Gau Mahakumbh, a global summit on cows, organised by the Shri Devraha Baba Gau Seva Parivar in Jaipur yesterday, the Chief Minister highlighted the significant steps being taken to achieve this goal.<br/>A provision of 500 crore rupees has been made under the Chief Minister Milk Producer Incentive Scheme, with 468 crore rupees already transferred through Direct Benefit Transfer (DBT). To support milk producers, a subsidy of 5 rupees per litre has been introduced, while ensuring an average price of 864 rupees per kg of fat. The Chief Minister also emphasised that farmers and animal keepers are the backbone of food and nutrition production. As part of efforts to empower them, the government has increased the ‘Kisan Samman Nidhi’ from 6,000 rupees to 9,000 rupees.<br/>In addition, loan facilities are being extended through the Gopal Credit Card, and more than 33,000 milk producers have been provided with 3 lakh rupees insurance coverage. The Chief Minister stated that a grant of 2,791 crore rupees has been allocated under cow protection and promotion schemes. Every registered Gaushala receives assistance of 50 rupees per cow per day and 25 rupees for small calves. Under the Nandishala Sahyogita Yojana, over 62 crore rupees have been allocated for Panchayat-level infrastructure development..</p>"
-    },
-      "4":     {
-      "title": "Jaipur Gets 2 Lakh LED Streetlights",
-      "excerpt": "CM launches Places TO Visit to install 200,000 LED streetlights in Jaipur under City Chalo drive.",
-      "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Chalo Places TO Visit</h2><p class='mb-4'>Ahead of the festive season, the Rajasthan government under CM Bhajanlal Sharma announced the installation of 2 lakh LED streetlights across Jaipur. A new helpline (181) was also launched for citizen feedback on civic services.</p>"
-    },
+      "3": {
+        "title": "Rajasthan government took a big decision for cow service, the grant amount for cow shelters was increased by 15 percent",
+        "excerpt": "Rajasthan CM outlines govt’s vision to transform state into India’s largest dairy hub at Gau Mahakumbh.",
+        "contentHtml": "<h2 class='text-2xl font-bold mb-2'>The grant amount for cow shelters was increased by 15 percent</h2><p class='mb-4'>Taking a big step for the protection and promotion of cows, the Rajasthan government has increased the grant amount given for cow shelters and Nandishalas by 15 percent. Now an assistance of Rs 50 per day will be given for each cow. Chief Minister Bhajanlal Sharma said that cow service is the priority of the government and many important decisions have been taken in the interest of cattle owners and cows in the recently presented budget. Addressing the gratitude meeting organized at the Chief Minister's residence, Chief Minister Sharma said that under the Gopal Credit Card Scheme, interest-free loans will now be provided to 2.5 lakh cowherd families. To make this scheme more simple, stamp duty has been waived on all necessary documents.<br/>Rajasthan Chief Minister Bhajan Lal Sharma has outlined the government’s vision to transform the state into not just an agricultural hub but also India’s largest dairy hub. Speaking at the Gau Mahakumbh, a global summit on cows, organised by the Shri Devraha Baba Gau Seva Parivar in Jaipur yesterday, the Chief Minister highlighted the significant steps being taken to achieve this goal.<br/>A provision of 500 crore rupees has been made under the Chief Minister Milk Producer Incentive Scheme, with 468 crore rupees already transferred through Direct Benefit Transfer (DBT). To support milk producers, a subsidy of 5 rupees per litre has been introduced, while ensuring an average price of 864 rupees per kg of fat. The Chief Minister also emphasised that farmers and animal keepers are the backbone of food and nutrition production. As part of efforts to empower them, the government has increased the ‘Kisan Samman Nidhi’ from 6,000 rupees to 9,000 rupees.<br/>In addition, loan facilities are being extended through the Gopal Credit Card, and more than 33,000 milk producers have been provided with 3 lakh rupees insurance coverage. The Chief Minister stated that a grant of 2,791 crore rupees has been allocated under cow protection and promotion schemes. Every registered Gaushala receives assistance of 50 rupees per cow per day and 25 rupees for small calves. Under the Nandishala Sahyogita Yojana, over 62 crore rupees have been allocated for Panchayat-level infrastructure development..</p>"
+      },
+      "4": {
+        "title": "Jaipur Gets 2 Lakh LED Streetlights",
+        "excerpt": "CM launches Places TO Visit to install 200,000 LED streetlights in Jaipur under City Chalo drive.",
+        "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Chalo Places TO Visit</h2><p class='mb-4'>Ahead of the festive season, the Rajasthan government under CM Bhajanlal Sharma announced the installation of 2 lakh LED streetlights across Jaipur. A new helpline (181) was also launched for citizen feedback on civic services.</p>"
+      },
       "5": {
         "title": "Winner Announcement for Comic Story competition on Unani Medicine",
         "excerpt": "Comic Story winners are out."
