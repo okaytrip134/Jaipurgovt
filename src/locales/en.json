@@ -299,8 +299,22 @@
         "excerpt": "Royal residence with museums, courtyards, and ornate gates showcasing Jaipur’s heritage."
       }
     },
-    "cmdesk": {
+"cmdesk": {
       "designation": "Chief Minister of Rajasthan",
+      "detailsLabels": {
+        "Name": "Name",
+        "Date of Birth": "Date of Birth",
+        "Home Town": "Home Town",
+        "Educational Qualification": "Educational Qualification",
+        "Father's Name": "Father's Name",
+        "Mother's Name": "Mother's Name",
+        "Marital Status": "Marital Status",
+        "Spouse Name": "Spouse Name",
+        "Number of Children": "Number of Children",
+        "Assembly Constituency": "Assembly Constituency",
+        "Member Category": "Member Category",
+        "Official Website": "Official Website"
+      },
       "details": {
         "Name": "Shri Bhajanlal Sharma",
         "Date of Birth": "15-Dec-1966",
@@ -315,6 +329,12 @@
         "Member Category": "General",
         "Official Website": "https://cmo.rajasthan.gov.in/"
       },
+      "deputyChiefMinistersTitle": "Deputy Chief Ministers",
+      "tableHeaders": {
+        "image": "Image",
+        "name": "Name",
+        "designation": "Designation"
+      },
       "deputyChiefMinisters": [
         {
           "name": "Shri Diya Kumari",
@@ -325,6 +345,16 @@
           "designation": "Deputy Chief Minister"
         }
       ]
+    }
+  },
+  "media": {
+    "title": "Jaipur News Media",
+    "suggested": "Suggested videos",
+    "videos": {
+      "1": "Pratham Gau-Mahakumbh organized in Jaipur",
+      "2": "Women’s strength, new colors - Path to self-reliance | Episode 4",
+      "3": "Respectful greetings to all teachers on Teacher’s Day!",
+      "4": "Heartfelt wishes on World Environment Day!"
     }
   }
 }

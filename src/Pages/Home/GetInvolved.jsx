@@ -53,11 +53,10 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`w-1/2 flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
-                  active
+                className={`w-1/2 flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
                     ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
                     : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
-                }`}
+                  }`}
                 role="tab"
                 aria-selected={active}
               >
@@ -151,7 +150,7 @@ export default function GetInvolved() {
   );
 
   return (
-    <section className="py-10 px-6 max-w-7xl mx-auto">
+    <section className="py-10 px-6 max-w-[1450px] mx-auto">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-sky-600">{t("get_involved_title")}</h2>
         <p className="text-gray-600">{t("get_involved_subtitle")}</p>
@@ -159,10 +158,10 @@ export default function GetInvolved() {
 
       {/* Tabs: Mobile carousel (2 per view) */}
       <MobileTabsCarousel
-    tabs={tabs.map((tab) => ({
-  ...tab,
-  label: t(`tabs.${tab.key}`), // Use the key and the "tabs" namespace
-}))}
+        tabs={tabs.map((tab) => ({
+          ...tab,
+          label: t(`tabs.${tab.key}`), // Use the key and the "tabs" namespace
+        }))}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         activeColor={activeColor}
@@ -177,11 +176,10 @@ export default function GetInvolved() {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`bg-gray-50 relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
-                active
+              className={`bg-gray-50 relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
                   ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
                   : "bg-gray-50 text-gray-500 shadow-lg hover:shadow-md focus:ring-gray-300"
-              }`}
+                }`}
               role="tab"
               aria-selected={active}
             >
@@ -239,13 +237,14 @@ export default function GetInvolved() {
                           {Object.entries(item.details).map(([key]) => (
                             <tr key={key}>
                               <td className="font-semibold border px-2 py-1 w-1/3">
-                                {t(`${key}`)}
+                                {t(`involvedPosts.cmdesk.detailsLabels.${key}`)} {/* ✅ Label */}
                               </td>
                               <td className="border px-2 py-1">
-                                {t(`involvedPosts.cmdesk.details.${key}`)}
+                                {t(`involvedPosts.cmdesk.details.${key}`)} {/* ✅ Value */}
                               </td>
                             </tr>
                           ))}
+
                         </tbody>
                       </table>
                     </td>

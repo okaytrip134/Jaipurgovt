@@ -299,13 +299,27 @@
         "excerpt": "शाही निवास जिसमें संग्रहालय, प्रांगण और भव्य द्वार हैं जो जयपुर की धरोहर को दर्शाते हैं।"
       }
     },
-    "cmdesk": {
+"cmdesk": {
       "designation": "राजस्थान के मुख्यमंत्री",
+      "detailsLabels": {
+        "Name": "नाम",
+        "Date of Birth": "जन्म तिथि",
+        "Home Town": "गृहनगर",
+        "Educational Qualification": "शैक्षिक योग्यता",
+        "Father's Name": "पिता का नाम",
+        "Mother's Name": "माता का नाम",
+        "Marital Status": "वैवाहिक स्थिति",
+        "Spouse Name": "जीवनसाथी का नाम",
+        "Number of Children": "संतानों की संख्या",
+        "Assembly Constituency": "विधानसभा क्षेत्र",
+        "Member Category": "सदस्य श्रेणी",
+        "Official Website": "आधिकारिक वेबसाइट"
+      },
       "details": {
         "Name": "श्री भजनलाल शर्मा",
         "Date of Birth": "15-दिसंबर-1966",
         "Home Town": "भरतपुर",
-        "Educational Qualification": "एम.ए. (राजनीति विज्ञान)",
+        "Educational Qualification": "एम.ए.(राजनीति विज्ञान)",
         "Father's Name": "श्री किशन स्वरूप शर्मा",
         "Mother's Name": "श्रीमती गोमती देवी",
         "Marital Status": "विवाहित",
@@ -314,6 +328,12 @@
         "Assembly Constituency": "सांगानेर",
         "Member Category": "सामान्य",
         "Official Website": "https://cmo.rajasthan.gov.in/"
+      },
+      "deputyChiefMinistersTitle": "उप मुख्यमंत्री",
+      "tableHeaders": {
+        "image": "छवि",
+        "name": "नाम",
+        "designation": "पद"
       },
       "deputyChiefMinisters": [
         {
@@ -325,6 +345,16 @@
           "designation": "उप मुख्यमंत्री"
         }
       ]
+    }
+  },
+  "media": {
+    "title": "जयपुर न्यूज़ मीडिया",
+    "suggested": "सुझाए गए वीडियो",
+    "videos": {
+      "1": "श्री देवराहा बाबा गौसेवा परिवार के तत्वाधान में आयोजित प्रथम गौ-महाकुंभ, जयपुर",
+      "2": "नारी संग, नये रंग - आत्मनिर्भरता की राह | एपिसोड 4",
+      "3": "शिक्षक दिवस के पावन अवसर पर सभी शिक्षकों व गुरुजनों को आदरपूर्वक नमन!",
+      "4": "विश्व पर्यावरण दिवस की हार्दिक शुभकामनाएँ!"
     }
   }
 }
