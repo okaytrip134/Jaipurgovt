@@ -356,5 +356,44 @@
       "3": "Respectful greetings to all teachers on Teacher’s Day!",
       "4": "Heartfelt wishes on World Environment Day!"
     }
+  },
+  
+"important_links": {
+    "title": "Important Links",
+    "description": "Quick access to government services and resources",
+    "links": {
+      "nfsa_application_form": {
+        "title": "NFSA Application Form",
+        "url": "https://food.rajasthan.gov.in/NFSA_Application_Form"
+      },
+      "election_department": {
+        "title": "Election Department",
+        "url": "https://ceorajasthan.nic.in/"
+      },
+      "zila_darshan_pustika": {
+        "title": "Zila Darshan Pustika",
+        "url": "https://jaipur.rajasthan.gov.in/zila-darshan"
+      },
+      "success_story": {
+        "title": "Success Story",
+        "url": "https://jaipur.rajasthan.gov.in/success-stories"
+      },
+      "tourist_places": {
+        "title": "Tourist Places",
+        "url": "https://tourism.rajasthan.gov.in/jaipur"
+      },
+      "business_opportunity": {
+        "title": "Business Opportunity",
+        "url": "https://invest.rajasthan.gov.in/"
+      },
+      "awards": {
+        "title": "Awards",
+        "url": "https://jaipur.rajasthan.gov.in/awards"
+      },
+      "services": {
+        "title": "Services",
+        "url": "https://sso.rajasthan.gov.in/"
+      }
+    }
   }
 }

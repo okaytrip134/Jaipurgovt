@@ -356,5 +356,43 @@
       "3": "शिक्षक दिवस के पावन अवसर पर सभी शिक्षकों व गुरुजनों को आदरपूर्वक नमन!",
       "4": "विश्व पर्यावरण दिवस की हार्दिक शुभकामनाएँ!"
     }
+  },
+   "important_links": {
+    "title": "महत्वपूर्ण लिंक",
+    "description": "सरकारी सेवाओं और संसाधनों तक त्वरित पहुँच",
+    "links": {
+      "nfsa_application_form": {
+        "title": "एनएफएसए आवेदन फॉर्म",
+        "url": "https://food.rajasthan.gov.in/NFSA_Application_Form"
+      },
+      "election_department": {
+        "title": "चुनाव विभाग",
+        "url": "https://ceorajasthan.nic.in/"
+      },
+      "zila_darshan_pustika": {
+        "title": "ज़िला दर्शन पुस्तिका",
+        "url": "https://jaipur.rajasthan.gov.in/zila-darshan"
+      },
+      "success_story": {
+        "title": "सफलता की कहानी",
+        "url": "https://jaipur.rajasthan.gov.in/success-stories"
+      },
+      "tourist_places": {
+        "title": "पर्यटन स्थल",
+        "url": "https://tourism.rajasthan.gov.in/jaipur"
+      },
+      "business_opportunity": {
+        "title": "व्यवसाय के अवसर",
+        "url": "https://invest.rajasthan.gov.in/"
+      },
+      "awards": {
+        "title": "पुरस्कार",
+        "url": "https://jaipur.rajasthan.gov.in/awards"
+      },
+      "services": {
+        "title": "सेवाएँ",
+        "url": "https://sso.rajasthan.gov.in/"
+      }
+    }
   }
 }

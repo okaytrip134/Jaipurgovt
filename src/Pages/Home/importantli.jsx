@@ -1,51 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import backimg from "../../../public/bg-noise.png";
 import im from "../../../public/ack.jpg";
 
-const importantLinks = [
-  {
-    title: "NFSA Application Form",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://food.rajasthan.gov.in/NFSA_Application_Form",
-  },
-  {
-    title: "Election Department",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://ceorajasthan.nic.in/",
-  },
-  {
-    title: "Zila Darshan Pustika",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://jaipur.rajasthan.gov.in/zila-darshan",
-  },
-  {
-    title: "Success Story",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://jaipur.rajasthan.gov.in/success-stories",
-  },
-  {
-    title: "Tourist Places",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://tourism.rajasthan.gov.in/jaipur",
-  },
-  {
-    title: "Business Opportunity",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://invest.rajasthan.gov.in/",
-  },
-  {
-    title: "Awards",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://jaipur.rajasthan.gov.in/awards",
-  },
-  {
-    title: "Services",
-    img: "https://cdn-icons-png.flaticon.com/512/15876/15876463.png",
-    url: "https://sso.rajasthan.gov.in/",
-  },
-];
+// Static icon used for all cards
+const cardIcon = "https://cdn-icons-png.flaticon.com/512/15876/15876463.png";
 
 export default function ImportantLinks() {
+  const { t } = useTranslation();
+
+  // Fetch links from translation file
+  const importantLinks = t("important_links.links", { returnObjects: true });
+
   return (
     <div
       className="w-full py-14"
@@ -61,36 +27,38 @@ export default function ImportantLinks() {
       {/* Section Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-white relative inline-block">
-          Important Links
-          {/* Underline accent */}
-          <span className="block w-40 h-1  mx-auto mt-3 rounded-full" style={{background: "var(--gradient-primary)"}}></span>
+          {t("important_links.title")}
+          <span
+            className="block w-40 h-1 mx-auto mt-3 rounded-full"
+            style={{ background: "var(--gradient-primary)" }}
+          ></span>
         </h2>
         <p className="text-gray-900 mt-3 text-sm md:text-base">
-          Quick access to government services and resources
+          {t("important_links.description")}
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1450px] mx-auto px-4">
         {/* Links Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9">
-          {importantLinks.map((link, idx) => (
+          {Object.entries(importantLinks).map(([key, value], idx) => (
             <a
               key={idx}
-              href={link.url}
+              href={value.url}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col items-center justify-center text-center h-44 p-4 rounded-xl shadow-sm hover:shadow-lg transition-transform hover:scale-105 bg-cover bg-center"
+              className="flex flex-col items-center justify-center text-center h-44 p-4 rounded-xl  shadow-sm hover:shadow-lg transition-transform hover:scale-105 bg-cover bg-center"
               style={{
                 backgroundImage: `url(${im})`,
               }}
             >
               <img
-                src={link.img}
-                alt={link.title}
-                className="w-16 h-16 mx-auto mb-3"
+                src={cardIcon}
+                alt={t(`important_links.links.${key}.title`)}
+                className="w-16 h-16 object-contain mb-3 "
               />
-              <span className="text-base font-medium text-gray-800 hover:text-blue-600 break-words whitespace-normal leading-tight">
-                {link.title}
+              <span className="text-base font-medium text-gray-800 hover:text-blue-600 break-words text-center">
+                {t(`important_links.links.${key}.title`)}
               </span>
             </a>
           ))}
