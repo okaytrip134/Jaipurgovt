@@ -131,7 +131,7 @@
       "id": 10,
       "slug": "amber-fort-jaipur",
       "title": "Amber Fort",
-      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/amer-fort-jaipur.jpg",
+      "image": "/amer-fort-jaipur.jpg",
       "categoryKey": "places",
       "excerpt": "A majestic fort-palace complex overlooking Maota Lake, blending Rajput and Mughal styles.",
       "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Amber Fort</h2><p class='mb-4'>Built in 1592 by Raja Man Singh, Amber Fort is one of Jaipur’s most famous attractions. Made of red sandstone and marble, the fort includes stunning courtyards, palaces, halls, and gardens. The Sheesh Mahal (Mirror Palace) is a highlight with intricate mirror work. The fort sits on a hilltop, offering panoramic views of Maota Lake and the surrounding hills.</p>"
@@ -140,7 +140,7 @@
       "id": 11,
       "slug": "hawa-mahal-jaipur",
       "title": "Hawa Mahal",
-      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/hawa-mahal-jaipur.jpg",
+      "image": "/hawa-mahal.jpg",
       "categoryKey": "places",
       "excerpt": "The Palace of Winds, with 953 intricately designed windows allowing cool breeze to flow through.",
       "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Hawa Mahal</h2><p class='mb-4'>Constructed in 1799 by Maharaja Sawai Pratap Singh, Hawa Mahal is an iconic five-story palace designed with 953 jharokhas (small windows). The palace allowed royal women to observe street festivals without being seen. Its honeycomb-like structure is a prime example of Rajput architecture, and it is especially beautiful at sunrise.</p>"
@@ -149,7 +149,7 @@
       "id": 12,
       "slug": "jal-mahal-jaipur",
       "title": "Jal Mahal",
-      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/jal-mahal.jpg",
+      "image": "/jal-mahal.jpg",
       "categoryKey": "places",
       "excerpt": "A beautiful Water Palace located in the middle of Man Sagar Lake, offering serene views.",
       "contentHtml": "<h2 class='text-2xl font-bold mb-2'>Jal Mahal</h2><p class='mb-4'>Jal Mahal, meaning 'Water Palace', is a 5-story palace with 4 floors submerged under Man Sagar Lake. It was built in the 18th century by Maharaja Madho Singh. The palace combines Rajput and Mughal styles and offers enchanting views at sunrise and sunset. Visitors enjoy the peaceful atmosphere and picturesque surroundings.</p>"
@@ -158,7 +158,7 @@
       "id": 13,
       "slug": "city-palace-jaipur",
       "title": "City Palace",
-      "image": "https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/attraction/banners/desk/10047.jpg",
+      "image": "/city palace.jpg",
       "categoryKey": "places",
       "excerpt": "Royal residence with museums, courtyards, and ornate gates showcasing Jaipur’s heritage.",
       "contentHtml": "<h2 class='text-2xl font-bold mb-2'>City Palace</h2><p class='mb-4'>City Palace was built by Maharaja Sawai Jai Singh II in the 18th century. It is a grand complex of courtyards, gardens, and buildings blending Rajput, Mughal, and European styles. Key highlights include Mubarak Mahal, Chandra Mahal, and Pritam Niwas Chowk. Today, parts of the palace serve as museums displaying royal costumes, weapons, and artifacts.</p>"

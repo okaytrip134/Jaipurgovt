@@ -34,9 +34,9 @@ const Article = () => {
         {/* Left Featured Article (custom overlay card) */}
         <article className="group relative overflow-hidden rounded-2xl shadow-md">
           <img
-            src="https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/explore/S526.jpg"
+            src="/tour.jpg"
             alt={t('article.jaipur_workshop')}
-            className="h-80 sm:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-80 sm:h-full w-full object-fill transition-transform duration-500 group-hover:scale-105"
           />
 
           {/* Overlay */}
