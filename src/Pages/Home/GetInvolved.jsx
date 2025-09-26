@@ -53,11 +53,10 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`w-1/2 flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
-                  active
-                    ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
-                    : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
-                }`}
+                className={`w-1/2 flex-shrink-0 relative p-4 flex flex-col items-center justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
+                  ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
+                  : "bg-gray-50 text-gray-500 shadow-sm hover:shadow-md focus:ring-gray-300"
+                  }`}
                 role="tab"
                 aria-selected={active}
               >
@@ -151,7 +150,7 @@ export default function GetInvolved() {
   );
 
   return (
-    <section className="py-10 px-6 max-w-7xl mx-auto">
+    <section className="py-10 px-6 max-w-[1450px] mx-auto">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-sky-600">{t("get_involved_title")}</h2>
         <p className="text-gray-600">{t("get_involved_subtitle")}</p>
@@ -159,10 +158,10 @@ export default function GetInvolved() {
 
       {/* Tabs: Mobile carousel (2 per view) */}
       <MobileTabsCarousel
-    tabs={tabs.map((tab) => ({
-  ...tab,
-  label: t(`tabs.${tab.key}`), // Use the key and the "tabs" namespace
-}))}
+        tabs={tabs.map((tab) => ({
+          ...tab,
+          label: t(`tabs.${tab.key}`), // Use the key and the "tabs" namespace
+        }))}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         activeColor={activeColor}
@@ -170,18 +169,17 @@ export default function GetInvolved() {
       />
 
       {/* Tabs: Desktop static grid */}
-      <div className="hidden md:flex flex-wrap justify-center gap-12 mb-12" role="tablist">
+      <div className="hidden md:flex flex-wrap justify-center gap-24 mb-12" role="tablist">
         {tabs.map((tab) => {
           const active = activeTab === tab.key;
           return (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`bg-gray-50 relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${
-                active
-                  ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
-                  : "bg-gray-50 text-gray-500 shadow-lg hover:shadow-md focus:ring-gray-300"
-              }`}
+              className={`bg-gray-50 relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
+                ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
+                : "bg-gray-50 text-gray-500 shadow-lg hover:shadow-md focus:ring-gray-300"
+                }`}
               role="tab"
               aria-selected={active}
             >
@@ -199,85 +197,92 @@ export default function GetInvolved() {
 
       {/* Content */}
       <div className="mb-10 text-center">
-        <h3 className="text-xl mb-4 font-bold text-gray-800">
+        <h3 className="text-xl mb-4 mt-5 font-bold text-gray-800">
           {contentMeta[activeTab]?.title}
         </h3>
         <p className="text-gray-500">{contentMeta[activeTab]?.subtitle}</p>
       </div>
 
-      {/* Cards: Mobile carousel */}
-      <div className="md:hidden">
-        {itemsForCarousel.length ? (
-          <ResponsiveCardsCarousel items={itemsForCarousel} interval={3000} />
-        ) : (
-          <div className="text-center text-sm text-gray-500">No items yet.</div>
-        )}
-      </div>
-
-{activeTab === "cmdesk" ? (
-  <div className="space-y-6">
-    {visibleItems.map((item) => (
-      <div key={item.id}>
-        {/* CM Desk Table */}
-        <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
-          <tbody>
-            <tr>
-              <td className="border p-2 w-1/3 align-top">
-                <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  className="w-48 h-auto rounded-lg shadow"
-                />
-              </td>
-              <td className="border p-4 align-top">
-                <h3 className="text-2xl font-bold mb-2 text-blue-700">
-                 {t("involvedPosts.cmdesk.title")}
-                </h3>
-                <h4 className="text-lg font-semibold mb-4 text-gray-700">
-                 {t("involvedPosts.cmdesk.subtitle")}
-                </h4>
-                <p className="text-gray-600 leading-relaxed">{t("involvedPosts.cmdesk.article")}</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-{/* Deputy CMs */}
-<h3 className="text-lg font-semibold mt-6 mb-2">
-  {t("involvedPosts.cmdesk.deputyChiefMinistersTitle")}
-</h3>
-<table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
-  <thead className="bg-gray-100">
-    <tr>
-      <th className="border px-2 py-2 w-1/3">Image</th>
-      <th className="border px-2 py-2 w-1/3">Name</th>
-      <th className="border px-2 py-2 w-1/3">Designation</th>
-    </tr>
-  </thead>
-  <tbody>
-    {item.deputyChiefMinisters.map((dep, i) => {
-      const translated = t("involvedPosts.cmdesk.deputyChiefMinisters", { returnObjects: true })[i];
-      return (
-        <tr key={i}>
-          <td className="border p-2 text-center">
-            <img
-              src={dep.image}
-              alt={dep.name}
-              className="w-28 h-32 object-cover rounded-full mx-auto"
+      {/* Mobile carousel only for non-cmdesk tabs */}
+      {activeTab !== "cmdesk" && (
+        <div className="md:hidden">
+          {itemsForCarousel.length ? (
+            <ResponsiveCardsCarousel
+              items={itemsForCarousel}
+              interval={3000} // auto-play interval
             />
-          </td>
-          <td className="border px-2 py-2 text-center">{translated.name}</td>
-          <td className="border px-2 py-2 text-center">{translated.designation}</td>
-        </tr>
-      );
-    })}
-  </tbody>
-</table>
+          ) : (
+            <div className="text-center text-sm text-gray-500">No items yet.</div>
+          )}
+        </div>
+      )}
 
-      </div>
-    ))}
-  </div>
-) : (
-  // existing grid view...
+
+
+      {activeTab === "cmdesk" ? (
+        <div className="space-y-6">
+          {visibleItems.map((item) => (
+            <div key={item.id}>
+              {/* CM Desk Table */}
+              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
+                <tbody>
+                  <tr>
+                    <td className="border p-2 w-1/3 align-top">
+                      <img
+                        src={item.image}
+                        alt={item.imageAlt}
+                        className="w-48 h-auto rounded-lg shadow"
+                      />
+                      <h4 className="text-lg font-semibold mt-2 text-gray-700">
+                        {t("involvedPosts.cmdesk.subtitle")}
+                      </h4>
+                    </td>
+                    <td className="border p-4 align-top">
+                      <h3 className="text-2xl font-bold mb-4 text-blue-700">
+                        {t("involvedPosts.cmdesk.title")}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">{t("involvedPosts.cmdesk.article")}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              {/* Deputy CMs */}
+              <h3 className="text-lg font-semibold mt-6 mb-2">
+                {t("involvedPosts.cmdesk.deputyChiefMinistersTitle")}
+              </h3>
+              <table className="max-w-full border border-gray-300 bg-white rounded-lg shadow">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.image")}</th>
+                    <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.name")}</th>
+                    <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.designation")}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {item.deputyChiefMinisters.map((dep, i) => {
+                    const translated = t("involvedPosts.cmdesk.deputyChiefMinisters", { returnObjects: true })[i];
+                    return (
+                      <tr key={i}>
+                        <td className="border p-2 text-center">
+                          <img
+                            src={dep.image}
+                            alt={dep.name}
+                            className="w-28 h-32 object-cover rounded-full mx-auto"
+                          />
+                        </td>
+                        <td className="border px-2 py-2 text-center">{translated.name}</td>
+                        <td className="border px-2 py-2 text-center">{translated.designation}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+
+            </div>
+          ))}
+        </div>
+      ) : (
+        // existing grid view...
 
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {visibleItems.map((item) => (

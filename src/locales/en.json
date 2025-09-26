@@ -299,26 +299,36 @@
         "excerpt": "Royal residence with museums, courtyards, and ornate gates showcasing Jaipur’s heritage."
       }
     },
-"cmdesk": {
-  "title": "Chief Minister of Rajasthan",
-  "subtitle": "Shri Bhajanlal Sharma",
-  "article": "Jaipur, the capital city of Rajasthan, is moving towards a vision of becoming a hub of development and cultural heritage. Under the leadership of the Hon’ble Chief Minister, initiatives are being taken to modernize infrastructure, strengthen urban governance, and preserve the city's rich traditions while promoting economic growth. This development vision focuses on sustainable progress, citizen welfare, and global recognition of Jaipur as a vibrant, smart, and inclusive city.",
-  "image": "/images/cm-bhajanlal.jpg",
-  "imageAlt": "Chief Minister of Rajasthan",
-  "deputyChiefMinistersTitle": "Deputy Chief Ministers",
-  "deputyChiefMinisters": [
-    {
-      "name": "Shri Diya Kumari",
-      "designation": "Deputy Chief Minister",
-      "image": "/images/diya-kumari.jpg"
+
+  "cmdesk": {
+    "title": "Chief Minister of Rajasthan",
+    "subtitle": "Shri Bhajanlal Sharma",
+    "article": "Hon’ble Chief Minister Shri Bhajanlal Sharma has pledged to transform Jaipur into a smart and modern city. He has promised to strengthen infrastructure and improve traffic management for smoother commutes. Special initiatives will be launched to enhance cleanliness and greenery across the city. Concrete steps will be taken to promote tourism and give Jaipur’s cultural heritage global recognition. Opportunities and employment will be expanded for youth and entrepreneurs. Public safety and security measures will be strengthened to ensure a safe environment. Modern educational and healthcare facilities will be upgraded to benefit all citizens. Smart technology and digital solutions will be implemented for better governance. Above all, citizen convenience and welfare will be given the highest priority.",
+    "image": "/images/cm-bhajanlal.jpg",
+    "imageAlt": "Chief Minister of Rajasthan",
+
+    "deputyChiefMinistersTitle": "Deputy Chief Ministers",
+
+    "tableHeaders": {
+      "image": "Image",
+      "name": "Name",
+      "designation": "Designation"
     },
-    {
-      "name": "Shri Prem Chand Bairwa",
-      "designation": "Deputy Chief Minister",
-      "image": "/images/prem-chand-bairwa.jpg"
-    }
-  ]
-}
+
+    "deputyChiefMinisters": [
+      {
+        "name": "Shri Diya Kumari",
+        "designation": "Deputy Chief Minister",
+        "image": "/images/diya-kumari.jpg"
+      },
+      {
+        "name": "Shri Prem Chand Bairwa",
+        "designation": "Deputy Chief Minister",
+        "image": "/images/prem-chand-bairwa.jpg"
+      }
+    ]
+  }
+
   },
   "media": {
     "title": "Jaipur News Media",

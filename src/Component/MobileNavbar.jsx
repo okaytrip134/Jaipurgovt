@@ -211,9 +211,9 @@ export default function MobileNavbar() {
           <div className="mt-2 mb-10 px-3">
             <div className="flex items-center gap-3 p-3 rounded-lg border bg-gray-50">
               <img
-                src="https://jankalyanfile.rajasthan.gov.in//Content/UploadFolder/CMProfile/2024/Jun/1_CM_4a8f94bc-1773-48b0-9d53-734d79cbc223.jpeg"
+                src="/cm/cm bhajan lal ji.webp"
                 alt="Shri BhajanLal Sharma"
-                className="h-12 w-12 rounded-full object-cover"
+                className="h-16 w-16 rounded-full object-cover"
               />
               <div>
                 <p className="m-0 font-medium text-sm">Shri BhajanLal Sharma</p>
