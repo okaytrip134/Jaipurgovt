@@ -300,52 +300,26 @@
       }
     },
 "cmdesk": {
-      "designation": "राजस्थान के मुख्यमंत्री",
-      "detailsLabels": {
-        "Name": "नाम",
-        "Date of Birth": "जन्म तिथि",
-        "Home Town": "गृहनगर",
-        "Educational Qualification": "शैक्षिक योग्यता",
-        "Father's Name": "पिता का नाम",
-        "Mother's Name": "माता का नाम",
-        "Marital Status": "वैवाहिक स्थिति",
-        "Spouse Name": "जीवनसाथी का नाम",
-        "Number of Children": "संतानों की संख्या",
-        "Assembly Constituency": "विधानसभा क्षेत्र",
-        "Member Category": "सदस्य श्रेणी",
-        "Official Website": "आधिकारिक वेबसाइट"
-      },
-      "details": {
-        "Name": "श्री भजनलाल शर्मा",
-        "Date of Birth": "15-दिसंबर-1966",
-        "Home Town": "भरतपुर",
-        "Educational Qualification": "एम.ए.(राजनीति विज्ञान)",
-        "Father's Name": "श्री किशन स्वरूप शर्मा",
-        "Mother's Name": "श्रीमती गोमती देवी",
-        "Marital Status": "विवाहित",
-        "Spouse Name": "श्रीमती गीता शर्मा",
-        "Number of Children": "2 पुत्र",
-        "Assembly Constituency": "सांगानेर",
-        "Member Category": "सामान्य",
-        "Official Website": "https://cmo.rajasthan.gov.in/"
-      },
-      "deputyChiefMinistersTitle": "उप मुख्यमंत्री",
-      "tableHeaders": {
-        "image": "छवि",
-        "name": "नाम",
-        "designation": "पद"
-      },
-      "deputyChiefMinisters": [
-        {
-          "name": "श्रीमती दिया कुमारी",
-          "designation": "उप मुख्यमंत्री"
-        },
-        {
-          "name": "श्री प्रेम चंद बैरवा",
-          "designation": "उप मुख्यमंत्री"
-        }
-      ]
+  "title": "राजस्थान के मुख्यमंत्री",
+  "subtitle": "श्री भजनलाल शर्मा",
+  "article": "जयपुर, राजस्थान की राजधानी, विकास और सांस्कृतिक धरोहर का केंद्र बनने की दिशा में आगे बढ़ रहा है। माननीय मुख्यमंत्री के नेतृत्व में बुनियादी ढांचे के आधुनिकीकरण, शहरी प्रशासन को सुदृढ़ बनाने और शहर की समृद्ध परंपराओं को संरक्षित करते हुए आर्थिक विकास को बढ़ावा देने के लिए पहलें की जा रही हैं। यह विकास दृष्टि सतत प्रगति, नागरिक कल्याण और जयपुर को एक जीवंत, स्मार्ट और समावेशी शहर के रूप में वैश्विक पहचान दिलाने पर केंद्रित है।",
+  "image": "/images/cm-bhajanlal.jpg",
+  "imageAlt": "राजस्थान के मुख्यमंत्री",
+  "deputyChiefMinistersTitle": "उपमुख्यमंत्रीगण",
+  "deputyChiefMinisters": [
+    {
+      "name": "श्रीमती दीया कुमारी",
+      "designation": "उपमुख्यमंत्री",
+      "image": "/images/diya-kumari.jpg"
+    },
+    {
+      "name": "श्री प्रेमचंद बैरवा",
+      "designation": "उपमुख्यमंत्री",
+      "image": "/images/prem-chand-bairwa.jpg"
     }
+  ]
+}
+
   },
   "media": {
     "title": "जयपुर न्यूज़ मीडिया",

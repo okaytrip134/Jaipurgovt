@@ -300,52 +300,25 @@
       }
     },
 "cmdesk": {
-      "designation": "Chief Minister of Rajasthan",
-      "detailsLabels": {
-        "Name": "Name",
-        "Date of Birth": "Date of Birth",
-        "Home Town": "Home Town",
-        "Educational Qualification": "Educational Qualification",
-        "Father's Name": "Father's Name",
-        "Mother's Name": "Mother's Name",
-        "Marital Status": "Marital Status",
-        "Spouse Name": "Spouse Name",
-        "Number of Children": "Number of Children",
-        "Assembly Constituency": "Assembly Constituency",
-        "Member Category": "Member Category",
-        "Official Website": "Official Website"
-      },
-      "details": {
-        "Name": "Shri Bhajanlal Sharma",
-        "Date of Birth": "15-Dec-1966",
-        "Home Town": "Bharatpur",
-        "Educational Qualification": "M.A.(Political Science)",
-        "Father's Name": "Shri Kishan Swaroop Sharma",
-        "Mother's Name": "Smt. Gomti Devi",
-        "Marital Status": "Married",
-        "Spouse Name": "Smt. Geeta Sharma",
-        "Number of Children": "2 sons",
-        "Assembly Constituency": "Sanganer",
-        "Member Category": "General",
-        "Official Website": "https://cmo.rajasthan.gov.in/"
-      },
-      "deputyChiefMinistersTitle": "Deputy Chief Ministers",
-      "tableHeaders": {
-        "image": "Image",
-        "name": "Name",
-        "designation": "Designation"
-      },
-      "deputyChiefMinisters": [
-        {
-          "name": "Shri Diya Kumari",
-          "designation": "Deputy Chief Minister"
-        },
-        {
-          "name": "Shri Prem Chand Bairwa",
-          "designation": "Deputy Chief Minister"
-        }
-      ]
+  "title": "Chief Minister of Rajasthan",
+  "subtitle": "Shri Bhajanlal Sharma",
+  "article": "Jaipur, the capital city of Rajasthan, is moving towards a vision of becoming a hub of development and cultural heritage. Under the leadership of the Hon’ble Chief Minister, initiatives are being taken to modernize infrastructure, strengthen urban governance, and preserve the city's rich traditions while promoting economic growth. This development vision focuses on sustainable progress, citizen welfare, and global recognition of Jaipur as a vibrant, smart, and inclusive city.",
+  "image": "/images/cm-bhajanlal.jpg",
+  "imageAlt": "Chief Minister of Rajasthan",
+  "deputyChiefMinistersTitle": "Deputy Chief Ministers",
+  "deputyChiefMinisters": [
+    {
+      "name": "Shri Diya Kumari",
+      "designation": "Deputy Chief Minister",
+      "image": "/images/diya-kumari.jpg"
+    },
+    {
+      "name": "Shri Prem Chand Bairwa",
+      "designation": "Deputy Chief Minister",
+      "image": "/images/prem-chand-bairwa.jpg"
     }
+  ]
+}
   },
   "media": {
     "title": "Jaipur News Media",

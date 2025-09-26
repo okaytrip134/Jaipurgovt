@@ -7,7 +7,7 @@ import Loader from "./Component/Loader";
 import MobileNavbar from "./Component/MobileNavbar";
 import InvolvedDetail from "./Pages/Home/InvolvedDetails";
 // import GetInvolved from "./Pages/Home/GetInvolved"; // optional
-import LenisProvider from "./Component/LenisProvider"; // ✅ Lenis import
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <LenisProvider>
+
         <MobileNavbar />
         <Navbar />
 
@@ -33,7 +33,6 @@ function App() {
         </Routes>
 
         <Footer />
-      </LenisProvider>
     </BrowserRouter>
   );
 }
