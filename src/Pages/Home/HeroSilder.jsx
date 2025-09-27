@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 
 const slides = [
   { id: 1, image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
-  { id: 2, image: "https://storage.firstindia.co.in/public/news/September2025/175721882785.webp" },
-  { id: 3, image: "https://live.staticflickr.com/8076/8424029020_902fca70b8_b.jpg" },
+  { id: 2, image: "https://www.livehindustan.com/lh-img/smart/img/2025/09/06/1200x900/Buses__1757156071931_1757156072359.jpeg" },
+  { id: 3, image: "https://scontent.fdel1-3.fna.fbcdn.net/v/t39.30808-6/544899231_1115042140802279_3963050255515265691_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sBAgIvhf4uoQ7kNvwEIFPXw&_nc_oc=AdnxtbAc-MrjBnfw_-qvPFBA9mEpmo7kWHr7OihbqorACjIvD84JKO2i0FQiJpahC_Q&_nc_zt=23&_nc_ht=scontent.fdel1-3.fna&_nc_gid=48tvf7trK5tTAhwhSjWRig&oh=00_AfZVx4lxj9BlqnLvkxDuqjIcU93SEqTX87lSNEHki3LhfA&oe=68DD3AB0" },
   { id: 4, image: "https://images.unsplash.com/photo-1682830819991-3e100a80aa2e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
   { id: 5, image: "https://images.unsplash.com/photo-1712166424478-eb9b7103e460?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
 ];
@@ -35,39 +35,37 @@ export default function HeroSlider() {
   return (
     <>
       {/* HERO */}
-<section className="relative overflow-hidden h-[220px] sm:h-[300px] md:h-[380px] lg:h-[440px]">
-  <div className="absolute inset-0">
-    {slides.map((s, i) => (
-      <div
-        key={s.id}
-        className={`absolute inset-0 transition-opacity duration-[1000ms] ${
-          i === current ? "opacity-100" : "opacity-0"
-        }`}
-        style={{
-          backgroundImage: `url(${s.image})`,
-          backgroundSize: "100% 100%", // stretch to fill
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/25" />
-      </div>
-    ))}
-  </div>
+      <section className="relative overflow-hidden h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px]">
+        <div className="absolute inset-0">
+          {slides.map((s, i) => (
+            <div
+              key={s.id}
+              className={`absolute inset-0 transition-opacity duration-[1000ms] ${i === current ? "opacity-100" : "opacity-0"
+                }`}
+              style={{
+                backgroundImage: `url(${s.image})`,
+                backgroundSize: "100% 100%", // stretch to fill
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="absolute inset-0 bg-black/25" />
+            </div>
+          ))}
+        </div>
 
-  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-    {slides.map((_, i) => (
-      <button
-        key={i}
-        onClick={() => setCurrent(i)}
-        aria-label={t("hero.slide_aria", { n: i + 1 })}
-        className={`h-2 w-2 rounded-full transition-all ${
-          i === current ? "bg-white w-6" : "bg-white/60"
-        }`}
-      />
-    ))}
-  </div>
-</section>
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={t("hero.slide_aria", { n: i + 1 })}
+              className={`h-2 w-2 rounded-full transition-all ${i === current ? "bg-white w-6" : "bg-white/60"
+                }`}
+            />
+          ))}
+        </div>
+      </section>
 
 
       {/* STATISTICS STRIP */}

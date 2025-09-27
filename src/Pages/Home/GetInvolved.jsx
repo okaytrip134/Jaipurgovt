@@ -250,7 +250,7 @@ export default function GetInvolved() {
               <h3 className="text-lg font-semibold mt-6 mb-2">
                 {t("involvedPosts.cmdesk.deputyChiefMinistersTitle")}
               </h3>
-              <table className="max-w-full border border-gray-300 bg-white rounded-lg shadow">
+              <table className="min-w-full border border-gray-300 bg-white rounded-lg shadow">
                 <thead className="bg-gray-100">
                   <tr>
                     <th className="border px-2 py-2 w-1/3">{t("involvedPosts.cmdesk.tableHeaders.image")}</th>
