@@ -46,7 +46,7 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
   return (
     <div className="relative md:hidden">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-4 pl-2 pr-2">
+        <div className="flex gap-4 pl-2 pr-6">
           {tabs.map((tab) => {
             const active = activeTab === tab.key;
             return (
@@ -78,7 +78,7 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
         type="button"
         aria-label="Previous tabs"
         onClick={scrollPrev}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow rounded-full p-2 ml-1"
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow rounded-xl p-2 ml-1"
       >
         ◀
       </button>
@@ -86,7 +86,7 @@ function MobileTabsCarousel({ tabs, activeTab, setActiveTab, activeColor, inacti
         type="button"
         aria-label="Next tabs"
         onClick={scrollNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow rounded-full p-2 mr-1"
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow rounded-xl p-2 mr-1"
       >
         ▶
       </button>
@@ -156,43 +156,47 @@ export default function GetInvolved() {
         <p className="text-gray-600">{t("get_involved_subtitle")}</p>
       </div>
 
-      {/* Tabs: Mobile carousel (2 per view) */}
-      <MobileTabsCarousel
-        tabs={tabs.map((tab) => ({
-          ...tab,
-          label: t(`tabs.${tab.key}`), // Use the key and the "tabs" namespace
-        }))}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        activeColor={activeColor}
-        inactiveColor={inactiveColor}
-      />
+      {/* Mobile carousel */}
+      <div className="tabs-mobile">
+        <MobileTabsCarousel
+          tabs={tabs.map((tab) => ({
+            ...tab,
+            label: t(`tabs.${tab.key}`),
+          }))}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          activeColor={activeColor}
+          inactiveColor={inactiveColor}
+        />
+      </div>
 
-      {/* Tabs: Desktop static grid */}
-      <div className="hidden md:flex flex-wrap justify-center gap-24 mb-12" role="tablist">
-        {tabs.map((tab) => {
-          const active = activeTab === tab.key;
-          return (
-            <button
-              key={tab.key}
-              onClick={() => setActiveTab(tab.key)}
-              className={`bg-gray-50 relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
-                ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
-                : "bg-gray-50 text-gray-500 shadow-lg hover:shadow-md focus:ring-gray-300"
-                }`}
-              role="tab"
-              aria-selected={active}
-            >
-              <IconMasked
-                src={tab.icon}
-                alt={tab.label}
-                size={32}
-                color={active ? activeColor : inactiveColor}
-              />
-              <p className="mt-2 text-sm font-semibold text-center">{t(`tabs.${tab.key}`)}</p>
-            </button>
-          );
-        })}
+      {/* Desktop grid */}
+      <div
+        className="tabs-desktop flex flex-nowrap justify-center gap-12 overflow-x-auto mb-12 p-1"
+        role="tablist"
+      >     {tabs.map((tab) => {
+        const active = activeTab === tab.key;
+        return (
+          <button
+            key={tab.key}
+            onClick={() => setActiveTab(tab.key)}
+            className={`bg-gray-50 relative p-4 flex flex-col items-center w-45 h-28 justify-center transition-all duration-300 rounded-xl focus:outline-none focus:ring focus:ring-offset hover:shadow-xl ${active
+              ? "border border-[#C46340] bg-orange-50 text-[#C46340] shadow-lg focus:ring-[#C46340]"
+              : "bg-gray-50 text-gray-500 shadow-lg hover:shadow-md focus:ring-gray-300"
+              }`}
+            role="tab"
+            aria-selected={active}
+          >
+            <IconMasked
+              src={tab.icon}
+              alt={tab.label}
+              size={32}
+              color={active ? activeColor : inactiveColor}
+            />
+            <p className="mt-2 text-sm font-semibold text-center">{t(`tabs.${tab.key}`)}</p>
+          </button>
+        );
+      })}
       </div>
 
       {/* Content */}

@@ -1,0 +1,17 @@
+@media (min-width: 884px) {
+  .tabs-desktop {
+    display: flex !important;
+  }
+  .tabs-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 883px) {
+  .tabs-desktop {
+    display: none !important;
+  }
+  .tabs-mobile {
+    display: block !important;
+  }
+}

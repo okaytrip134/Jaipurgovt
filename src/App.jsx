@@ -6,6 +6,7 @@ import Footer from "./Component/footer";
 import Loader from "./Component/Loader";
 import MobileNavbar from "./Component/MobileNavbar";
 import InvolvedDetail from "./Pages/Home/InvolvedDetails";
+import './App.css';
 // import GetInvolved from "./Pages/Home/GetInvolved"; // optional
 
 
