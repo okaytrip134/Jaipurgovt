@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const slides = [
   { id: 1, image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
   { id: 2, image: "https://www.livehindustan.com/lh-img/smart/img/2025/09/06/1200x900/Buses__1757156071931_1757156072359.jpeg" },
-  { id: 3, image: "https://scontent.fdel1-3.fna.fbcdn.net/v/t39.30808-6/544899231_1115042140802279_3963050255515265691_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sBAgIvhf4uoQ7kNvwEIFPXw&_nc_oc=AdnxtbAc-MrjBnfw_-qvPFBA9mEpmo7kWHr7OihbqorACjIvD84JKO2i0FQiJpahC_Q&_nc_zt=23&_nc_ht=scontent.fdel1-3.fna&_nc_gid=48tvf7trK5tTAhwhSjWRig&oh=00_AfZVx4lxj9BlqnLvkxDuqjIcU93SEqTX87lSNEHki3LhfA&oe=68DD3AB0" },
+  { id: 3, image: "https://images.bhaskarassets.com/web2images/521/2024/07/20/whatsapp-image-2024-07-20-at-143132_1721469384.jpeg" },
   { id: 4, image: "https://images.unsplash.com/photo-1682830819991-3e100a80aa2e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
   { id: 5, image: "https://images.unsplash.com/photo-1712166424478-eb9b7103e460?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0" },
 ];
